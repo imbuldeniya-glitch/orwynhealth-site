@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>orwyn — surgeon-governed decision support for first-contact MSK clinicians</title>
+<meta name="description" content="Orwyn is decision support for the clinicians who see musculoskeletal patients first. Founded by Dr Arj Imbuldeniya, consultant orthopaedic knee and hip surgeon. Routing criteria written down, explainable, and beside the clinician in the room. Knee first, then hip.">
+<link rel="canonical" href="https://orwynhealth.com/">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#2B1B2E">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Orwyn">
+<meta property="og:title" content="orwyn — surgeon-governed decision support for first-contact MSK clinicians">
+<meta property="og:description" content="A surgeon's routing criteria, written down, explainable, and beside the clinician in the room. Knee first, then hip.">
+<meta property="og:url" content="https://orwynhealth.com/">
+<meta property="og:image" content="https://orwynhealth.com/social.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Orwyn. A surgeon beside every decision. Dr Arj Imbuldeniya, Consultant Knee and Hip Surgeon.">
+<meta name="twitter:image" content="https://orwynhealth.com/social.jpg">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="/favicon.png" type="image/png">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Orwyn",
+  "legalName": "Orwynhealth Ltd",
+  "url": "https://orwynhealth.com/",
+  "logo": "https://orwynhealth.com/social.jpg",
+  "description": "Surgeon-governed decision support for first-contact musculoskeletal clinicians in the NHS. Knee first, then hip.",
+  "foundingDate": "2026-07-31",
+  "identifier": "17374862",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "1 Landor Road",
+    "addressLocality": "London",
+    "postalCode": "SW9 9RX",
+    "addressCountry": "GB"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "enquiries",
+    "email": "hello@orwynhealth.com",
+    "areaServed": "GB"
+  },
+  "founder": {
+    "@type": "Person",
+    "name": "Dr Arj Imbuldeniya",
+    "honorificPrefix": "Dr",
+    "jobTitle": "Consultant Orthopaedic Knee and Hip Surgeon",
+    "sameAs": "https://www.linkedin.com/in/dr-arj-imbuldeniya-b9374651/",
+    "image": "https://orwynhealth.com/portrait.jpg"
+  }
+}
+</script>
+
+<style>
+/* Orwyn brand tokens — governed by the orwyn-brand skill's palette.md. Do not edit hex values here. */
+:root{
+  --plum:#2B1B2E; --coral:#E5735B; --sage:#7A8F7D; --parchment:#F6F4EF; --stone:#D6D8DB;
+  --ink:#2B1B2E; --muted:#6B6470; --line:#E5E1E6; --card:#FFFFFF;
+  --coral-soft:#FDF3F0;
+  --red:#B23B2E; --redbg:#FBECEA; --redline:#E5B7B0;
+  --amber:#8A6D1F; --amberbg:#FBF3DD; --amberline:#E8D79C;
+  --green:#3F6B57; --greenbg:#E9F1EC; --greenline:#BCD6C8;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--parchment);color:var(--ink);
+  font-family:'Inter',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  line-height:1.5;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px 80px}
+
+header.top{background:var(--plum);color:#fff;padding:18px 0}
+header.top .wrap{display:flex;align-items:center;gap:18px;flex-wrap:wrap;padding-bottom:0}
+.mark{font-family:'Playfair Display',Georgia,'Times New Roman',serif;font-size:30px;letter-spacing:.02em;font-weight:600}
+.mark .o{color:var(--coral)}
+.brand{display:inline-flex;align-items:center;gap:10px}
+.logomark{width:34px;height:34px;border-radius:8px;display:block;flex:0 0 auto}
+.tag{font-size:13px;color:#E7DCE6}
+.tag b{color:#fff;font-weight:600}
+
+h2.section{font-family:'Playfair Display',Georgia,serif;font-weight:600;font-size:19px;margin:26px 0 10px}
+.kicker{font-size:11px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:760px){.grid{grid-template-columns:1fr}}
+
+.btn{display:inline-block;padding:10px 16px;border-radius:9px;border:1px solid var(--plum);background:var(--plum);color:#fff;font:inherit;font-weight:600;cursor:pointer;text-decoration:none}
+.btn.ghost{background:#fff;color:var(--plum)}
+
+.foot{font-size:12px;color:var(--muted);margin-top:18px;border-top:1px solid var(--line);padding-top:12px}
+.disclaim{background:#fff;border:1px dashed var(--stone);border-radius:8px;padding:9px 12px;font-size:12px;color:var(--muted);margin-top:10px}
+
+/* Page-specific layout, derived from the existing scale: same radii, borders and type */
+.hero{background:var(--plum);color:#fff;padding:64px 0 68px}
+.hero .wrap{padding-bottom:0}
+.hero h1{font-family:'Playfair Display',Georgia,serif;font-weight:600;font-size:44px;line-height:1.18;margin:0 0 18px;max-width:20ch}
+.hero .lede{font-size:18px;line-height:1.6;color:#E7DCE6;max-width:60ch;margin:0 0 14px}
+.hero .thesis{font-size:18px;font-weight:600;color:var(--coral);max-width:60ch;margin:0 0 30px}
+.hero .btn.ghost{margin-right:10px}
+@media(max-width:760px){.hero h1{font-size:32px}.hero{padding:44px 0 48px}}
+
+.three{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media(max-width:860px){.three{grid-template-columns:1fr}}
+.card h3{font-family:'Playfair Display',Georgia,serif;font-weight:600;font-size:17px;margin:0 0 8px}
+.card p{margin:0 0 10px}
+.card p:last-child{margin-bottom:0}
+.lead{font-size:17px;max-width:68ch}
+.sect{padding-top:14px}
+ul.plain{margin:0;padding-left:20px}
+ul.plain li{margin-bottom:8px}
+a{color:var(--plum)}
+footer.site{background:var(--plum);color:#E7DCE6;padding:34px 0 44px;font-size:13px}
+footer.site .wrap{padding-bottom:0}
+footer.site a{color:#fff}
+.bio{display:flex;gap:22px;align-items:flex-start}
+.portrait{width:132px;height:132px;border-radius:50%;flex:0 0 auto;object-fit:cover;border:3px solid var(--plum)}
+@media(max-width:620px){.bio{flex-direction:column;gap:14px}.portrait{width:104px;height:104px}}
+footer.site .mark{font-size:22px;display:block;margin-bottom:12px;color:#fff}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <span class="brand"><img class="logomark" src="/logo.png" width="34" height="34" alt="Orwyn logo"><span class="mark"><span class="o">o</span>rwyn</span></span>
+    <span class="tag"><b>Better decisions, together.</b> · Clinician-led. Surgeon-supported. Patient-focused.</span>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <h1>A surgeon beside every decision.</h1>
+    <p class="lede">Orwyn is decision support for the clinicians who see musculoskeletal patients first. It brings a consultant knee and hip surgeon's routing criteria into the room, written down and explainable, at the moment the referral decision is made.</p>
+    <p class="thesis">To surgery when it's needed, to a real plan when it's not.</p>
+    <a class="btn ghost" href="#what">What it does</a>
+    <a class="btn ghost" href="#founder">Who is behind it</a>
+    <a class="btn" href="#contact">Get in touch</a>
+  </div>
+</section>
+
+<div class="wrap">
+
+  <div class="sect" id="what">
+    <div class="kicker">The problem</div>
+    <h2 class="section">Musculoskeletal care goes wrong in both directions</h2>
+    <p class="lead">Some patients are sent for a surgical opinion they do not need, and wait months to be told so. Others are managed for a year with a problem that needed an operation. Both happen for the same reason: the person seeing the patient first has no way to reach the judgement of the person at the end of the pathway.</p>
+    <p class="lead">Musculoskeletal means the joints, muscles, bones and soft tissues. First-contact practitioners are the physiotherapists and clinicians who see these patients before anyone else, usually in general practice or a community service. They are experienced and they are not the problem. What they do not have is a surgeon in the room.</p>
+  </div>
+
+  <div class="sect">
+    <div class="kicker">What Orwyn is</div>
+    <h2 class="section">A surgeon's criteria, written down and shown</h2>
+    <div class="three">
+      <div class="card">
+        <h3>It is used by the clinician</h3>
+        <p>Orwyn is not a patient app and not a questionnaire the patient fills in at home. It sits with the clinician while the patient is in front of them, and it fits inside a normal appointment.</p>
+      </div>
+      <div class="card">
+        <h3>It shows its reasons</h3>
+        <p>Every routing suggestion comes with the reason for it, in plain words. There are no scores and no percentages. The clinician can disagree and record why, and that disagreement is kept.</p>
+      </div>
+      <div class="card">
+        <h3>It works with you, not above you</h3>
+        <p>Orwyn does not check, approve or oversee the clinician's work. It carries a surgeon's judgement into a room the surgeon is not in. The clinician assesses the patient and decides.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="sect">
+    <div class="kicker">How it is built</div>
+    <h2 class="section">Written rules, not a black box</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Explainable by design</h3>
+        <p>Orwyn runs on rules a named consultant surgeon has written and signed off, not on a model whose reasoning cannot be inspected. Anyone reviewing a decision can be shown why it was made.</p>
+        <p>Safety questions must be answered before Orwyn will suggest anything at all. That behaviour is deliberate and it does not bend.</p>
+      </div>
+      <div class="card">
+        <h3>Built for the standard it will be held to</h3>
+        <p>Orwyn is being built to the engineering and safety standards expected of regulated clinical software, with a clinical safety case and a named clinical safety officer, and the intention to certify.</p>
+        <p>Knee first, then hip. One joint done properly before the next.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="sect" id="founder">
+    <div class="kicker">Who is behind it</div>
+    <h2 class="section">Dr Arj Imbuldeniya</h2>
+    <div class="card bio">
+      <img class="portrait" src="/portrait.jpg" width="200" height="200" alt="Dr Arj Imbuldeniya, Consultant Orthopaedic Knee and Hip Surgeon">
+      <div>
+      <p>Orwyn is founded and led by Dr Arj Imbuldeniya, a consultant orthopaedic knee and hip surgeon. He has been an NHS consultant at Chelsea and Westminster Hospital NHS Foundation Trust for over a decade, and his practice spans the full range of modern knee and hip care, from biological and regenerative treatment through to robotic-assisted joint replacement.</p>
+      <p>The idea came from more than ten years of watching the same thing happen. People wait too long to see the right person, and the decision that shapes everything afterwards gets made without the surgical input it deserves. Orwyn is an attempt to put that input where the decision is actually made, rather than months later.</p>
+      <p>He is a member of the NHS Clinical Entrepreneur Programme, Cohort 10. You can find him on <a href="https://www.linkedin.com/in/dr-arj-imbuldeniya-b9374651/" rel="noopener">LinkedIn</a>.</p>
+      <p><em>Orwyn is an independent company. It is not a Chelsea and Westminster Hospital NHS Foundation Trust product, and no NHS organisation endorses it. Dr Imbuldeniya's NHS role is given here as background only.</em></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="sect">
+    <div class="kicker">Who it is for</div>
+    <h2 class="section">Working with the NHS</h2>
+    <p class="lead">Orwyn is being developed with NHS musculoskeletal clinicians, and is designed for NHS trusts and the services that commission musculoskeletal care.</p>
+    <p class="lead">If you run or commission a musculoskeletal service, or you see these patients first and want to say what would actually help, we would like to hear from you.</p>
+  </div>
+
+  <div class="sect" id="contact">
+    <div class="kicker">Contact</div>
+    <h2 class="section">Get in touch</h2>
+    <div class="card">
+      <p>Email <a href="mailto:hello@orwynhealth.com">hello@orwynhealth.com</a>.</p>
+      <p>We reply to clinicians, services and commissioners. We do not give clinical advice to patients and we cannot answer questions about an individual's care.</p>
+    </div>
+  </div>
+
+  <div class="sect" id="privacy">
+    <div class="kicker">Privacy</div>
+    <h2 class="section">What this website does with your information</h2>
+    <div class="card">
+      <p>This website sets no cookies, runs no analytics and no advertising or tracking scripts, and collects nothing about you as you read it. Web fonts are loaded from Google Fonts, which will see your device's internet address when the page loads.</p>
+      <p>If you email us, we hold your message and your email address so we can reply, and for as long as the conversation is useful. We do not add you to any mailing list and we do not pass your details to anyone else. Ask us to delete them at any time and we will.</p>
+      <p>Orwynhealth Ltd is the data controller. Write to us at the address below, or to <a href="mailto:hello@orwynhealth.com">hello@orwynhealth.com</a>. You can complain to the Information Commissioner's Office at ico.org.uk.</p>
+    </div>
+  </div>
+
+  <div class="foot">
+    Orwyn is a trade mark of Orwynhealth Ltd, application UK00004424413.
+    <div class="disclaim">Decision support only. The clinician assesses the patient and makes the final decision. Orwyn is not a service for patients and does not provide medical advice.</div>
+  </div>
+
+</div>
+
+<footer class="site">
+  <div class="wrap">
+    <span class="brand" style="margin-bottom:12px"><img class="logomark" src="/logo.png" width="30" height="30" alt="Orwyn logo"><span class="mark" style="margin-bottom:0"><span class="o">o</span>rwyn</span></span>
+    <p>Orwynhealth Ltd, registered in England and Wales, company number 17374862.<br>
+    Registered office: 1 Landor Road, London SW9 9RX.<br>
+    <a href="mailto:hello@orwynhealth.com">hello@orwynhealth.com</a></p>
+    <p>&copy; 2026 Orwynhealth Ltd. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
