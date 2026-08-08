@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Safety and how Orwyn is built — written rules, not a black box | orwyn</title>
+<meta name="description" content="Orwyn runs on rules a named consultant surgeon has written and signed off. Safety questions must be answered before it suggests anything at all, and it is built to the standards expected of regulated clinical software.">
+
+<link rel="canonical" href="https://orwynhealth.com/safety">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#2B1B2E">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Orwyn">
+<meta property="og:title" content="Safety and how Orwyn is built — written rules, not a black box | orwyn">
+<meta property="og:description" content="Orwyn runs on rules a named consultant surgeon has written and signed off. Safety questions must be answered before it suggests anything at all, and it is built to the standards expected of regulated clinical software.">
+<meta property="og:url" content="https://orwynhealth.com/safety">
+<meta property="og:image" content="https://orwynhealth.com/social.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Orwyn. The ortho opinion, at first contact. Dr Arj Imbuldeniya, Consultant Knee and Hip Surgeon.">
+<meta name="twitter:image" content="https://orwynhealth.com/social.jpg">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="/"><img class="logomark" src="/logo.png" width="32" height="32" alt="Orwyn logo"><span class="mark"><span class="o">o</span>rwyn<span class="tm">&trade;</span></span></a>
+    <nav class="main" aria-label="Main"><a href="/">Home</a><a href="/what-orwyn-does">What it does</a><a href="/safety" aria-current="page">Safety</a><a href="/about">About</a><a href="/nhs">Working with the NHS</a><a class="cta" href="/contact">Get in touch</a></nav>
+  </div>
+</header>
+<section class="hero small">
+  <div class="wrap">
+    <div class="kicker">Safety and how it is built</div>
+    <h1>Written rules, not a black box.</h1>
+  </div>
+</section>
+
+<div class="wrap pad">
+
+  <section class="idea first reveal">
+    <div class="kicker">Explainable by design</div>
+    <h2 class="section">Every decision can be shown and inspected</h2>
+    <p class="lead">Orwyn runs on rules a named consultant surgeon has written and signed off, not on a model whose reasoning cannot be inspected. Anyone reviewing a decision can be shown why it was made.</p>
+  </section>
+
+  <section class="idea reveal">
+    <div class="kicker">Safety first, deliberately</div>
+    <h2 class="section">Safety questions come before anything else</h2>
+    <p class="lead">Safety questions must be answered before Orwyn will suggest anything at all. That behaviour is deliberate and it does not bend.</p>
+  </section>
+
+  <section class="idea reveal">
+    <div class="kicker">Standards</div>
+    <h2 class="section">Built for the standard it will be held to</h2>
+    <p class="lead">Orwyn is health technology built to the engineering and safety standards expected of regulated clinical software, with a clinical safety case that will be reviewed by an independent clinical safety officer before any deployment, and the intention to certify.</p>
+    <p class="lead">Knee first, then hip. One joint done properly before the next.</p>
+  </section>
+
+  <div class="band reveal">
+    <h2>Who wrote the rules?</h2>
+    <p>Orwyn is founded and led by a consultant orthopaedic knee and hip surgeon.</p>
+    <a class="btn ghost" href="/about">Who is behind Orwyn</a>
+  </div>
+
+  <div class="foot">
+    <div class="disclaim">Decision support only. The clinician assesses the patient and makes the final decision. Orwyn is not a service for patients and does not provide medical advice.</div>
+  </div>
+</div>
+<footer class="site">
+  <div class="wrap">
+    <span class="mark"><span class="o">o</span>rwyn<span class="tm">&trade;</span></span>
+    <nav aria-label="Footer">
+      <a href="/what-orwyn-does">What it does</a>
+      <a href="/safety">Safety</a>
+      <a href="/about">About</a>
+      <a href="/nhs">Working with the NHS</a>
+      <a href="/contact">Contact</a>
+      <a href="/privacy">Privacy</a>
+    </nav>
+    <p>Orwynhealth Ltd, registered in England and Wales, company number 17374862.<br>
+    Registered office: 1 Landor Road, London SW9 9RX.<br>
+    <a href="mailto:hello@orwynhealth.com">hello@orwynhealth.com</a></p>
+    <p>Orwyn is a trade mark of Orwynhealth Ltd, application UK00004424413.</p>
+    <p>&copy; 2026 Orwynhealth Ltd. All rights reserved.</p>
+  </div>
+</footer>
+<script>
+(function(){
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var els = document.querySelectorAll('.reveal');
+  if (!('IntersectionObserver' in window)) { els.forEach(function(e){e.classList.add('in');}); return; }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){ if (en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
+  }, {threshold:.12});
+  els.forEach(function(e){ io.observe(e); });
+})();
+</script>
+</body>
+</html>

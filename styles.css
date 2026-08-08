@@ -1,0 +1,127 @@
+/* Orwyn site styles — brand tokens governed by the orwyn-brand skill's palette.md. Do not edit hex values. */
+:root{
+  --plum:#2B1B2E; --coral:#E5735B; --sage:#7A8F7D; --parchment:#F6F4EF; --stone:#D6D8DB;
+  --ink:#2B1B2E; --muted:#6B6470; --line:#E5E1E6; --card:#FFFFFF;
+  --coral-soft:#FDF3F0;
+  --red:#B23B2E; --redbg:#FBECEA; --redline:#E5B7B0;
+  --amber:#8A6D1F; --amberbg:#FBF3DD; --amberline:#E8D79C;
+  --green:#3F6B57; --greenbg:#E9F1EC; --greenline:#BCD6C8;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--parchment);color:var(--ink);
+  font-family:'Inter',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+
+/* Header */
+header.top{background:var(--plum);color:#fff;padding:16px 0;position:sticky;top:0;z-index:10;
+  box-shadow:0 1px 0 rgba(0,0,0,.18)}
+header.top .wrap{display:flex;align-items:center;gap:26px;flex-wrap:wrap}
+.mark{font-family:'Playfair Display',Georgia,'Times New Roman',serif;font-size:27px;letter-spacing:.02em;font-weight:600;color:#fff;text-decoration:none}
+.mark .o{color:var(--coral)}
+.mark .tm{font-family:'Inter',-apple-system,sans-serif;font-size:.38em;font-weight:500;vertical-align:super;letter-spacing:0;margin-left:2px;color:#E7DCE6}
+.brand{display:inline-flex;align-items:center;gap:10px;text-decoration:none}
+.logomark{width:34px;height:34px;border-radius:8px;display:block;flex:0 0 auto}
+nav.main{display:flex;align-items:center;gap:4px;margin-left:auto;flex-wrap:wrap}
+nav.main a{color:#E7DCE6;text-decoration:none;font-size:14.5px;font-weight:500;padding:8px 12px;border-radius:999px}
+nav.main a:hover{color:#fff;background:rgba(255,255,255,.07)}
+nav.main a[aria-current="page"]{color:#fff;font-weight:600}
+nav.main a.cta{background:#fff;color:var(--plum);font-weight:600;padding:9px 18px;margin-left:8px}
+nav.main a.cta:hover{background:#F1EDE6}
+@media(max-width:880px){header.top .wrap{gap:12px}nav.main{margin-left:0}}
+
+/* Hero — plum ground, soft light, one idea */
+.hero{background:var(--plum);color:#fff;position:relative;overflow:hidden;
+  padding:110px 0 120px}
+.hero::before{content:"";position:absolute;inset:0;pointer-events:none;
+  background:
+    radial-gradient(ellipse 60% 45% at 22% 8%, rgba(229,115,91,.16), transparent 65%),
+    radial-gradient(ellipse 55% 50% at 85% 95%, rgba(122,143,125,.18), transparent 65%)}
+.hero .wrap{position:relative;z-index:1;text-align:center}
+.hero .kicker{color:#CBB9CC}
+.hero h1{font-family:'Playfair Display',Georgia,serif;font-weight:600;
+  font-size:clamp(38px,6.2vw,68px);line-height:1.12;margin:14px auto 26px;max-width:17ch}
+.hero .lede{font-size:19px;line-height:1.65;color:#E7DCE6;max-width:56ch;margin:0 auto 16px}
+.hero .thesis{font-family:'Playfair Display',Georgia,serif;font-size:clamp(20px,2.6vw,26px);font-weight:600;color:var(--coral);max-width:44ch;margin:26px auto 40px;line-height:1.35}
+.hero.small{padding:74px 0 78px}
+.hero.small h1{font-size:clamp(32px,4.6vw,50px);max-width:22ch;margin-left:auto;margin-right:auto}
+.hero .heromark{display:block;margin:0 auto 26px;width:clamp(150px,20vw,240px);height:auto}
+
+/* Buttons */
+.btn{display:inline-block;padding:12px 24px;border-radius:999px;border:1px solid var(--plum);
+  background:var(--plum);color:#fff;font:inherit;font-size:15.5px;font-weight:600;cursor:pointer;text-decoration:none}
+.btn:hover{background:#3A2740}
+.btn.ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.45);margin-right:10px}
+.btn.ghost:hover{border-color:#fff;background:rgba(255,255,255,.06)}
+.btn.onlight{background:var(--plum);color:#fff}
+.btn.onlight.ghost{background:transparent;color:var(--plum);border-color:var(--plum)}
+
+/* Sections — generous air, one idea per screen */
+section.idea{padding:96px 0 8px;text-align:center}
+section.idea.first{padding-top:84px}
+.kicker{font-size:12px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+h2.section{font-family:'Playfair Display',Georgia,serif;font-weight:600;
+  font-size:clamp(28px,3.6vw,40px);line-height:1.2;margin:12px auto 22px;max-width:24ch}
+.lead{font-size:17.5px;line-height:1.7;max-width:62ch;margin:0 auto 18px}
+.lead:last-child{margin-bottom:0}
+.center{text-align:center}
+.center h2.section,.center .lead{margin-left:auto;margin-right:auto}
+
+/* Cards */
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:26px 26px;text-align:left}
+.card h3{font-family:'Playfair Display',Georgia,serif;font-weight:600;font-size:19px;margin:0 0 10px}
+.card p{margin:0 0 12px;font-size:15.5px;line-height:1.65}
+.card p:last-child{margin-bottom:0}
+.three{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:38px}
+@media(max-width:860px){.three{grid-template-columns:1fr}}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:38px}
+@media(max-width:760px){.grid{grid-template-columns:1fr}}
+
+/* Page teaser links on home */
+.pagelinks{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:38px}
+@media(max-width:760px){.pagelinks{grid-template-columns:1fr}}
+a.pagelink{display:block;text-align:left;text-decoration:none;color:var(--ink);background:var(--card);
+  border:1px solid var(--line);border-radius:14px;padding:24px 26px;transition:border-color .2s ease}
+a.pagelink:hover{border-color:var(--stone)}
+a.pagelink h3{font-family:'Playfair Display',Georgia,serif;font-weight:600;font-size:19px;margin:0 0 8px}
+a.pagelink p{margin:0;font-size:15px;color:var(--muted);line-height:1.6}
+a.pagelink .go{display:inline-block;margin-top:14px;font-size:14px;font-weight:600;color:var(--plum)}
+
+/* Bio */
+.bio{display:flex;gap:26px;align-items:flex-start}
+.portrait{width:140px;height:140px;border-radius:50%;flex:0 0 auto;object-fit:cover;border:3px solid var(--plum)}
+@media(max-width:620px){.bio{flex-direction:column;gap:16px}.portrait{width:108px;height:108px}}
+
+/* Closing band */
+.band{background:var(--plum);color:#fff;border-radius:18px;padding:64px 48px;margin:96px 0 0;text-align:center;
+  position:relative;overflow:hidden}
+.band::before{content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(ellipse 55% 70% at 80% 10%, rgba(229,115,91,.15), transparent 65%)}
+.band>*{position:relative}
+.band h2{font-family:'Playfair Display',Georgia,serif;font-weight:600;font-size:clamp(26px,3.2vw,34px);margin:0 auto 14px;max-width:24ch}
+.band p{color:#E7DCE6;max-width:56ch;font-size:16.5px;margin:0 auto 26px}
+@media(max-width:620px){.band{padding:40px 26px}}
+
+/* Footer */
+.foot{font-size:12.5px;color:var(--muted);margin-top:88px;border-top:1px solid var(--line);padding-top:16px}
+.disclaim{background:#fff;border:1px dashed var(--stone);border-radius:10px;padding:10px 14px;font-size:12.5px;color:var(--muted);margin-top:12px}
+footer.site{background:var(--plum);color:#E7DCE6;padding:40px 0 50px;font-size:13.5px;margin-top:44px}
+footer.site a{color:#fff}
+footer.site .mark{font-size:22px;display:inline-block;margin-bottom:12px}
+footer.site nav{display:flex;gap:18px;flex-wrap:wrap;margin:10px 0 18px}
+footer.site nav a{color:#E7DCE6;text-decoration:none;font-size:13.5px}
+footer.site nav a:hover{color:#fff}
+a{color:var(--plum)}
+.pad{padding-bottom:96px}
+
+/* Scroll pacing — content arrives quietly */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  .reveal{opacity:1;transform:none;transition:none}
+}
+
+.bio{text-align:left}
+.hero .btn.ghost{margin:0 6px}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy — orwyn</title>
+<meta name="description" content="What this website does with your information. It sets no cookies, runs no analytics, and collects nothing about you as you read it.">
+
+<link rel="canonical" href="https://orwynhealth.com/privacy">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#2B1B2E">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Orwyn">
+<meta property="og:title" content="Privacy — orwyn">
+<meta property="og:description" content="What this website does with your information. It sets no cookies, runs no analytics, and collects nothing about you as you read it.">
+<meta property="og:url" content="https://orwynhealth.com/privacy">
+<meta property="og:image" content="https://orwynhealth.com/social.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Orwyn. The ortho opinion, at first contact. Dr Arj Imbuldeniya, Consultant Knee and Hip Surgeon.">
+<meta name="twitter:image" content="https://orwynhealth.com/social.jpg">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="/"><img class="logomark" src="/logo.png" width="32" height="32" alt="Orwyn logo"><span class="mark"><span class="o">o</span>rwyn<span class="tm">&trade;</span></span></a>
+    <nav class="main" aria-label="Main"><a href="/">Home</a><a href="/what-orwyn-does">What it does</a><a href="/safety">Safety</a><a href="/about">About</a><a href="/nhs">Working with the NHS</a><a class="cta" href="/contact">Get in touch</a></nav>
+  </div>
+</header>
+<section class="hero small">
+  <div class="wrap">
+    <div class="kicker">Privacy</div>
+    <h1>What this website does with your information.</h1>
+  </div>
+</section>
+
+<div class="wrap pad">
+
+  <section class="idea first reveal">
+    <div class="card">
+      <p>This website sets no cookies, runs no analytics and no advertising or tracking scripts, and collects nothing about you as you read it. Web fonts are loaded from Google Fonts, which will see your device's internet address when the page loads.</p>
+      <p>If you email us, we hold your message and your email address so we can reply, and for as long as the conversation is useful. We do not add you to any mailing list and we do not pass your details to anyone else. Ask us to delete them at any time and we will.</p>
+      <p>Orwynhealth Ltd is the data controller. Write to us at the registered office address in the footer, or to <a href="mailto:hello@orwynhealth.com">hello@orwynhealth.com</a>. You can complain to the Information Commissioner's Office at ico.org.uk.</p>
+    </div>
+  </section>
+
+  <div class="foot">
+    <div class="disclaim">Decision support only. The clinician assesses the patient and makes the final decision. Orwyn is not a service for patients and does not provide medical advice.</div>
+  </div>
+</div>
+<footer class="site">
+  <div class="wrap">
+    <span class="mark"><span class="o">o</span>rwyn<span class="tm">&trade;</span></span>
+    <nav aria-label="Footer">
+      <a href="/what-orwyn-does">What it does</a>
+      <a href="/safety">Safety</a>
+      <a href="/about">About</a>
+      <a href="/nhs">Working with the NHS</a>
+      <a href="/contact">Contact</a>
+      <a href="/privacy">Privacy</a>
+    </nav>
+    <p>Orwynhealth Ltd, registered in England and Wales, company number 17374862.<br>
+    Registered office: 1 Landor Road, London SW9 9RX.<br>
+    <a href="mailto:hello@orwynhealth.com">hello@orwynhealth.com</a></p>
+    <p>Orwyn is a trade mark of Orwynhealth Ltd, application UK00004424413.</p>
+    <p>&copy; 2026 Orwynhealth Ltd. All rights reserved.</p>
+  </div>
+</footer>
+<script>
+(function(){
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var els = document.querySelectorAll('.reveal');
+  if (!('IntersectionObserver' in window)) { els.forEach(function(e){e.classList.add('in');}); return; }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){ if (en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
+  }, {threshold:.12});
+  els.forEach(function(e){ io.observe(e); });
+})();
+</script>
+</body>
+</html>
