@@ -153,3 +153,6 @@ footer.site nav a:hover{color:var(--coral)}
 .band .btn.ghost:hover{border-color:var(--coral);color:var(--coral)}
 
 .hero .kicker2{margin-top:7px}
+
+/* Coral words in body leads carry weight for contrast compliance */
+.lead .accent,.lede .accent{font-weight:600}
