@@ -19,8 +19,8 @@ Colours: plum #2B1B2E (grounds, ink, buttons), coral #E5735B (accent), sage #7A8
 Typography: Playfair Display (headings, wordmark), Inter (body/UI). The wordmark is always TYPESET, lowercase "orwyn", never an image; the o takes coral on dark grounds only.
 Red, amber and green are functional safety colours only, never decoration; coral is never a warning colour.
 
-## Coral policy (ruled by Dr Imbuldeniya, 9 August 2026)
-Coral works hard: headline keyword spans (.accent), bold key phrases in leads (b.hl), card headings, Read more links, hover states. Constraint that never bends: coral only on large text or bold text of 14px and above — small plain coral body text on white fails WCAG contrast (3.03:1) and this is an NHS-facing site.
+## Coral policy (ruled by Dr Imbuldeniya, 9 August 2026; tightened to one word same day)
+Coral is spent sparingly, one word at a time: a single headline keyword per heading (.accent), at most one bold keyword in a lead (b.hl), Read more links and hover states. NOT on card headings. Constraint that never bends: coral only on large text or bold text of 14px and above — small plain coral body text on white fails WCAG contrast (3.03:1) and this is an NHS-facing site.
 
 ## Design language
 Restraint: one idea per screen, generous vertical space, centred sections. Content fades up on scroll (.reveal + IntersectionObserver) and must keep respecting prefers-reduced-motion. Soft geometry: pill buttons, 14px card radii. Mobile below 880px: centred brand, hamburger menu (.menubtn), no visible link row.
