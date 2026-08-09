@@ -6,7 +6,7 @@ This is the public website of Orwynhealth Ltd (company 17374862). It deploys AUT
 Orwyn: surgeon-governed decision support for first-contact musculoskeletal (MSK) clinicians in the NHS. Founded by Dr Arj Imbuldeniya (always "Dr", never "Mr"). Plain static HTML, no build step, no framework. Clean URLs via vercel.json.
 
 ## Hard content rules — breaking these is a business risk, not a style slip
-- NO audit figures, statistics or clinical outcome numbers anywhere on the site.
+- NO audit figures or clinical outcome numbers anywhere on the site. National PUBLISHED statistics (NHS England and similar) ARE allowed in problem-framing sections, always with a cited, linked source (ruled by Dr Imbuldeniya, 9 August 2026). His own audit figures stay banned until Stage 2 review is complete.
 - NO prices.
 - NO mention of Dr Imbuldeniya's private practice or OrthoLongevity: Orwyn is a strictly separate brand.
 - NO claims that Orwyn is endorsed by the NHS or any trust. The independence disclaimer on the About page stays.
@@ -26,7 +26,7 @@ Coral is spent sparingly, one word at a time: a single headline keyword per head
 Restraint: one idea per screen, generous vertical space, centred sections. Content fades up on scroll (.reveal + IntersectionObserver) and must keep respecting prefers-reduced-motion. Soft geometry: pill buttons, 14px card radii. Mobile below 880px: centred brand, hamburger menu (.menubtn), no visible link row.
 
 ## Structure
-Seven pages: index, what-orwyn-does, safety, about, nhs, contact, privacy — shared styles.css, per-page canonical/OG tags, Organization schema on index only, sitemap.xml kept in step with any page added or removed. Protected files, do not modify or delete: logo.png, favicon.png, portrait.jpg, social.jpg, hero-mark.png, robots.txt, google091cc17a7cfd7918.html.
+Eleven pages: index, what-orwyn-does, safety, about, nhs, contact, privacy, first-contact-practitioners-explained, msk-triage-explained, standards (reference pages sit in the footer only, never the header nav) — shared styles.css, per-page canonical/OG tags, Organization schema on index only, sitemap.xml kept in step with any page added or removed. Protected files, do not modify or delete: logo.png, favicon.png, portrait.jpg, social.jpg, hero-mark.png, robots.txt, google091cc17a7cfd7918.html.
 
 ## Process
 1. Branch, never main.

@@ -165,3 +165,9 @@ footer.site nav a:hover{color:var(--coral)}
 .dict .pos{font-size:13px;font-style:italic;color:var(--muted);margin-left:8px}
 .dict .ety{font-size:15px;color:var(--muted);margin:14px 0 10px;line-height:1.6}
 .dict .def{font-size:17px;line-height:1.6;margin:0}
+
+/* National statistics cards — problem validation */
+.stat .n{font-family:'Playfair Display',Georgia,serif;font-size:40px;font-weight:700;color:var(--plum);line-height:1.1}
+.stat .t{font-size:15px;line-height:1.55;margin-top:8px}
+.stat .src{font-size:12.5px;color:var(--muted);margin-top:10px}
+.stat .src a{color:var(--muted)}
