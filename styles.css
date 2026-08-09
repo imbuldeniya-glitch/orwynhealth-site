@@ -125,3 +125,30 @@ a{color:var(--plum)}
 
 .bio{text-align:left}
 .hero .btn.ghost{margin:0 6px}
+
+/* Mobile menu — hamburger below 880px */
+.menubtn{display:none;width:44px;height:44px;border:0;background:none;cursor:pointer;padding:10px;
+  position:absolute;right:16px;top:14px;border-radius:10px}
+.menubtn span{display:block;height:2px;background:#fff;border-radius:2px;margin:5px 0;transition:transform .25s ease,opacity .25s ease}
+@media(max-width:880px){
+  header.top{position:sticky}
+  header.top .wrap{position:relative;justify-content:center;gap:0}
+  .menubtn{display:block}
+  nav.main{display:none;width:100%;flex-direction:column;align-items:stretch;gap:2px;margin:14px 0 6px}
+  nav.main a{padding:12px 14px;font-size:16px;border-radius:10px}
+  nav.main a.cta{margin:10px 0 4px;text-align:center;padding:12px 14px}
+  header.top.menu-open nav.main{display:flex}
+  header.top.menu-open .menubtn span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  header.top.menu-open .menubtn span:nth-child(2){opacity:0}
+  header.top.menu-open .menubtn span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+}
+
+/* Coral accent system — large or bold text only (contrast rule) */
+.accent{color:var(--coral)}
+.lead b.hl,p b.hl{color:var(--coral);font-weight:600}
+.card h3{color:var(--coral)}
+a.pagelink .go{color:var(--coral)}
+a.pagelink:hover{border-color:var(--coral)}
+nav.main a:hover{color:var(--coral);background:rgba(229,115,91,.08)}
+footer.site nav a:hover{color:var(--coral)}
+.band .btn.ghost:hover{border-color:var(--coral);color:var(--coral)}

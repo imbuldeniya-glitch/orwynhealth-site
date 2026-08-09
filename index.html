@@ -69,14 +69,15 @@
 <header class="top">
   <div class="wrap">
     <a class="brand" href="/"><img class="logomark" src="/logo.png" width="34" height="34" alt="Orwyn logo"><span class="mark"><span class="o">o</span>rwyn<span class="tm">&trade;</span></span></a>
-    <nav class="main" aria-label="Main"><a href="/" aria-current="page">Home</a><a href="/what-orwyn-does">What it does</a><a href="/safety">Safety</a><a href="/about">About</a><a href="/nhs">Working with the NHS</a><a class="cta" href="/contact">Get in touch</a></nav>
+    <button class="menubtn" aria-label="Open menu" aria-expanded="false" aria-controls="mainnav"><span></span><span></span><span></span></button>
+    <nav class="main" id="mainnav" aria-label="Main"><a href="/" aria-current="page">Home</a><a href="/what-orwyn-does">What it does</a><a href="/safety">Safety</a><a href="/about">About</a><a href="/nhs">Working with the NHS</a><a class="cta" href="/contact">Get in touch</a></nav>
   </div>
 </header>
 <section class="hero">
   <div class="wrap">
     <img class="heromark" src="/hero-mark.png" alt="Orwyn" width="240" height="240">
     <div class="kicker">Surgeon-governed decision support for first-contact MSK clinicians</div>
-    <h1>Better decisions, together.</h1>
+    <h1>Better decisions, <span class="accent">together.</span></h1>
     <p class="lede">Orwyn brings a consultant knee and hip surgeon's routing criteria into the room, written down and explainable, at the moment the referral decision is made.</p>
     <p class="thesis">To surgery when it's needed, to a real plan when it's not.</p>
     <p><a class="btn ghost" href="/what-orwyn-does">What it does</a><a class="btn ghost" href="/about">Who is behind it</a></p>
@@ -87,14 +88,14 @@
 
   <section class="idea first reveal">
     <div class="kicker">The problem</div>
-    <h2 class="section">Musculoskeletal care goes wrong in both directions</h2>
+    <h2 class="section">Musculoskeletal care goes wrong in <span class="accent">both directions</span></h2>
     <p class="lead">Some patients are sent for a surgical opinion they do not need, and wait months to be told so. Others are managed for a year with a problem that needed an operation. Both happen for the same reason: the person seeing the patient first has no way to reach the judgement of the person at the end of the pathway.</p>
   </section>
 
   <section class="idea reveal">
     <div class="kicker">What Orwyn is</div>
-    <h2 class="section">A surgeon's criteria, written down and shown</h2>
-    <p class="lead">Every routing suggestion comes with the reason for it, in plain words. There are no scores and no percentages. The clinician can disagree and record why, and that disagreement is kept.</p>
+    <h2 class="section">A surgeon's criteria, <span class="accent">written down and shown</span></h2>
+    <p class="lead">Every routing suggestion comes with the reason for it, <b class="hl">in plain words</b>. There are no scores and no percentages. The clinician can disagree and record why, and that disagreement is kept.</p>
     <div class="three">
       <div class="card reveal">
         <h3>Used by the clinician</h3>
@@ -113,7 +114,7 @@
 
   <section class="idea reveal">
     <div class="kicker">Explore</div>
-    <h2 class="section">Find what you came for</h2>
+    <h2 class="section">Find what you <span class="accent">came for</span></h2>
     <div class="pagelinks">
       <a class="pagelink reveal" href="/what-orwyn-does"><h3>What Orwyn does</h3><p>The problem it exists for, what it is, and where it came from.</p><span class="go">Read more</span></a>
       <a class="pagelink reveal" href="/safety"><h3>Safety and how it is built</h3><p>Written rules, not a black box, built for the standard it will be held to.</p><span class="go">Read more</span></a>
@@ -159,6 +160,21 @@
     entries.forEach(function(en){ if (en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
   }, {threshold:.12});
   els.forEach(function(e){ io.observe(e); });
+})();
+</script>
+<script>
+(function(){
+  var btn = document.querySelector('.menubtn');
+  var hdr = document.querySelector('header.top');
+  if (!btn || !hdr) return;
+  btn.addEventListener('click', function(){
+    var open = hdr.classList.toggle('menu-open');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  });
+  document.querySelectorAll('nav.main a').forEach(function(a){
+    a.addEventListener('click', function(){ hdr.classList.remove('menu-open'); btn.setAttribute('aria-expanded','false'); });
+  });
 })();
 </script>
 </body>

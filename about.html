@@ -31,13 +31,14 @@
 <header class="top">
   <div class="wrap">
     <a class="brand" href="/"><img class="logomark" src="/logo.png" width="32" height="32" alt="Orwyn logo"><span class="mark"><span class="o">o</span>rwyn<span class="tm">&trade;</span></span></a>
-    <nav class="main" aria-label="Main"><a href="/">Home</a><a href="/what-orwyn-does">What it does</a><a href="/safety">Safety</a><a href="/about" aria-current="page">About</a><a href="/nhs">Working with the NHS</a><a class="cta" href="/contact">Get in touch</a></nav>
+    <button class="menubtn" aria-label="Open menu" aria-expanded="false" aria-controls="mainnav"><span></span><span></span><span></span></button>
+    <nav class="main" id="mainnav" aria-label="Main"><a href="/">Home</a><a href="/what-orwyn-does">What it does</a><a href="/safety">Safety</a><a href="/about" aria-current="page">About</a><a href="/nhs">Working with the NHS</a><a class="cta" href="/contact">Get in touch</a></nav>
   </div>
 </header>
 <section class="hero small">
   <div class="wrap">
     <div class="kicker">Who is behind it</div>
-    <h1>A surgeon who watched the same thing happen for ten years.</h1>
+    <h1>A surgeon who watched the same thing happen <span class="accent">for ten years.</span></h1>
   </div>
 </section>
 
@@ -94,6 +95,21 @@
     entries.forEach(function(en){ if (en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
   }, {threshold:.12});
   els.forEach(function(e){ io.observe(e); });
+})();
+</script>
+<script>
+(function(){
+  var btn = document.querySelector('.menubtn');
+  var hdr = document.querySelector('header.top');
+  if (!btn || !hdr) return;
+  btn.addEventListener('click', function(){
+    var open = hdr.classList.toggle('menu-open');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  });
+  document.querySelectorAll('nav.main a').forEach(function(a){
+    a.addEventListener('click', function(){ hdr.classList.remove('menu-open'); btn.setAttribute('aria-expanded','false'); });
+  });
 })();
 </script>
 </body>

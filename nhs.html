@@ -31,13 +31,14 @@
 <header class="top">
   <div class="wrap">
     <a class="brand" href="/"><img class="logomark" src="/logo.png" width="32" height="32" alt="Orwyn logo"><span class="mark"><span class="o">o</span>rwyn<span class="tm">&trade;</span></span></a>
-    <nav class="main" aria-label="Main"><a href="/">Home</a><a href="/what-orwyn-does">What it does</a><a href="/safety">Safety</a><a href="/about">About</a><a href="/nhs" aria-current="page">Working with the NHS</a><a class="cta" href="/contact">Get in touch</a></nav>
+    <button class="menubtn" aria-label="Open menu" aria-expanded="false" aria-controls="mainnav"><span></span><span></span><span></span></button>
+    <nav class="main" id="mainnav" aria-label="Main"><a href="/">Home</a><a href="/what-orwyn-does">What it does</a><a href="/safety">Safety</a><a href="/about">About</a><a href="/nhs" aria-current="page">Working with the NHS</a><a class="cta" href="/contact">Get in touch</a></nav>
   </div>
 </header>
 <section class="hero small">
   <div class="wrap">
     <div class="kicker">Working with the NHS</div>
-    <h1>Developed with the people who do the work.</h1>
+    <h1>Developed with the people who <span class="accent">do the work.</span></h1>
   </div>
 </section>
 
@@ -45,7 +46,7 @@
 
   <section class="idea first reveal">
     <div class="kicker">Who it is for</div>
-    <h2 class="section">Clinicians, trusts and the services that commission care</h2>
+    <h2 class="section">Clinicians, trusts and the services that <span class="accent">commission care</span></h2>
     <p class="lead">Orwyn is being developed with NHS musculoskeletal clinicians, and is designed for NHS trusts and the services that commission musculoskeletal care.</p>
     <p class="lead">For the services that pay for musculoskeletal care the point is practical: fewer referrals that add nothing, earlier surgical review for the patients who need it, and a recorded reason for every routing decision.</p>
     <p class="lead">If you run or commission a musculoskeletal service, or you see these patients first and want to say what would actually help, we would like to hear from you.</p>
@@ -88,6 +89,21 @@
     entries.forEach(function(en){ if (en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
   }, {threshold:.12});
   els.forEach(function(e){ io.observe(e); });
+})();
+</script>
+<script>
+(function(){
+  var btn = document.querySelector('.menubtn');
+  var hdr = document.querySelector('header.top');
+  if (!btn || !hdr) return;
+  btn.addEventListener('click', function(){
+    var open = hdr.classList.toggle('menu-open');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  });
+  document.querySelectorAll('nav.main a').forEach(function(a){
+    a.addEventListener('click', function(){ hdr.classList.remove('menu-open'); btn.setAttribute('aria-expanded','false'); });
+  });
 })();
 </script>
 </body>
