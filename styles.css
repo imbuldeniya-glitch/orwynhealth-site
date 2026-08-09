@@ -146,7 +146,6 @@ a{color:var(--plum)}
 /* Coral accent system — large or bold text only (contrast rule) */
 .accent{color:var(--coral)}
 .lead b.hl,p b.hl{color:var(--coral);font-weight:600}
-.card h3{color:var(--coral)}
 a.pagelink .go{color:var(--coral)}
 a.pagelink:hover{border-color:var(--coral)}
 nav.main a:hover{color:var(--coral);background:rgba(229,115,91,.08)}
