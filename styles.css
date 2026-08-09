@@ -156,3 +156,12 @@ footer.site nav a:hover{color:var(--coral)}
 
 /* Coral words in body leads carry weight for contrast compliance */
 .lead .accent,.lede .accent{font-weight:600}
+
+/* Dictionary entry — the name */
+.dict{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:34px 38px;max-width:620px;margin:38px auto 0;text-align:left}
+.dict .word{font-family:'Playfair Display',Georgia,serif;font-size:34px;font-weight:600;color:var(--ink)}
+.dict .word .o{color:var(--coral)}
+.dict .phon{font-size:15px;color:var(--muted);margin-left:10px}
+.dict .pos{font-size:13px;font-style:italic;color:var(--muted);margin-left:8px}
+.dict .ety{font-size:15px;color:var(--muted);margin:14px 0 10px;line-height:1.6}
+.dict .def{font-size:17px;line-height:1.6;margin:0}
