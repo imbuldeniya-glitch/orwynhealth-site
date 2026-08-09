@@ -26,7 +26,7 @@ Coral is spent sparingly, one word at a time: a single headline keyword per head
 Restraint: one idea per screen, generous vertical space, centred sections. Content fades up on scroll (.reveal + IntersectionObserver) and must keep respecting prefers-reduced-motion. Soft geometry: pill buttons, 14px card radii. Mobile below 880px: centred brand, hamburger menu (.menubtn), no visible link row.
 
 ## Structure
-Eleven pages: index, what-orwyn-does, safety, about, nhs, contact, privacy, first-contact-practitioners-explained, msk-triage-explained, standards (reference pages sit in the footer only, never the header nav) — shared styles.css, per-page canonical/OG tags, Organization schema on index only, sitemap.xml kept in step with any page added or removed. Protected files, do not modify or delete: logo.png, favicon.png, portrait.jpg, social.jpg, hero-mark.png, robots.txt, google091cc17a7cfd7918.html.
+Ten pages: index, what-orwyn-does, safety, about, nhs, contact, privacy, first-contact-practitioners-explained, msk-triage-explained, standards (reference pages sit in the footer only, never the header nav) — shared styles.css, per-page canonical/OG tags, Organization schema on index only, sitemap.xml kept in step with any page added or removed. Protected files, do not modify or delete: logo.png, favicon.png, portrait.jpg, social.jpg, hero-mark.png, robots.txt, google091cc17a7cfd7918.html.
 
 ## Process
 1. Branch, never main.
