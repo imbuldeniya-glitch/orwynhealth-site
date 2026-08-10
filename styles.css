@@ -174,6 +174,6 @@ footer.site nav a:hover{color:var(--coral)}
 
 /* Footer standing group: safety and standards, quiet and secondary */
 footer.site .footgroup{margin:0 0 20px}
-footer.site .footgroup .footgroup-h{display:block;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:#CBB9CC;margin-bottom:7px}
+footer.site .footgroup .footgroup-h{display:block;font-size:11.5px;font-weight:600;letter-spacing:.02em;color:#CBB9CC;margin-bottom:7px}
 footer.site .footgroup a{color:#E7DCE6;text-decoration:none;font-size:12.5px;margin-right:16px}
 footer.site .footgroup a:hover{color:var(--coral)}
