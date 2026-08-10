@@ -3,16 +3,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Working with the NHS — for trusts, services and clinicians | orwyn</title>
-<meta name="description" content="Orwyn is being developed with NHS musculoskeletal clinicians, and is designed for NHS Trusts and the services that commission musculoskeletal care.">
+<title>For commissioners, MSK triage and general practice | orwyn</title>
+<meta name="description" content="How Orwyn works with the NHS, for commissioners of musculoskeletal care, for musculoskeletal triage and first contact services, and for general practice.">
 
 <link rel="canonical" href="https://orwynhealth.com/nhs">
 <meta name="robots" content="index, follow">
 <meta name="theme-color" content="#2B1B2E">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Orwyn">
-<meta property="og:title" content="Working with the NHS — for trusts, services and clinicians | orwyn">
-<meta property="og:description" content="Orwyn is being developed with NHS musculoskeletal clinicians, and is designed for NHS Trusts and the services that commission musculoskeletal care.">
+<meta property="og:title" content="For commissioners, MSK triage and general practice | orwyn">
+<meta property="og:description" content="How Orwyn works with the NHS, for commissioners of musculoskeletal care, for musculoskeletal triage and first contact services, and for general practice.">
 <meta property="og:url" content="https://orwynhealth.com/nhs">
 <meta property="og:image" content="https://orwynhealth.com/social.jpg">
 <meta property="og:image:width" content="1200">
@@ -26,6 +26,15 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/styles.css">
+<style>
+  .secnav{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;max-width:640px;margin:56px auto 0}
+  .secnav a{font-size:14px;font-weight:600;color:var(--plum);text-decoration:none;border:1px solid var(--line);border-radius:999px;padding:8px 16px;line-height:1.35}
+  .secnav a:hover{border-color:var(--coral);color:var(--coral)}
+  .source{font-size:12.5px;line-height:1.6;color:var(--muted);max-width:62ch;margin:22px auto 0}
+  .source a{color:var(--muted)}
+  .idea[id]{scroll-margin-top:88px}
+  @media(max-width:520px){.secnav{flex-direction:column;align-items:stretch;max-width:320px}.secnav a{text-align:center}}
+</style>
 </head>
 <body>
 <header class="top">
@@ -44,21 +53,36 @@
 
 <div class="wrap pad">
 
-  <section class="idea first reveal">
-    <div class="kicker">Who it is for</div>
-    <h2 class="section">Clinicians, trusts and the services that commission <span class="accent">care</span></h2>
-    <p class="lead">Orwyn is being <span class="accent">co-designed</span> with the clinicians who will use it and with patients, and is designed for NHS Trusts and the services that commission musculoskeletal care.</p>
-    <p class="lead">Patient involvement sits at the <span class="accent">centre</span> of that work, because the best-designed pathway still fails if patients do not believe the plan, understand it, or cannot realistically follow it.</p>
-    <p class="lead">For the services that pay for musculoskeletal care the point is <span class="accent">practical</span>: fewer referrals that add nothing, earlier surgical review for the patients who need it, and a recorded reason for every decision.</p>
-    <p class="lead">If you run or commission a musculoskeletal service, or you see these patients first and want to say what would actually help, we would like to <span class="accent">hear</span> from you.</p>
-    <p>If you want the plain version of how these roles fit together, we have written one: <a href="/first-contact-practitioners-explained">first contact practitioners and MSK roles, explained</a>.</p>
+  <nav class="secnav" aria-label="On this page">
+    <a href="#commissioners">Commissioners</a>
+    <a href="#triage">Triage and first contact</a>
+    <a href="#general-practice">General practice</a>
+  </nav>
+
+  <section class="idea first reveal" id="scale">
+    <h2 class="section">The size of the problem</h2>
+    <p class="lead">Musculoskeletal problems are one of the biggest things the NHS deals with. 20 million people in the UK live with a musculoskeletal condition. 1 in 4 GP appointments is for one. The NHS spends around &pound;5 billion a year on them, and 30 million working days are lost to them every year.</p>
+    <p class="lead">ARMA, the alliance of patient charities and professional bodies that speaks for musculoskeletal health in the UK, describes <a href="https://arma.uk.net/policy-priorities/better-msk-care/" target="_blank" rel="noopener noreferrer">what good care needs</a>: early assessment, rapid advice and appropriate triage, so people get the right support before problems escalate, and strong links between community services and specialist care. Delays, they note, lead to avoidable deterioration, loss of function and increased pressure on the rest of the system.</p>
+    <p class="source">Figures and policy positions published by <a href="https://arma.uk.net" target="_blank" rel="noopener noreferrer">ARMA</a>, the Arthritis and Musculoskeletal Alliance. Orwyn has no affiliation with ARMA and is not endorsed by it.</p>
   </section>
 
-  <div class="band reveal">
-    <h2>Say what would actually <span class="accent">help.</span></h2>
-    <p>We reply to clinicians, services and commissioners.</p>
-    <a class="btn ghost" href="/contact">Get in touch</a>
-  </div>
+  <section class="idea reveal" id="commissioners">
+    <h2 class="section">For services that commission musculoskeletal care</h2>
+    <p class="lead">ARMA's analysis of every integrated care board's joint forward plan found that 1 in 3 do not meaningfully reference musculoskeletal health, and 2 in 3 do not reference chronic pain services. Their recommendation is a joined up approach across the whole system, with clear outcomes for the services being bought, and services measured on function and participation rather than on activity.</p>
+    <p class="lead">Orwyn does not ask for more money to be spent. It is built for one moment inside the spending that already happens: the point where the clinician seeing the patient first decides whether that patient needs a surgical opinion. Get that moment right and the patients who need an operation are found sooner, and the patients who do not are given a clear answer instead of a year of waiting to be told so. Because every decision is recorded with the reason for it, what happens next can be counted.</p>
+  </section>
+
+  <section class="idea reveal" id="triage">
+    <h2 class="section">For musculoskeletal triage and first contact services</h2>
+    <p class="lead">Orwyn is for the clinician, in the room, while the patient is in front of them. It is not a patient questionnaire and not something the patient fills in at home. It fits inside a normal appointment and it does not slow the appointment down.</p>
+    <p class="lead">Every suggestion comes with the reason for it, in plain words. The clinician can disagree and record why, and that disagreement is kept. Orwyn does not check, approve or oversee anyone's work. It carries a surgeon's judgement into a room the surgeon is not in, and the clinician assesses the patient and decides.</p>
+  </section>
+
+  <section class="idea reveal" id="general-practice">
+    <h2 class="section">For general practice</h2>
+    <p class="lead">General practice still sees most musculoskeletal presentations, and very few GPs have a musculoskeletal special interest. The hardest cases are often the ones already waiting, who keep coming back, where the honest question is whether anything has been missed and whether the plan should change.</p>
+    <p class="lead">Orwyn is designed and tested for first contact musculoskeletal appointments rather than for a ten minute general practice appointment. We are talking to GPs now about whether it is useful in general practice and what would have to change. If you see these patients, <a href="/contact">we would like to hear from you</a>.</p>
+  </section>
 
   <div class="foot">
     <div class="disclaim">Decision support for clinicians only. The clinician assesses the patient and makes every decision. Orwyn is not a service for patients and gives no advice directly to patients or the public.</div>
