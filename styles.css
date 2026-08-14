@@ -275,3 +275,7 @@ section.idea.ground.slim{padding:60px 0}
 
 /* Closing band on restructured pages: no extra top margin */
 .band.close{margin-top:0}
+
+/* two-route CTA pair */
+.cta-row{margin-top:22px}
+.cta-row .btn{margin:6px}
