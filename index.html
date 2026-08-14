@@ -68,14 +68,14 @@
 <body>
 <header class="top">
   <div class="wrap">
-    <a class="brand" href="/"><img class="logomark" src="/logo.png" width="34" height="34" alt="Orwyn logo"><span class="mark"><span class="o">o</span>rwyn<span class="tm">&trade;</span></span></a>
+    <a class="brand" href="/"><img class="logomark" src="/logo.png" width="32" height="32" alt="Orwyn logo"><span class="mark"><span class="o">o</span>rwyn<span class="tm">&trade;</span></span></a>
     <button class="menubtn" aria-label="Open menu" aria-expanded="false" aria-controls="mainnav"><span></span><span></span><span></span></button>
-    <nav class="main" id="mainnav" aria-label="Main"><a href="/" aria-current="page">Home</a><a href="/what-orwyn-does">What it does</a><a href="/safety">Safety</a><a href="/about">About</a><a href="/nhs">Working with the NHS</a><a class="cta" href="/contact">Get in touch</a></nav>
+    <nav class="main" id="mainnav" aria-label="Main"><a href="/" aria-current="page">Home</a><a href="/what-orwyn-does">What it does</a><a href="/safety">Safety</a><a href="/about">About</a><a href="/nhs">Working with the NHS</a><a href="/demo">See the demo</a><a class="cta" href="/contact">Get in touch</a></nav>
   </div>
 </header>
 <section class="hero">
   <div class="wrap">
-    <img class="heromark" src="/hero-mark.png" alt="Orwyn" width="240" height="240">
+    <img class="heromark" src="/hero-mark.png" alt="Orwyn" width="240" height="208">
     <div class="kicker"><span class="accent">Surgeon</span>-governed decision support for first-contact MSK clinicians</div>
     <div class="kicker kicker2"><span class="accent">Clinician</span>-led. Surgeon-supported. Patient-focused.</div>
     <h1>Better decisions, <span class="accent">together.</span></h1>
@@ -85,18 +85,85 @@
   </div>
 </section>
 
-<div class="wrap pad">
-
-  <section class="idea first reveal">
+<!-- PROBLEM — parchment ground, carries the diagram -->
+<section class="idea ground ground-parchment first reveal">
+  <div class="wrap">
     <div class="kicker">The problem</div>
     <h2 class="section">Musculoskeletal care goes wrong in <span class="accent">both</span> directions</h2>
-    <p class="lead">Some patients are sent for a surgical opinion they do not need, and wait months to be told so. Others are managed for a year with a problem that needed an operation. Both happen for the same reason: the person seeing the patient first has no way to reach the judgement of the person at the end of the pathway.</p>
-  </section>
+    <p class="body">Some patients are sent for a surgical opinion they do not need, and wait months to be told so. Others are managed for a year with a problem that needed an operation. First contact clinicians already make these decisions every day. What the system does not consistently do is make the specialist decision thresholds applied downstream, and the eventual outcome of the referral, available at the point of decision.</p>
+    <figure class="diagram reveal">
+      <svg viewBox="0 0 820 540" role="img" aria-labelledby="dgmT dgmD" preserveAspectRatio="xMidYMid meet">
+        <title id="dgmT">One decision, two directions</title>
+        <desc id="dgmD">At first contact a patient and clinician reach the referral decision, where Orwyn makes the specialist criteria and reasoning visible. From there the pathway separates into two appropriate directions: when a specialist opinion is indicated the patient reaches earlier specialist review; when it is not indicated now the patient gets a clear non-surgical plan. Both are good outcomes. Behind these, two faint failure routes show what happens without shared thresholds: an unnecessary specialist wait, or a delayed escalation. The outcome is returned to the first contact clinician.</desc>
+        <defs>
+          <marker id="ahP" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L6.5,3 L0,6 Z" fill="#2B1B2E"/></marker>
+          <marker id="ahC" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L6.5,3 L0,6 Z" fill="#E5735B"/></marker>
+          <marker id="ahS" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L6.5,3 L0,6 Z" fill="#7A8F7D"/></marker>
+          <marker id="ahG" markerWidth="8" markerHeight="8" refX="5.5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#B9AEBA"/></marker>
+        </defs>
+        <path class="dgm-ghost" d="M150,210 C 270,74 490,74 606,150" marker-end="url(#ahG)"/>
+        <path class="dgm-ghost" d="M150,290 C 270,470 490,470 606,354" marker-end="url(#ahG)"/>
+        <text x="392" y="60" text-anchor="middle" class="dgm-gl">Unnecessary specialist wait</text>
+        <text x="392" y="470" text-anchor="middle" class="dgm-gl">Delayed escalation</text>
+        <path class="dgm-fb" d="M700,406 C 610,504 250,514 116,300" marker-end="url(#ahP)"/>
+        <text x="392" y="522" text-anchor="middle" class="dgm-fl">Outcome returned to clinician</text>
+        <line x1="186" y1="250" x2="300" y2="250" class="dgm-main-p" marker-end="url(#ahP)"/>
+        <path class="dgm-main-c" d="M472,198 C 540,176 566,190 606,193" marker-end="url(#ahC)"/>
+        <path class="dgm-main-s" d="M472,302 C 540,328 566,352 606,360" marker-end="url(#ahS)"/>
+        <rect x="32" y="204" width="152" height="92" rx="13" class="dgm-box"/>
+        <text x="108" y="244" text-anchor="middle" class="dgm-cap">FIRST CONTACT</text>
+        <text x="108" y="263" text-anchor="middle" class="dgm-sub">Patient and clinician</text>
+        <text x="108" y="277" text-anchor="middle" class="dgm-sub">assessment</text>
+        <circle cx="396" cy="250" r="90" class="dgm-decision"/>
+        <text x="396" y="236" text-anchor="middle" class="dgm-t">THE REFERRAL</text>
+        <text x="396" y="255" text-anchor="middle" class="dgm-t">DECISION</text>
+        <text x="396" y="279" text-anchor="middle" class="dgm-dsub">Orwyn makes the criteria</text>
+        <text x="396" y="293" text-anchor="middle" class="dgm-dsub">and reasoning visible</text>
+        <rect x="606" y="151" width="200" height="84" rx="13" class="dgm-card-c"/>
+        <text x="628" y="181" class="dgm-cap2">SPECIALIST OPINION</text>
+        <text x="628" y="196" class="dgm-cap2">INDICATED</text>
+        <text x="628" y="219" class="dgm-sub2">Earlier specialist review</text>
+        <rect x="606" y="319" width="200" height="84" rx="13" class="dgm-card-s"/>
+        <text x="628" y="349" class="dgm-cap2">SPECIALIST OPINION</text>
+        <text x="628" y="364" class="dgm-cap2">NOT INDICATED NOW</text>
+        <text x="628" y="387" class="dgm-sub2">A clear non-surgical plan</text>
+      </svg>
+      <div class="dgm-alt">
+        <ol>
+          <li><b>First contact.</b> Patient and clinician assessment.</li>
+          <li><b>The referral decision.</b> Orwyn makes the specialist criteria and reasoning visible.</li>
+          <li><b>Specialist opinion indicated.</b> Earlier specialist review.</li>
+          <li><b>Specialist opinion not indicated now.</b> A clear non-surgical plan.</li>
+        </ol>
+        <p>Both directions are good outcomes. Without shared thresholds a patient drifts, into an unnecessary specialist wait or a delayed escalation. The outcome is returned to the first contact clinician.</p>
+      </div>
+      <figcaption class="figcap">One decision, two directions. Orwyn supports the referral decision at first contact by making the specialist criteria and reasoning visible. Both directions are good outcomes.</figcaption>
+    </figure>
+  </div>
+</section>
 
-  <section class="idea reveal">
+<!-- SEE ORWYN IN A CONSULTATION: product preview, white ground -->
+<section class="idea ground ground-white reveal">
+  <div class="wrap">
+    <div class="kicker">See it</div>
+    <h2 class="section">See Orwyn in a <span class="accent">consultation</span></h2>
+    <p class="body">The suggested next step, the reasons behind it with their rule numbers, the evidence each rule rests on, the control to disagree, and what would change the answer, on one screen, inside a normal appointment.</p>
+    <figure class="device-figure reveal">
+      <div class="device">
+        <div class="device-bar"><span></span><span></span><span></span></div>
+        <img class="device-shot" src="/product-decision-1440.png" width="2280" height="1110" alt="The Orwyn clinician tool: a referral decision with its reasons and rule numbers, the evidence each rule rests on, an override control, and what would change the answer. Synthetic sample data.">
+      </div>
+      <figcaption class="figcap">Real build, synthetic data. <a href="/demo">See the demo</a></figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- WHAT ORWYN IS — plum band (the weight), white cards -->
+<section class="idea ground ground-plum reveal">
+  <div class="wrap">
     <div class="kicker">What Orwyn is</div>
     <h2 class="section">A surgeon's criteria, written down and <span class="accent">shown</span></h2>
-    <p class="lead">Every suggestion Orwyn makes comes with the reason for it, in plain words. There are no scores and no percentages. The clinician can disagree and record why, and that disagreement is kept.</p>
+    <p class="body">Every suggestion Orwyn makes comes with the reason for it, in plain words. There are no scores and no percentages. The clinician can disagree and record why, and that disagreement is kept.</p>
     <div class="three">
       <div class="card reveal">
         <h3>Used by the clinician</h3>
@@ -104,62 +171,67 @@
       </div>
       <div class="card reveal">
         <h3>It shows its reasons</h3>
-        <p>Orwyn runs on rules a named consultant surgeon has written and signed off, built from the strongest available research evidence and national guidance: <a href="https://www.nice.org.uk/" target="_blank" rel="noopener">NICE</a>, the <a href="https://gettingitrightfirsttime.co.uk/" target="_blank" rel="noopener">Getting It Right First Time programme</a> and the British orthopaedic specialist societies, including the <a href="https://www.boa.ac.uk/" target="_blank" rel="noopener">British Orthopaedic Association</a>, the <a href="https://bask.ac.uk/" target="_blank" rel="noopener">British Association for Surgery of the Knee</a> and the <a href="https://britishhipsociety.com/" target="_blank" rel="noopener">British Hip Society</a>. It is not a model whose reasoning cannot be inspected. Anyone reviewing a decision can be shown why it was made.</p>
+        <p>Orwyn runs on rules a named consultant surgeon has written and signed off, built from the strongest research evidence and national guidance. It is not a model whose reasoning cannot be inspected: anyone reviewing a decision can be shown why it was made.</p>
       </div>
       <div class="card reveal">
         <h3>With you, not above you</h3>
         <p>Orwyn does not check, approve or oversee the clinician's work. It carries a surgeon's judgement into a room the surgeon is not in. The clinician assesses the patient and decides.</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="idea reveal">
+<!-- IN A CLINIC — sage-tint ground, numbered sequence -->
+<section class="idea ground ground-sage reveal">
+  <div class="wrap">
     <div class="kicker">In a clinic</div>
     <h2 class="section">Six things happen, and only one of them is a <span class="accent">decision</span></h2>
-    <p class="lead">A decision on its own changes very little. What makes a plan hold is that the patient believes it, that the difficult cases still reach a surgeon, and that the clinician finds out what happened.</p>
-    <div class="three">
-      <div class="card reveal">
+    <p class="body">A decision on its own changes very little. What makes a plan hold is that the patient believes it, that the difficult cases still reach a surgeon, and that the clinician finds out what happened.</p>
+    <ol class="sequence reveal">
+      <li class="step lead">
+        <div class="num">1</div>
         <h3>The safety questions come first</h3>
         <p>Nothing else appears until every safety question has been answered. An unanswered question is never read as a no, and anything that should not wait is named, with where the patient should go and how quickly.</p>
-      </div>
-      <div class="card reveal">
+      </li>
+      <li class="step lead">
+        <div class="num">2</div>
         <h3>The decision, with its reasons</h3>
         <p>One suggested next step, in plain words, with the reasoning shown and the evidence behind each part of it. The clinician can disagree, and the disagreement is recorded rather than overruled.</p>
-      </div>
-      <div class="card reveal">
+      </li>
+      <li class="step">
+        <div class="num">3</div>
         <h3>The patient leaves with it</h3>
         <p>The plan the clinician has agreed with the patient, in plain English, texted or printed in the room. What was decided, why, and what would change the answer. A decision not to operate arrives as an answer rather than a refusal.</p>
-      </div>
-      <div class="card reveal">
+      </li>
+      <li class="step">
+        <div class="num">4</div>
         <h3>The hard cases still reach a surgeon</h3>
-        <p>Some patients cannot be settled by any set of criteria, and those are usually the ones who most need judgement. Orwyn prepares them for an existing multidisciplinary meeting, and records the decision and who made it. It does not hold the meeting and it does not make that decision.</p>
-      </div>
-      <div class="card reveal">
+        <p>Some patients cannot be settled by any criteria, and those are usually the ones who most need judgement. Orwyn prepares them for an existing multidisciplinary meeting, and records the decision and who made it. It does not hold the meeting or make the decision.</p>
+      </li>
+      <li class="step tail">
+        <div class="num">5</div>
         <h3>The clinician finds out what happened</h3>
         <p>Today a referral is made and the outcome goes somewhere else, so the clinician who decided never learns whether they were right. Orwyn sends that outcome back to them. It is theirs alone: never a comparison with colleagues, never a report to a manager.</p>
-      </div>
-      <div class="card reveal">
+      </li>
+      <li class="step tail">
+        <div class="num">6</div>
         <h3>And it counts all of it</h3>
-        <p>Every decision, every disagreement and every outcome is recorded, so a service can show what changed rather than assert it. Nothing about how Orwyn behaves changes by itself. Rules change only when a named surgeon changes them, in writing, with a version and a date.</p>
-      </div>
-    </div>
-  </section>
+        <p>Every decision, every disagreement and every outcome is recorded, so a service can show what changed rather than assert it. Nothing about how Orwyn behaves changes by itself: rules change only when a named surgeon changes them, in writing, with a version and a date.</p>
+      </li>
+    </ol>
+    <a class="nextlink reveal" href="/what-orwyn-does">
+      <span class="nextlink-k">Go deeper</span>
+      <span class="nextlink-h">What Orwyn does, in full &mdash; the problem, the tool, and where it came from</span>
+      <span class="nextlink-go">Read more &rarr;</span>
+    </a>
+  </div>
+</section>
 
-  <section class="idea reveal">
-    <div class="kicker">Explore</div>
-    <h2 class="section">Find what you came for</h2>
-    <div class="pagelinks">
-      <a class="pagelink reveal" href="/what-orwyn-does"><h3>What Orwyn does</h3><p>The problem it exists for, what it is, and where it came from.</p><span class="go">Read more</span></a>
-      <a class="pagelink reveal" href="/safety"><h3>Safety and how it is built</h3><p>Written rules, not a black box, built for the standard it will be held to.</p><span class="go">Read more</span></a>
-      <a class="pagelink reveal" href="/about"><h3>Who is behind it</h3><p>Dr Arj Imbuldeniya, consultant orthopaedic knee and hip surgeon.</p><span class="go">Read more</span></a>
-      <a class="pagelink reveal" href="/nhs"><h3>Working with the NHS</h3><p>For the clinicians who see these patients first, and the services that commission their care.</p><span class="go">Read more</span></a>
-    </div>
-  </section>
-
-  <div class="band reveal">
+<div class="wrap">
+  <div class="band close reveal">
     <h2>If you see these patients <span class="accent">first</span>, we would like to hear from you.</h2>
     <p>Orwyn is being developed with NHS musculoskeletal clinicians, and is designed for NHS Trusts and the services that commission musculoskeletal care.</p>
-    <a class="btn ghost" href="/contact">Get in touch</a>
+    <a class="btn ghost" href="/demo">See the demo</a><a class="btn ghost" href="/contact">Discuss an NHS pilot</a>
   </div>
 
   <div class="foot">

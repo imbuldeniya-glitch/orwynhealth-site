@@ -32,7 +32,7 @@
   <div class="wrap">
     <a class="brand" href="/"><img class="logomark" src="/logo.png" width="32" height="32" alt="Orwyn logo"><span class="mark"><span class="o">o</span>rwyn<span class="tm">&trade;</span></span></a>
     <button class="menubtn" aria-label="Open menu" aria-expanded="false" aria-controls="mainnav"><span></span><span></span><span></span></button>
-    <nav class="main" id="mainnav" aria-label="Main"><a href="/">Home</a><a href="/what-orwyn-does" aria-current="page">What it does</a><a href="/safety">Safety</a><a href="/about">About</a><a href="/nhs">Working with the NHS</a><a class="cta" href="/contact">Get in touch</a></nav>
+    <nav class="main" id="mainnav" aria-label="Main"><a href="/">Home</a><a href="/what-orwyn-does" aria-current="page">What it does</a><a href="/safety">Safety</a><a href="/about">About</a><a href="/nhs">Working with the NHS</a><a href="/demo">See the demo</a><a class="cta" href="/contact">Get in touch</a></nav>
   </div>
 </header>
 <section class="hero small">
@@ -42,12 +42,12 @@
   </div>
 </section>
 
-<div class="wrap pad">
-
-  <section class="idea first reveal">
+<!-- PROBLEM — parchment: leads, national statistics, and the diagram -->
+<section class="idea ground ground-parchment first reveal">
+  <div class="wrap">
     <div class="kicker">The problem</div>
     <h2 class="section">Care goes wrong in <span class="accent">both</span> directions</h2>
-    <p class="lead">Some patients are sent for a surgical opinion they do not need, and wait months to be told so. Others are managed for a year with a problem that needed an operation. Both happen for the same reason: the person seeing the patient first has no way to reach the judgement of the person at the end of the pathway.</p>
+    <p class="body">Some patients are sent for a surgical opinion they do not need, and wait months to be told so. Others are managed for a year with a problem that needed an operation. First contact clinicians already make these decisions every day. What the system does not consistently do is make the specialist decision thresholds applied downstream, and the eventual outcome of the referral, available at the point of decision.</p>
     <div class="three">
       <div class="card stat reveal">
         <div class="n">Up to 30%</div>
@@ -65,13 +65,50 @@
         <div class="src">Source: <a href="https://www.kingsfund.org.uk/insight-and-analysis/data-and-charts/waiting-times-non-urgent-treatment" target="_blank" rel="noopener">The King's Fund, NHS waiting times analysis</a></div>
       </div>
     </div>
-    <p class="lead">Musculoskeletal means the joints, muscles, bones and soft tissues. First contact practitioners are the clinicians who see these patients before anyone else, usually in general practice or a community service: most often physiotherapists, and also GPs, osteopaths, podiatrists, sports and exercise medicine doctors, and the advanced practitioners who run triage clinics. They are experienced and they are not the problem. The problem is that the system shows none of them the surgical end of the pathway, and gives them no way to reach a surgical opinion at the moment the decision is actually made.</p>
-  </section>
+    <figure class="diagram reveal">
+      <svg viewBox="0 0 760 340" role="img" aria-labelledby="dgmT dgmD" preserveAspectRatio="xMidYMid meet">
+        <title id="dgmT">How musculoskeletal care goes wrong in two directions</title>
+        <desc id="dgmD">A pathway runs left to right through four stages: first contact, then community care, then the orthopaedic clinic, then surgery. The correct route moves through each stage in turn. In one failure a patient is sent from first contact straight to the orthopaedic clinic, too early, skipping community care. In the other a patient is held in community care too long and reaches the orthopaedic clinic late. The single decision Orwyn supports is at first contact.</desc>
+        <defs>
+          <marker id="ahSage" markerWidth="8" markerHeight="8" refX="5.5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#7A8F7D"/></marker>
+          <marker id="ahPlum" markerWidth="8" markerHeight="8" refX="5.5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#2B1B2E"/></marker>
+        </defs>
+        <!-- correct route: sage spine -->
+        <line x1="115" y1="195" x2="672" y2="195" fill="none" stroke="#7A8F7D" stroke-width="3" marker-end="url(#ahSage)"/>
+        <!-- failure: sent too early (above the line) -->
+        <path d="M140,186 C 250,112 400,112 506,183" fill="none" stroke="#2B1B2E" stroke-width="2" stroke-dasharray="5 5" marker-end="url(#ahPlum)"/>
+        <text x="324" y="104" text-anchor="middle" class="dgm-fl">sent too early</text>
+        <!-- failure: held too long (below the line) -->
+        <path d="M140,205 C 250,286 400,286 506,209" fill="none" stroke="#2B1B2E" stroke-width="2" stroke-dasharray="5 5" marker-end="url(#ahPlum)"/>
+        <text x="324" y="308" text-anchor="middle" class="dgm-fl">held too long</text>
+        <!-- pathway stops: plum nodes -->
+        <circle cx="315" cy="195" r="6" fill="#2B1B2E"/>
+        <circle cx="515" cy="195" r="6" fill="#2B1B2E"/>
+        <circle cx="672" cy="195" r="6" fill="#2B1B2E"/>
+        <!-- stage labels -->
+        <text x="115" y="224" text-anchor="middle" class="dgm-nl">First contact</text>
+        <text x="315" y="224" text-anchor="middle" class="dgm-nl">Community care</text>
+        <text x="515" y="224" text-anchor="middle" class="dgm-nl">Orthopaedic</text>
+        <text x="515" y="240" text-anchor="middle" class="dgm-nl">clinic</text>
+        <text x="672" y="224" text-anchor="middle" class="dgm-nl">Surgery</text>
+        <!-- the one decision, the one coral -->
+        <line x1="115" y1="150" x2="115" y2="187" stroke="#2B1B2E" stroke-width="1.5"/>
+        <circle cx="115" cy="195" r="7.5" fill="#E5735B"/>
+        <text x="115" y="120" text-anchor="middle" class="dgm-dl">The decision</text>
+        <text x="115" y="136" text-anchor="middle" class="dgm-dl">Orwyn supports</text>
+      </svg>
+      <figcaption class="figcap">Two ways the same pathway fails &mdash; and the single decision, at first contact, that Orwyn supports.</figcaption>
+    </figure>
+    <p class="body">Musculoskeletal means the joints, muscles, bones and soft tissues. First contact practitioners are the clinicians who see these patients before anyone else, usually in general practice or a community service: most often physiotherapists, and also GPs, osteopaths, podiatrists, sports and exercise medicine doctors, and the advanced practitioners who run triage clinics. They are experienced and they are not the problem. The problem is that the system shows none of them the surgical end of the pathway, and gives them no way to reach a surgical opinion at the moment the decision is actually made.</p>
+  </div>
+</section>
 
-  <section class="idea reveal">
+<!-- WHAT ORWYN IS — plum band (the weight), white cards -->
+<section class="idea ground ground-plum reveal">
+  <div class="wrap">
     <div class="kicker">What Orwyn is</div>
     <h2 class="section">A surgeon's criteria, written down and <span class="accent">shown</span></h2>
-    <p class="lead">Most patients do not need it. An experienced clinician is certain about most of the people they see, and existing triage stays exactly where it is. Orwyn is for the referral decisions where the surgical question is genuinely in play, and for making the reasoning visible to both clinician and patient when it is.</p>
+    <p class="body">Most patients do not need it. An experienced clinician is certain about most of the people they see, and existing triage stays exactly where it is. Orwyn is for the referral decisions where the surgical question is genuinely in play, and for making the reasoning visible to both clinician and patient when it is.</p>
     <div class="three">
       <div class="card reveal">
         <h3>It is used by the clinician</h3>
@@ -86,43 +123,71 @@
         <p>Orwyn does not check, approve or oversee the clinician's work. It carries a surgeon's judgement into a room the surgeon is not in. The clinician assesses the patient and decides.</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="idea reveal">
+<!-- WHAT IT DOES IN THE ROOM — parchment, numbered sequence -->
+<section class="idea ground ground-parchment reveal">
+  <div class="wrap">
     <div class="kicker">What it does in the room</div>
     <h2 class="section">A decision is not enough on its <span class="accent">own</span></h2>
-    <p class="lead">Most of the harm in this pathway does not come from a single wrong decision. It comes from a right decision the patient does not accept, a difficult case nobody senior ever sees, and a clinician who never learns what happened to the patient they sent.</p>
-    <div class="two">
-      <div class="card reveal">
+    <p class="body">Most of the harm in this pathway does not come from a single wrong decision. It comes from a right decision the patient does not accept, a difficult case nobody senior ever sees, and a clinician who never learns what happened to the patient they sent.</p>
+    <ol class="sequence reveal">
+      <li class="step lead">
+        <div class="num">1</div>
         <h3>The patient leaves with the plan</h3>
         <p>At the end of the appointment the patient is given the plan the clinician has agreed with them, in plain English, by text or on paper. It says what was decided, why, and what would change the answer. Where a consultant has reviewed the case it says so. Nothing is asked of the patient in return: there is no app to download, no account, no diary to fill in, and nothing is collected back from them.</p>
         <p>This exists because of a finding we did not expect. Clinicians told us, independently of each other, that patients accept the same advice differently depending on who appears to stand behind it. A decision not to operate is far easier to accept when the reasoning is visible and a surgeon's criteria are attached to it.</p>
-      </div>
-      <div class="card reveal">
+      </li>
+      <li class="step lead">
+        <div class="num">2</div>
         <h3>The difficult cases still reach a surgeon</h3>
         <p>No set of written criteria settles every patient, and the ones it cannot settle are usually the ones who most need judgement. Orwyn identifies those cases and prepares them, in a structured form, for an existing multidisciplinary meeting: what was tried and for how long, the imaging and its dates, and why the criteria did not resolve it. The decision, the reason and the responsible clinician are recorded, and the letters to the patient and the GP are drafted from them.</p>
         <p>Orwyn does not hold the meeting, does not schedule it and does not make the decision. It removes the preparation time that makes consultant sessions too expensive for most community services to justify.</p>
-      </div>
-      <div class="card reveal">
+      </li>
+      <li class="step tail">
+        <div class="num">3</div>
         <h3>The clinician finds out what happened</h3>
         <p>When a first contact clinician refers a patient, the outcome letter goes to the GP and the patient leaves the community service. The clinician who made the decision usually never learns what happened. There is no loop anywhere in this pathway, which is a strange way to run a system that depends on those decisions being good.</p>
         <p>Orwyn returns the outcome to the clinician who made the referral. It is theirs and theirs alone. There is no league table, no ranking, no comparison against colleagues and no report to a line manager. Feedback to a clinician is how anyone improves. Comparison between clinicians is something else, and we have deliberately built it so that it cannot be done.</p>
-      </div>
-      <div class="card reveal">
+      </li>
+      <li class="step tail">
+        <div class="num">4</div>
         <h3>It does not learn by itself</h3>
         <p>Every decision, disagreement and outcome is recorded, and none of it changes how Orwyn behaves. The rules change only when a named consultant surgeon changes them, in writing, with a version number and a date, so that any decision can be traced to the exact rule that produced it. That is a deliberate constraint and not a limitation we intend to remove.</p>
-      </div>
-    </div>
-  </section>
+      </li>
+    </ol>
+  </div>
+</section>
 
-  <section class="idea reveal">
+<!-- SEE IT — white ground, product device frame -->
+<section class="idea ground ground-white reveal">
+  <div class="wrap">
+    <div class="kicker">See it</div>
+    <h2 class="section">The tool the clinician <span class="accent">uses</span></h2>
+    <p class="body">The suggested next step, the reasons behind it with their rule numbers, the evidence each rule rests on, the control to disagree, and what would change the answer &mdash; on one screen, inside a normal appointment.</p>
+    <figure class="device-figure reveal">
+      <div class="device">
+        <div class="device-bar"><span></span><span></span><span></span></div>
+        <img class="device-shot" src="/product-decision-1440.png" width="2280" height="1110" alt="The Orwyn clinician tool: a referral decision with its reasons and rule numbers, the evidence each rule rests on, an override control, and what would change the answer. Synthetic sample data.">
+      </div>
+      <figcaption class="figcap">Real build, synthetic data. <a href="/demo">See the demo</a></figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- WHERE IT COMES FROM — sage-tint ground -->
+<section class="idea ground ground-sage reveal">
+  <div class="wrap">
     <div class="kicker">Where it comes from</div>
     <h2 class="section">Built with <span class="accent">clinicians</span>, from evidence and experience</h2>
-    <p class="lead">Orwyn was designed from frontline NHS practice. It draws on decades of seeing and treating thousands of patients, surgically and non-surgically, and on conversations about this problem with over a hundred clinicians: physiotherapists, advanced practice physiotherapists, first contact practitioners, GPs, sports and exercise medicine doctors, radiologists and orthopaedic surgeons. The consensus, wherever the question was asked, was the same. Better decisions for patients are made <b class="hl">together</b>.</p>
-    <p class="lead">The criteria are built from the highest quality evidence available in published research and national guidance, combined with that clinical experience. When a consultant surgeon and a physiotherapist work side by side, patients reach the right decision sooner. Orwyn exists to make that working relationship available in every clinic, at a cost the NHS can afford.</p>
-  </section>
+    <p class="body">Orwyn was designed from frontline NHS practice. It draws on decades of seeing and treating thousands of patients, surgically and non-surgically, and on conversations about this problem with over a hundred clinicians: physiotherapists, advanced practice physiotherapists, first contact practitioners, GPs, sports and exercise medicine doctors, radiologists and orthopaedic surgeons. The consensus, wherever the question was asked, was the same. Better decisions for patients are made <b class="hl">together</b>.</p>
+    <p class="body">The criteria are built from the highest quality evidence available in published research and national guidance, combined with that clinical experience. When a consultant surgeon and a physiotherapist work side by side, patients reach the right decision sooner. Orwyn exists to make that working relationship available in every clinic, at a cost the NHS can afford.</p>
+  </div>
+</section>
 
-  <div class="band reveal">
+<div class="wrap">
+  <div class="band close reveal">
     <h2>How it is built matters as much as what it does.</h2>
     <p>Written rules, a named surgeon behind them, and safety questions that must be answered first.</p>
     <a class="btn ghost" href="/safety">Safety and how it is built</a>

@@ -1,0 +1,2 @@
+# Build tooling for the /demo gate — never serve this publicly.
+demo/_build/
