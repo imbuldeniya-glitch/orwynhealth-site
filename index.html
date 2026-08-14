@@ -92,38 +92,52 @@
     <h2 class="section">Musculoskeletal care goes wrong in <span class="accent">both</span> directions</h2>
     <p class="body">Some patients are sent for a surgical opinion they do not need, and wait months to be told so. Others are managed for a year with a problem that needed an operation. First contact clinicians already make these decisions every day. What the system does not consistently do is make the specialist decision thresholds applied downstream, and the eventual outcome of the referral, available at the point of decision.</p>
     <figure class="diagram reveal">
-      <svg viewBox="0 0 760 340" role="img" aria-labelledby="dgmT dgmD" preserveAspectRatio="xMidYMid meet">
-        <title id="dgmT">How musculoskeletal care goes wrong in two directions</title>
-        <desc id="dgmD">A pathway runs left to right through four stages: first contact, then community care, then the orthopaedic clinic, then surgery. The correct route moves through each stage in turn. In one failure a patient is sent from first contact straight to the orthopaedic clinic, too early, skipping community care. In the other a patient is held in community care too long and reaches the orthopaedic clinic late. The single decision Orwyn supports is at first contact.</desc>
+      <svg viewBox="0 0 820 540" role="img" aria-labelledby="dgmT dgmD" preserveAspectRatio="xMidYMid meet">
+        <title id="dgmT">One decision, two directions</title>
+        <desc id="dgmD">At first contact a patient and clinician reach the referral decision, where Orwyn makes the specialist criteria and reasoning visible. From there the pathway separates into two appropriate directions: when a specialist opinion is indicated the patient reaches earlier specialist review; when it is not indicated now the patient gets a clear non-surgical plan. Both are good outcomes. Behind these, two faint failure routes show what happens without shared thresholds: an unnecessary specialist wait, or a delayed escalation. The outcome is returned to the first contact clinician.</desc>
         <defs>
-          <marker id="ahSage" markerWidth="8" markerHeight="8" refX="5.5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#7A8F7D"/></marker>
-          <marker id="ahPlum" markerWidth="8" markerHeight="8" refX="5.5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#2B1B2E"/></marker>
+          <marker id="ahP" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L6.5,3 L0,6 Z" fill="#2B1B2E"/></marker>
+          <marker id="ahC" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L6.5,3 L0,6 Z" fill="#E5735B"/></marker>
+          <marker id="ahS" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L6.5,3 L0,6 Z" fill="#7A8F7D"/></marker>
+          <marker id="ahG" markerWidth="8" markerHeight="8" refX="5.5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#B9AEBA"/></marker>
         </defs>
-        <!-- correct route: sage spine -->
-        <line x1="115" y1="195" x2="672" y2="195" fill="none" stroke="#7A8F7D" stroke-width="3" marker-end="url(#ahSage)"/>
-        <!-- failure: sent too early (above the line) -->
-        <path d="M140,186 C 250,112 400,112 506,183" fill="none" stroke="#2B1B2E" stroke-width="2" stroke-dasharray="5 5" marker-end="url(#ahPlum)"/>
-        <text x="324" y="104" text-anchor="middle" class="dgm-fl">sent too early</text>
-        <!-- failure: held too long (below the line) -->
-        <path d="M140,205 C 250,286 400,286 506,209" fill="none" stroke="#2B1B2E" stroke-width="2" stroke-dasharray="5 5" marker-end="url(#ahPlum)"/>
-        <text x="324" y="308" text-anchor="middle" class="dgm-fl">held too long</text>
-        <!-- pathway stops: plum nodes -->
-        <circle cx="315" cy="195" r="6" fill="#2B1B2E"/>
-        <circle cx="515" cy="195" r="6" fill="#2B1B2E"/>
-        <circle cx="672" cy="195" r="6" fill="#2B1B2E"/>
-        <!-- stage labels -->
-        <text x="115" y="224" text-anchor="middle" class="dgm-nl">First contact</text>
-        <text x="315" y="224" text-anchor="middle" class="dgm-nl">Community care</text>
-        <text x="515" y="224" text-anchor="middle" class="dgm-nl">Orthopaedic</text>
-        <text x="515" y="240" text-anchor="middle" class="dgm-nl">clinic</text>
-        <text x="672" y="224" text-anchor="middle" class="dgm-nl">Surgery</text>
-        <!-- the one decision, the one coral -->
-        <line x1="115" y1="150" x2="115" y2="187" stroke="#2B1B2E" stroke-width="1.5"/>
-        <circle cx="115" cy="195" r="7.5" fill="#E5735B"/>
-        <text x="115" y="120" text-anchor="middle" class="dgm-dl">The decision</text>
-        <text x="115" y="136" text-anchor="middle" class="dgm-dl">Orwyn supports</text>
+        <path class="dgm-ghost" d="M150,210 C 270,74 490,74 606,150" marker-end="url(#ahG)"/>
+        <path class="dgm-ghost" d="M150,290 C 270,470 490,470 606,354" marker-end="url(#ahG)"/>
+        <text x="392" y="60" text-anchor="middle" class="dgm-gl">Unnecessary specialist wait</text>
+        <text x="392" y="470" text-anchor="middle" class="dgm-gl">Delayed escalation</text>
+        <path class="dgm-fb" d="M700,406 C 610,504 250,514 116,300" marker-end="url(#ahP)"/>
+        <text x="392" y="522" text-anchor="middle" class="dgm-fl">Outcome returned to clinician</text>
+        <line x1="186" y1="250" x2="300" y2="250" class="dgm-main-p" marker-end="url(#ahP)"/>
+        <path class="dgm-main-c" d="M472,198 C 540,176 566,190 606,193" marker-end="url(#ahC)"/>
+        <path class="dgm-main-s" d="M472,302 C 540,328 566,352 606,360" marker-end="url(#ahS)"/>
+        <rect x="32" y="204" width="152" height="92" rx="13" class="dgm-box"/>
+        <text x="108" y="244" text-anchor="middle" class="dgm-cap">FIRST CONTACT</text>
+        <text x="108" y="263" text-anchor="middle" class="dgm-sub">Patient and clinician</text>
+        <text x="108" y="277" text-anchor="middle" class="dgm-sub">assessment</text>
+        <circle cx="396" cy="250" r="90" class="dgm-decision"/>
+        <text x="396" y="236" text-anchor="middle" class="dgm-t">THE REFERRAL</text>
+        <text x="396" y="255" text-anchor="middle" class="dgm-t">DECISION</text>
+        <text x="396" y="279" text-anchor="middle" class="dgm-dsub">Orwyn makes the criteria</text>
+        <text x="396" y="293" text-anchor="middle" class="dgm-dsub">and reasoning visible</text>
+        <rect x="606" y="151" width="200" height="84" rx="13" class="dgm-card-c"/>
+        <text x="628" y="181" class="dgm-cap2">SPECIALIST OPINION</text>
+        <text x="628" y="196" class="dgm-cap2">INDICATED</text>
+        <text x="628" y="219" class="dgm-sub2">Earlier specialist review</text>
+        <rect x="606" y="319" width="200" height="84" rx="13" class="dgm-card-s"/>
+        <text x="628" y="349" class="dgm-cap2">SPECIALIST OPINION</text>
+        <text x="628" y="364" class="dgm-cap2">NOT INDICATED NOW</text>
+        <text x="628" y="387" class="dgm-sub2">A clear non-surgical plan</text>
       </svg>
-      <figcaption class="figcap">Two ways the same pathway fails &mdash; and the single decision, at first contact, that Orwyn supports.</figcaption>
+      <div class="dgm-alt">
+        <ol>
+          <li><b>First contact.</b> Patient and clinician assessment.</li>
+          <li><b>The referral decision.</b> Orwyn makes the specialist criteria and reasoning visible.</li>
+          <li><b>Specialist opinion indicated.</b> Earlier specialist review.</li>
+          <li><b>Specialist opinion not indicated now.</b> A clear non-surgical plan.</li>
+        </ol>
+        <p>Both directions are good outcomes. Without shared thresholds a patient drifts, into an unnecessary specialist wait or a delayed escalation. The outcome is returned to the first contact clinician.</p>
+      </div>
+      <figcaption class="figcap">One decision, two directions. Orwyn supports the referral decision at first contact by making the specialist criteria and reasoning visible. Both directions are good outcomes.</figcaption>
     </figure>
   </div>
 </section>
