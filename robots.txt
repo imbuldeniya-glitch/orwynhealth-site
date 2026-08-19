@@ -1,3 +1,7 @@
+# Orwyn — orwynhealth.com
+# /demo is not blocked here on purpose: it carries a noindex tag, and a page
+# blocked in robots.txt cannot be crawled, so its noindex would never be read.
+
 User-agent: *
 Allow: /
 

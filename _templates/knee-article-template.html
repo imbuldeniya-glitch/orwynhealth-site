@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{TITLE}} | orwyn</title>
+<meta name="description" content="{{META_DESCRIPTION}}">
+
+<link rel="canonical" href="https://orwynhealth.com/{{SLUG}}">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#2B1B2E">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Orwyn">
+<meta property="og:title" content="{{TITLE}} | orwyn">
+<meta property="og:description" content="{{META_DESCRIPTION}}">
+<meta property="og:url" content="https://orwynhealth.com/{{SLUG}}">
+<meta property="og:image" content="https://orwynhealth.com/social.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Orwyn. The ortho opinion, at first contact. Dr Arj Imbuldeniya, Consultant Knee and Hip Surgeon.">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{TITLE}} | orwyn">
+<meta name="twitter:description" content="{{META_DESCRIPTION}}">
+<meta name="twitter:image" content="https://orwynhealth.com/social.jpg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "{{TITLE}}",
+  "description": "{{META_DESCRIPTION}}",
+  "mainEntityOfPage": "https://orwynhealth.com/{{SLUG}}",
+  "inLanguage": "en-GB",
+  "datePublished": "{{DATE_PUBLISHED}}",
+  "dateModified": "{{DATE_MODIFIED}}",
+  "author": {
+    "@type": "Person",
+    "name": "Dr Arj Imbuldeniya",
+    "honorificPrefix": "Dr",
+    "jobTitle": "Consultant Orthopaedic Knee and Hip Surgeon",
+    "url": "https://orwynhealth.com/about"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Orwyn",
+    "legalName": "Orwynhealth Ltd",
+    "url": "https://orwynhealth.com/",
+    "logo": {"@type": "ImageObject", "url": "https://orwynhealth.com/logo.png"}
+  },
+  "about": ["{{TOPIC}}", "knee referral", "orthopaedic referral criteria"]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://orwynhealth.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Resources", "item": "https://orwynhealth.com/resources"},
+    {"@type": "ListItem", "position": 3, "name": "Knee referral decisions", "item": "https://orwynhealth.com/resources"},
+    {"@type": "ListItem", "position": 4, "name": "{{TITLE}}", "item": "https://orwynhealth.com/{{SLUG}}"}
+  ]
+}
+</script>
+<!-- FAQPage schema: add ONLY if the page answers discrete questions, and the answer text must match the visible page text verbatim. -->
+<link rel="icon" href="/favicon.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="/"><img class="logomark" src="/logo.png" width="32" height="32" alt="Orwyn logo"><span class="mark"><span class="o">o</span>rwyn<span class="tm">&trade;</span></span></a>
+    <button class="menubtn" aria-label="Open menu" aria-expanded="false" aria-controls="mainnav"><span></span><span></span><span></span></button>
+    <nav class="main" id="mainnav" aria-label="Main"><a href="/">Home</a><a href="/what-orwyn-does">What it does</a><a href="/safety">Safety</a><a href="/about">About</a><a href="/nhs">Working with the NHS</a><a href="/demo">See the demo</a><a class="cta" href="/contact">Get in touch</a></nav>
+  </div>
+</header>
+<section class="hero small">
+  <div class="wrap">
+    <div class="kicker">A clinical reference page</div>
+    <h1>{{H1_FIRST_PART}} <span class="accent">{{H1_ACCENT_WORD}}</span>.</h1>
+  </div>
+</section>
+
+<div class="wrap pad">
+
+  <!-- 1. DEFINITION FIRST. Answer the search query directly, in one short paragraph,
+       before any framing. This is the paragraph answer engines will quote. -->
+  <section class="idea first reveal">
+    <div class="kicker">The short answer</div>
+    <h2 class="section">{{DIRECT_QUESTION}}</h2>
+    <p class="lead">{{ONE_PARAGRAPH_DIRECT_ANSWER}}</p>
+    <p>{{NUANCE_PARAGRAPH}}</p>
+  </section>
+
+  <!-- 2. WHO THIS IS FOR. Never written as patient-facing content. -->
+  <section class="idea reveal">
+    <div class="kicker">Who this is for</div>
+    <h2 class="section">Written for the clinician seeing the patient <span class="accent">first</span></h2>
+    <p class="lead">{{AUDIENCE_PARAGRAPH}}</p>
+  </section>
+
+  <!-- 3. CLINICAL BODY. Repeat this section as needed. EVERY substantive clinical
+       statement must carry a link to NICE, GIRFT, NHS England, a professional body
+       or peer-reviewed literature. Statements that are Dr Imbuldeniya's own clinical
+       position are labelled expert opinion in the visible text. -->
+  <section class="idea reveal">
+    <div class="kicker">{{SECTION_KICKER}}</div>
+    <h2 class="section">{{SECTION_HEADING}}</h2>
+    <p class="lead">{{SECTION_LEAD}}</p>
+    <div class="pagelinks">
+      <div class="card reveal">
+        <h3>{{POINT_HEADING}}</h3>
+        <p>{{POINT_BODY_WITH_SOURCE_LINK}}</p>
+      </div>
+      <div class="card reveal">
+        <h3>{{POINT_HEADING}}</h3>
+        <p>{{POINT_BODY_WITH_SOURCE_LINK}}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. LIMITS. Mandatory on every page in this cluster. -->
+  <section class="idea reveal">
+    <div class="kicker">What this page does not cover</div>
+    <h2 class="section">Urgent and emergency presentations follow local <span class="accent">pathways</span></h2>
+    <p class="lead">Serious pathology as a cause of musculoskeletal symptoms is rare, and it is managed as an emergency or an urgent onward referral under local pathways rather than through advice or decision support. See the <a href="https://arma.uk.net/wp-content/uploads/2021/01/Urgent-emergency-MSK-conditions-requiring-onward-referral-2.pdf" target="_blank" rel="noopener">ARMA guidance on urgent and emergency musculoskeletal conditions</a>.</p>
+    <p>{{OTHER_EXCLUSIONS}}</p>
+  </section>
+
+  <!-- 5. RELATED PAGES. Descriptive anchor text, never "click here". -->
+  <section class="idea reveal">
+    <div class="kicker">Related</div>
+    <h2 class="section">Where this sits in the <span class="accent">pathway</span></h2>
+    <p>{{RELATED_PARAGRAPH_LINKING}} <a href="/msk-referral-optimisation">MSK referral optimisation</a>, <a href="/msk-clinical-decision-support">what MSK clinical decision support is</a>, and <a href="/msk-triage-explained">how MSK triage works</a>.</p>
+  </section>
+
+  <!-- 6. AUTHOR, REVIEWER, DATE, SOURCES. Do NOT pre-fill the reviewer line.
+       It is added only once a real second clinician has reviewed the page. -->
+  <section class="idea reveal">
+    <div class="kicker">Sources and review</div>
+    <h2 class="section">Where this <span class="accent">came</span> from</h2>
+    <p>{{SOURCE_1_FULL_CITATION}} <a href="{{URL}}" target="_blank" rel="noopener">Read it here</a>.</p>
+    <p>{{SOURCE_2_FULL_CITATION}} <a href="{{URL}}" target="_blank" rel="noopener">Read it here</a>.</p>
+    <p>Written by Dr Arj Imbuldeniya, consultant orthopaedic knee and hip surgeon. Clinically reviewed by {{REVIEWER_NAME_AND_ROLE}}. Last reviewed on {{REVIEW_DATE}}. If anything here is out of date or wrong, particularly if you work in one of these services, please <a href="/contact">tell me</a> and I will correct it. None of the organisations named or linked on this page has reviewed, approved or endorsed Orwyn.</p>
+  </section>
+
+  <div class="band reveal">
+    <h2>If you see these patients first, we would like to <span class="accent">hear</span> from you.</h2>
+    <p>Orwyn is being co-designed with the clinicians who will use it and with patients, and is designed for NHS Trusts and the services that commission musculoskeletal care.</p>
+    <a class="btn ghost" href="/contact">Get in touch</a>
+  </div>
+
+  <div class="foot">
+    <div class="disclaim">Decision support for clinicians only. The clinician assesses the patient and makes every decision. Orwyn is not a service for patients and gives no advice directly to patients or the public. This page is general information for health professionals about NHS referral pathways. It is not clinical advice, it is not a substitute for clinical judgement, and it is not written for patients.</div>
+  </div>
+</div>
+<footer class="site">
+  <div class="wrap">
+    <span class="mark"><span class="o">o</span>rwyn<span class="tm">&trade;</span></span>
+    <nav aria-label="Footer">
+      <a href="/what-orwyn-does">What it does</a>
+      <a href="/about">About</a>
+      <a href="/nhs">Working with the NHS</a>
+      <a href="/resources">Resources</a>
+      <a href="/contact">Contact</a>
+      <a href="/privacy">Privacy</a>
+      <a href="/demo">Demo</a>
+    </nav>
+    <div class="footgroup">
+      <span class="footgroup-h">Safety and standards</span>
+      <a href="/safety">Safety</a>
+      <a href="/standards">Standards</a>
+    </div>
+    <p>Orwynhealth Ltd, registered in England and Wales, company number 17374862.<br>
+    Registered office: 1 Landor Road, London SW9 9RX.<br>
+    <a href="mailto:hello@orwynhealth.com">hello@orwynhealth.com</a></p>
+    <p>Orwyn is a trade mark of Orwynhealth Ltd, application UK00004424413.</p>
+    <p>&copy; 2026 Orwynhealth Ltd. All rights reserved.</p>
+  </div>
+</footer>
+<script>
+(function(){
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var els = document.querySelectorAll('.reveal');
+  if (!('IntersectionObserver' in window)) { els.forEach(function(e){e.classList.add('in');}); return; }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){ if (en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
+  }, {threshold:.12});
+  els.forEach(function(e){ io.observe(e); });
+})();
+</script>
+<script>
+(function(){
+  var btn = document.querySelector('.menubtn');
+  var hdr = document.querySelector('header.top');
+  if (!btn || !hdr) return;
+  btn.addEventListener('click', function(){
+    var open = hdr.classList.toggle('menu-open');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  });
+  document.querySelectorAll('nav.main a').forEach(function(a){
+    a.addEventListener('click', function(){ hdr.classList.remove('menu-open'); btn.setAttribute('aria-expanded','false'); });
+  });
+})();
+</script>
+</body>
+</html>

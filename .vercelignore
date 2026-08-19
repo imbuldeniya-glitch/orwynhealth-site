@@ -1,2 +1,5 @@
 # Build tooling for the /demo gate — never serve this publicly.
 demo/_build/
+
+# Page templates and cluster rules — not a website page, never served.
+_templates/
