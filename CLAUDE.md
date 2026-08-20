@@ -32,6 +32,13 @@ Not indexable, and must stay that way until Dr Imbuldeniya says otherwise: /demo
 
 Colour: every hex value on this site, including inside inlined SVG diagrams, comes from the :root palette in styles.css. Diagrams supplied from outside are remapped to it before they ship. Never invent a new hex value.
 
+Logo and brand artwork. `brand/orwyn-logo-master.svg` in this repository is the single source
+for every Orwyn logo asset, and the working copy is at `Orwyn Ltd/04-brand/master-vector/`.
+Never regenerate a logo, favicon, app icon or social mark from a PNG; derive it from the master.
+The header logo is `logo.svg` and the home page hero mark is inlined SVG, both from that master.
+`logo.png` and `hero-mark.png` are kept as protected raster fallbacks and `logo.png` remains the
+Organization schema logo, because schema consumers want a raster.
+
 Protected files, do not modify or delete: logo.png, favicon.png, portrait.jpg, social.jpg, hero-mark.png, robots.txt, google091cc17a7cfd7918.html.
 
 ## Process
