@@ -14,6 +14,7 @@ Orwyn: surgeon-governed decision support for first-contact musculoskeletal (MSK)
 - Never change the wording of existing copy without Dr Imbuldeniya's explicit approval; copy is approved verbatim. Layout and styling changes are fine on a branch.
 - British English. Acronyms glossed at first use (MSK, FCP and so on). No marketing or startup vocabulary of any kind.
 - No em dashes or en dashes anywhere in this repository: not in page copy, not in code or comments, not in this file, not in any file of any type. Use a comma, a pair of commas, brackets, a colon, or a full stop instead.
+- The ban applies to all new and edited content. Pre-existing em dashes that remain in HTML comments, internal docs and build tooling are known and deliberately left, because no reader sees them; they are cleaned only when their file is next edited for another reason.
 
 ## Brand system (single source: these values, do not re-derive)
 Colours: plum #2B1B2E (grounds, ink, buttons), coral #E5735B (accent), sage #7A8F7D, parchment #F6F4EF (page background), stone #D6D8DB, card #FFFFFF, muted #6B6470, line #E5E1E6. All already in styles.css :root. Never invent new hex values.
