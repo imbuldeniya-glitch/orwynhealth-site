@@ -296,3 +296,12 @@ section.idea.ground.slim{padding:60px 0}
 /* two-route CTA pair */
 .cta-row{margin-top:22px}
 .cta-row .btn{margin:6px}
+
+/* Diagram wrapper for the inlined graphics pack — added 20 August 2026 */
+.orwyn-visual { width:min(100%,1100px); margin:44px auto 0 }
+.orwyn-visual svg { display:block; width:100%; height:auto }
+.orwyn-visual figcaption { font-size:13.5px; color:var(--muted); text-align:center; margin-top:14px; line-height:1.55 }
+@media (max-width:720px){
+  .orwyn-visual { overflow-x:auto; -webkit-overflow-scrolling:touch }
+  .orwyn-visual .wide-infographic { min-width:760px }
+}
