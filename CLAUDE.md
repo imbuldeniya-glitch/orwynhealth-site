@@ -26,7 +26,13 @@ Coral is spent sparingly, one word at a time: a single headline keyword per head
 Restraint: one idea per screen, generous vertical space, centred sections. Content fades up on scroll (.reveal + IntersectionObserver) and must keep respecting prefers-reduced-motion. Soft geometry: pill buttons, 14px card radii. Mobile below 880px: centred brand, hamburger menu (.menubtn), no visible link row.
 
 ## Structure
-Ten pages: index, what-orwyn-does, safety, about, nhs, contact, privacy, first-contact-practitioners-explained, msk-triage-explained, standards (reference pages sit in the footer only, never the header nav) — shared styles.css, per-page canonical/OG tags, Organization schema on index only, sitemap.xml kept in step with any page added or removed. Protected files, do not modify or delete: logo.png, favicon.png, portrait.jpg, social.jpg, hero-mark.png, robots.txt, google091cc17a7cfd7918.html.
+Thirteen indexable pages: index, what-orwyn-does, msk-clinical-decision-support, msk-referral-optimisation, nhs, resources, msk-triage-explained, first-contact-practitioners-explained, safety, standards, about, contact, privacy. The four reference pages sit under /resources, which is the only one of them in the footer; none is in the header nav. Shared styles.css, per-page canonical and Open Graph tags, Organization and WebSite schema on index, Article and BreadcrumbList on the reference pages, sitemap.xml kept in step with any page added or removed.
+
+Not indexable, and must stay that way until Dr Imbuldeniya says otherwise: /demo (noindex, password-gated) and knee-orthopaedic-referral-criteria (noindex, absent from the sitemap, linked from nowhere, carries TODO markers for clinical content and a blank reviewer line). The first page of a knee cluster; the rest follow the pattern in _templates/.
+
+Colour: every hex value on this site, including inside inlined SVG diagrams, comes from the :root palette in styles.css. Diagrams supplied from outside are remapped to it before they ship. Never invent a new hex value.
+
+Protected files, do not modify or delete: logo.png, favicon.png, portrait.jpg, social.jpg, hero-mark.png, robots.txt, google091cc17a7cfd7918.html.
 
 ## Process
 1. Branch, never main.
