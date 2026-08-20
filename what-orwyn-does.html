@@ -3,16 +3,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>What Orwyn does — surgeon-governed decision support at first contact | orwyn</title>
-<meta name="description" content="What Orwyn is and where it came from: a consultant surgeon's judgement, written down and explainable, beside first-contact MSK clinicians at the moment the referral decision is made.">
+<title>How Orwyn works: MSK decision support at first contact | orwyn</title>
+<meta name="description" content="How Orwyn supports safe, explainable MSK referral decisions at first contact: a consultant surgeon's criteria, written down, evidence-linked and open to disagreement, with the clinician responsible for every decision.">
 
 <link rel="canonical" href="https://orwynhealth.com/what-orwyn-does">
 <meta name="robots" content="index, follow">
 <meta name="theme-color" content="#2B1B2E">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Orwyn">
-<meta property="og:title" content="What Orwyn does — surgeon-governed decision support at first contact | orwyn">
-<meta property="og:description" content="What Orwyn is and where it came from: a consultant surgeon's judgement, written down and explainable, beside first-contact MSK clinicians at the moment the referral decision is made.">
+<meta property="og:title" content="How Orwyn works: MSK decision support at first contact | orwyn">
+<meta property="og:description" content="How Orwyn supports safe, explainable MSK referral decisions at first contact: a consultant surgeon's criteria, written down, evidence-linked and open to disagreement, with the clinician responsible for every decision.">
 <meta property="og:url" content="https://orwynhealth.com/what-orwyn-does">
 <meta property="og:image" content="https://orwynhealth.com/social.jpg">
 <meta property="og:image:width" content="1200">
@@ -21,6 +21,8 @@
 <meta name="twitter:image" content="https://orwynhealth.com/social.jpg">
 <meta property="og:locale" content="en_GB">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How Orwyn works: MSK decision support at first contact | orwyn">
+<meta name="twitter:description" content="How Orwyn supports safe, explainable MSK referral decisions at first contact: a consultant surgeon's criteria, written down, evidence-linked and open to disagreement, with the clinician responsible for every decision.">
 <link rel="icon" href="/favicon.png" type="image/png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -148,7 +150,7 @@
       <li class="step tail">
         <div class="num">3</div>
         <h3>The clinician finds out what happened</h3>
-        <p>When a first contact clinician refers a patient, the outcome letter goes to the GP and the patient leaves the community service. The clinician who made the decision usually never learns what happened. There is no loop anywhere in this pathway, which is a strange way to run a system that depends on those decisions being good.</p>
+        <p>When a first contact clinician refers a patient, the outcome letter goes to the GP and the patient leaves the community service. The clinician who made the decision usually never learns what happened. There is no loop anywhere in this pathway, which is a strange way to run a system that depends on those decisions being good. For the terms behind this, see <a href="/msk-referral-optimisation">MSK referral optimisation</a>, <a href="/msk-triage-explained">MSK triage explained</a>, and <a href="/first-contact-practitioners-explained">who first contact practitioners are</a>.</p>
         <p>Orwyn returns the outcome to the clinician who made the referral. It is theirs and theirs alone. There is no league table, no ranking, no comparison against colleagues and no report to a line manager. Feedback to a clinician is how anyone improves. Comparison between clinicians is something else, and we have deliberately built it so that it cannot be done.</p>
       </li>
       <li class="step tail">
@@ -169,9 +171,69 @@
     <figure class="device-figure reveal">
       <div class="device">
         <div class="device-bar"><span></span><span></span><span></span></div>
-        <img class="device-shot" src="/product-decision-1440.png" width="2280" height="1110" alt="The Orwyn clinician tool: a referral decision with its reasons and rule numbers, the evidence each rule rests on, an override control, and what would change the answer. Synthetic sample data.">
+        <img class="device-shot" loading="lazy" decoding="async" src="/product-decision-1440.png" width="2280" height="1110" alt="The Orwyn clinician tool: a referral decision with its reasons and rule numbers, the evidence each rule rests on, an override control, and what would change the answer. Synthetic sample data.">
       </div>
       <figcaption class="figcap">Real build, synthetic data. <a href="/demo">See the demo</a></figcaption>
+    </figure>
+    <figure class="diagram orwyn-visual reveal">
+<svg class="wide-infographic" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 500" role="img" aria-labelledby="whatorwynd1T whatorwynd1D" fill="#24172B">
+      <title id="whatorwynd1T">See why, not a score</title>
+      <desc id="whatorwynd1D">An explainability chain from clinical inputs through a named rule and reason to a suggested next step, with the clinician free to agree or disagree.</desc>
+
+<style>
+  .whatorwynd1-display { font-family: 'Playfair Display', Georgia, serif; }
+  .whatorwynd1-sans { font-family: Inter, Arial, sans-serif; }
+  .whatorwynd1-muted { fill:#756B74; }
+  .whatorwynd1-caps { letter-spacing:1.4px; font-weight:700; }
+  .whatorwynd1-fine { stroke:#D8D0C4; stroke-width:1.5; }
+</style>
+
+
+<defs>
+  <marker id="whatorwynd1-smallArrow" markerWidth="9" markerHeight="9" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#D8D0C4"/></marker>
+</defs>
+<rect width="1000" height="500" rx="30" fill="#FBF8F2"/>
+<text x="50" y="65" class="whatorwynd1-display" font-size="36">See <tspan fill="#E76F55">why</tspan>, not a score.</text>
+<text x="50" y="95" class="whatorwynd1-sans whatorwynd1-muted" font-size="15">Orwyn shows the chain from assessment to suggestion in plain language.</text>
+
+<rect x="45" y="142" width="180" height="270" rx="22" fill="#FFFDF9" stroke="#D8D0C4"/>
+<text x="68" y="178" class="whatorwynd1-sans whatorwynd1-caps" font-size="11" fill="#6E835E">CLINICAL INPUTS</text>
+<text x="68" y="220" class="whatorwynd1-sans" font-size="14" font-weight="700">Age</text><text x="68" y="242" class="whatorwynd1-sans whatorwynd1-muted" font-size="13">42</text>
+<line x1="68" y1="260" x2="200" y2="260" class="whatorwynd1-fine"/>
+<text x="68" y="290" class="whatorwynd1-sans" font-size="14" font-weight="700">Symptoms</text><text x="68" y="312" class="whatorwynd1-sans whatorwynd1-muted" font-size="13">Anterior knee pain</text>
+<line x1="68" y1="330" x2="200" y2="330" class="whatorwynd1-fine"/>
+<text x="68" y="360" class="whatorwynd1-sans" font-size="14" font-weight="700">Red flags</text><text x="68" y="382" class="whatorwynd1-sans whatorwynd1-muted" font-size="13">None reported</text>
+
+<path d="M238 278H300" stroke="#D8D0C4" stroke-width="2.5" marker-end="url(#whatorwynd1-smallArrow)"/>
+<rect x="310" y="142" width="190" height="270" rx="22" fill="#FFFDF9" stroke="#2A1831" stroke-width="1.4"/>
+<g transform="translate(375,182)" fill="none" stroke="#2A1831" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="5" width="34" height="40" rx="4"/><path d="M14 15h20M14 24h20M14 33h13"/><circle cx="34" cy="34" r="5"/></g>
+<text x="405" y="258" text-anchor="middle" class="whatorwynd1-sans whatorwynd1-caps" font-size="11" fill="#2A1831">RULE + REASON</text>
+<text x="405" y="294" text-anchor="middle" class="whatorwynd1-display" font-size="20">Rule KNEE-ROUTE-006</text>
+<text x="405" y="324" text-anchor="middle" class="whatorwynd1-sans" font-size="13">Presentation is consistent</text>
+<text x="405" y="344" text-anchor="middle" class="whatorwynd1-sans" font-size="13">with first-line management.</text>
+<text x="405" y="377" text-anchor="middle" class="whatorwynd1-sans whatorwynd1-muted" font-size="12">Evidence link attached</text>
+
+<path d="M513 278H575" stroke="#D8D0C4" stroke-width="2.5" marker-end="url(#whatorwynd1-smallArrow)"/>
+<rect x="585" y="142" width="230" height="270" rx="22" fill="#F7F8F1" stroke="#6E835E" stroke-width="1.4"/>
+<text x="610" y="178" class="whatorwynd1-sans whatorwynd1-caps" font-size="11" fill="#6E835E">SUGGESTED NEXT STEP</text>
+<text x="610" y="223" class="whatorwynd1-display" font-size="22">Non-surgical pathway</text>
+<text x="610" y="257" class="whatorwynd1-sans" font-size="14">Load management +</text>
+<text x="610" y="278" class="whatorwynd1-sans" font-size="14">targeted physiotherapy</text>
+<text x="610" y="314" class="whatorwynd1-sans whatorwynd1-muted" font-size="13">Reassess at a dated review.</text>
+<rect x="610" y="346" width="180" height="38" rx="8" fill="#6E835E"/>
+<text x="700" y="371" text-anchor="middle" class="whatorwynd1-sans" font-size="13" fill="white" font-weight="700">Clinician decides</text>
+
+<path d="M828 278H882" stroke="#D8D0C4" stroke-width="2.5" marker-end="url(#whatorwynd1-smallArrow)"/>
+<circle cx="916" cy="278" r="36" fill="#E76F55" opacity=".10" stroke="#E76F55" stroke-width="1.4"/>
+<g transform="translate(894,253) scale(1.35)" fill="none" stroke="#E76F55" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="16" cy="9" r="6"/>
+      <path d="M4 33c2-9 7-13 12-13s10 4 12 13"/>
+    </g>
+<text x="916" y="342" text-anchor="middle" class="whatorwynd1-sans" font-size="13" font-weight="800">Agree / disagree</text>
+<text x="916" y="362" text-anchor="middle" class="whatorwynd1-sans whatorwynd1-muted" font-size="12">Reason retained</text>
+
+    </svg>
+      <figcaption>How a suggestion is built, from the clinician&rsquo;s own findings to a named rule, its evidence and a next step the clinician can decline. Illustration with synthetic data.</figcaption>
     </figure>
   </div>
 </section>
@@ -204,8 +266,7 @@
       <a href="/what-orwyn-does">What it does</a>
       <a href="/about">About</a>
       <a href="/nhs">Working with the NHS</a>
-      <a href="/first-contact-practitioners-explained">MSK roles explained</a>
-      <a href="/msk-triage-explained">MSK triage explained</a>
+      <a href="/resources">Resources</a>
       <a href="/contact">Contact</a>
       <a href="/privacy">Privacy</a>
       <a href="/demo">Demo</a>
