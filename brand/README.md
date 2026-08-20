@@ -17,5 +17,6 @@ Colours: plum `#2B1B2E`, coral `#E5735B`, white `#FFFFFF`, matching `:root` in `
 Trade mark: Orwyn, UK00004424413, applicant Orwynhealth Ltd (17374862). The logo is a separate
 later filing awaiting final artwork, which is one of the reasons a clean vector matters.
 
-These files are served by Vercel and cost nothing there, but nothing on the site links to them,
-so they will not be crawled or indexed.
+These files are in git and are excluded from the Vercel deploy by `.vercelignore`, so they are
+versioned and backed up but not downloadable from the website. Nothing on the site links to
+them. Retrieve them from the repository, not from a URL.
