@@ -16,10 +16,18 @@ happening silently.
 Always build from the **committed** engine (commit the engine first):
 
 ```bash
-# from the orwynhealth-site repo root
-git -C "../../03-engine" show HEAD:app/orwyn-clinician-tool.html > /tmp/orwyn-engine.html
-ORWYN_DEMO_PW='the-demo-password' node demo/_build/rebuild-demo.mjs --engine /tmp/orwyn-engine.html
+# from the orwynhealth-site repo root. Name the ENGINE COMMIT you mean, not HEAD,
+# so the build is reproducible and you can state which commit was published.
+git -C "../../03-engine" show <engine-commit>:app/orwyn-clinician-tool.html > /tmp/orwyn-engine.html
+bash -c 'read -rs -p "Demo password: " PW && echo && ORWYN_DEMO_PW="$PW" node demo/_build/rebuild-demo.mjs --engine /tmp/orwyn-engine.html'
 ```
+
+The password is typed at the prompt, hidden, and never appears in the command, in
+your shell history or in this repository. The `read` step runs inside `bash`
+deliberately: the default shell on macOS is zsh, where `read -p` means something
+else and the line fails before it asks for anything. There is also a
+double-click version of the whole sequence at `08-website/Rebuild Orwyn demo.command`,
+outside this repository.
 
 This re-encrypts the engine into `demo/index.html` (gate and login flow untouched),
 round-trip-checks the encryption before writing, and stamps the engine's SHA-256 and
@@ -28,7 +36,7 @@ round-trip-checks the encryption before writing, and stamps the engine's SHA-256
 ## Before you deploy — verify no drift
 
 ```bash
-git -C "../../03-engine" show HEAD:app/orwyn-clinician-tool.html > /tmp/orwyn-engine.html
+git -C "../../03-engine" show <engine-commit>:app/orwyn-clinician-tool.html > /tmp/orwyn-engine.html
 node demo/_build/verify-demo.mjs --engine /tmp/orwyn-engine.html
 ```
 
