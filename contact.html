@@ -3,16 +3,35 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Contact Orwyn: NHS pilots and enquiries | Orwyn</title>
-<meta name="description" content="Get in touch with Orwyn about an NHS MSK pilot, a service or commissioning conversation. We reply to clinicians, services and commissioners.">
-
+<title>Contact Orwyn: see the demo or discuss an NHS pilot</title>
+<meta name="description" content="Contact Orwyn Health: clinicians can see the demo and ask for access, and NHS services and commissioners can discuss an NHS pilot by email.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://orwynhealth.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Contact",
+      "item": "https://orwynhealth.com/contact"
+    }
+  ]
+}
+</script>
 <link rel="canonical" href="https://orwynhealth.com/contact">
 <meta name="robots" content="index, follow">
 <meta name="theme-color" content="#2B1B2E">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Orwyn">
-<meta property="og:title" content="Contact Orwyn: NHS pilots and enquiries | Orwyn">
-<meta property="og:description" content="Get in touch with Orwyn about an NHS MSK pilot, a service or commissioning conversation. We reply to clinicians, services and commissioners.">
+<meta property="og:title" content="Contact Orwyn: see the demo or discuss an NHS pilot">
+<meta property="og:description" content="Contact Orwyn Health: clinicians can see the demo and ask for access, and NHS services and commissioners can discuss an NHS pilot by email.">
 <meta property="og:url" content="https://orwynhealth.com/contact">
 <meta property="og:image" content="https://orwynhealth.com/social.jpg">
 <meta property="og:image:width" content="1200">
@@ -21,44 +40,63 @@
 <meta name="twitter:image" content="https://orwynhealth.com/social.jpg">
 <meta property="og:locale" content="en_GB">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Contact Orwyn: NHS pilots and enquiries | Orwyn">
-<meta name="twitter:description" content="Get in touch with Orwyn about an NHS MSK pilot, a service or commissioning conversation. We reply to clinicians, services and commissioners.">
+<meta name="twitter:title" content="Contact Orwyn: see the demo or discuss an NHS pilot">
+<meta name="twitter:description" content="Contact Orwyn Health: clinicians can see the demo and ask for access, and NHS services and commissioners can discuss an NHS pilot by email.">
 <link rel="icon" href="/favicon.png" type="image/png">
 <link rel="preload" href="/fonts/playfair-display-latin-var.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/inter-latin-var.woff2" as="font" type="font/woff2" crossorigin>
+<script>document.documentElement.className+=' js'</script>
 <link rel="stylesheet" href="/styles.css">
+<style>.route[id]{scroll-margin-top:88px}</style>
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 <header class="top">
   <div class="wrap">
-    <a class="brand" href="/"><img class="logomark" src="/logo.svg" width="32" height="32" alt="Orwyn logo"><span class="mark"><span class="o">o</span>rwyn<span class="tm">&trade;</span></span></a>
+    <a class="brand" href="/"><img class="logomark" src="/logo.svg" width="34" height="34" alt="Orwyn logo"><span class="mark"><span class="o">o</span>rwyn<span class="tm">&trade;</span></span></a>
     <button class="menubtn" aria-label="Open menu" aria-expanded="false" aria-controls="mainnav"><span></span><span></span><span></span></button>
-    <nav class="main" id="mainnav" aria-label="Main"><a href="/">Home</a><a href="/what-orwyn-does">What it does</a><a href="/safety">Safety</a><a href="/about">About</a><a href="/nhs">Working with the NHS</a><a href="/demo">See the demo</a><a class="cta" href="/contact">Get in touch</a></nav>
+    <nav class="main" id="mainnav" aria-label="Main"><a href="/">Home</a><a href="/what-orwyn-does">What it does</a><a href="/safety">Safety</a><a href="/about">About</a><a href="/nhs">Working with the NHS</a><a href="/see-the-demo">See the demo</a><a class="cta" href="/contact" aria-current="page">Get in touch</a></nav>
   </div>
-</header>
+</header><main id="main">
 <section class="hero small">
   <div class="wrap">
-    <div class="kicker">Contact</div>
+    <p class="kicker">Contact</p>
     <h1>Get in <span class="accent">touch.</span></h1>
   </div>
 </section>
 
 <div class="wrap pad">
-
   <section class="idea first reveal">
-    <div class="card">
+    <div class="split2">
+      <div class="card route onlight">
+        <h2 class="kicker" style="margin:0 0 8px">For clinicians</h2>
+        <h3>See how Orwyn works in a consultation</h3>
+        <p>Watch an example patient step by step, then ask for access to try the demo yourself.</p>
+        <a class="btn primary" href="/see-the-demo">See the demo</a>
+      </div>
+      <div class="card route onlight" id="nhs-pilot">
+        <h2 class="kicker" style="margin:0 0 8px">For services and commissioners</h2>
+        <h3>Talk to us about evaluating Orwyn</h3>
+        <p>What a first evaluation would involve is set out on <a href="/nhs">the page for NHS services</a>. Tell us about your service and we will reply.</p>
+        <a class="btn ghost" href="mailto:hello@orwynhealth.com?subject=NHS%20pilot&body=Name%3A%0ARole%3A%0AService%20or%20organisation%3A%0A">Discuss an NHS pilot</a>
+      </div>
+    </div>
+    <div class="card" style="max-width:880px;margin:16px auto 0">
       <p>Email <a href="mailto:hello@orwynhealth.com">hello@orwynhealth.com</a>.</p>
       <p>You can also follow Orwyn on <a href="https://www.linkedin.com/company/orwynhealth/" target="_blank" rel="noopener">LinkedIn</a>.</p>
       <p>We reply to clinicians, services and commissioners. We do not give clinical advice to patients and we cannot answer questions about an individual's care.</p>
-      <p>Please do not send patient-identifiable or confidential clinical information to this email address.</p>
+      <p>Please do not send patient-identifiable or confidential clinical information to this address.</p>
     </div>
-    <p class="cta-row"><a class="btn" href="/demo">See the demo</a><a class="btn onlight ghost" href="mailto:hello@orwynhealth.com">Discuss an NHS pilot</a></p>
   </section>
-
+  <div class="band closing reveal">
+    <p class="one">Surgeon-governed decision support for first-contact MSK clinicians.</p>
+    <p class="btnrow"><a class="btn primary" href="/see-the-demo">See the demo</a><a class="btn ghost" href="/contact#nhs-pilot">Discuss an NHS pilot</a></p>
+  </div>
   <div class="foot">
     <div class="disclaim">Decision support for clinicians only. The clinician assesses the patient and makes every decision. Orwyn is not a service for patients and gives no advice directly to patients or the public.</div>
   </div>
 </div>
+</main>
 <footer class="site">
   <div class="wrap">
     <span class="mark"><span class="o">o</span>rwyn<span class="tm">&trade;</span></span>
@@ -67,15 +105,18 @@
       <a href="/about">About</a>
       <a href="/nhs">Working with the NHS</a>
       <a href="/resources">Resources</a>
+      <a href="/for-patients">For patients</a>
+      <a href="/press">Press</a>
       <a href="/contact">Contact</a>
       <a href="https://www.linkedin.com/company/orwynhealth/" target="_blank" rel="noopener">LinkedIn</a>
       <a href="/privacy">Privacy</a>
-      <a href="/demo">Demo</a>
+      <a href="/see-the-demo">See the demo</a>
     </nav>
     <div class="footgroup">
-      <span class="footgroup-h">Safety and standards</span>
+      <span class="footgroup-h">Safety, standards and evidence</span>
       <a href="/safety">Safety</a>
       <a href="/standards">Standards</a>
+      <a href="/evidence">Evidence</a>
     </div>
     <p>Orwynhealth Ltd, registered in England and Wales, company number 17374862.<br>
     Registered office: 1 Landor Road, London SW9 9RX.<br>
@@ -86,13 +127,15 @@
 </footer>
 <script>
 (function(){
-  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   var els = document.querySelectorAll('.reveal');
-  if (!('IntersectionObserver' in window)) { els.forEach(function(e){e.classList.add('in');}); return; }
+  function all(){ els.forEach(function(e){ e.classList.add('in'); }); }
+  if ((window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) || !('IntersectionObserver' in window)) { all(); return; }
   var io = new IntersectionObserver(function(entries){
     entries.forEach(function(en){ if (en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
   }, {threshold:.12});
   els.forEach(function(e){ io.observe(e); });
+  window.addEventListener('beforeprint', all);
+  setTimeout(all, 2500);
 })();
 </script>
 <script>
@@ -110,5 +153,6 @@
   });
 })();
 </script>
+<script src="/zoom.js" defer></script>
 </body>
 </html>

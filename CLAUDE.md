@@ -17,7 +17,7 @@ Orwyn: surgeon-governed decision support for first-contact musculoskeletal (MSK)
 - The ban applies to all new and edited content. Pre-existing em dashes that remain in HTML comments, internal docs and build tooling are known and deliberately left, because no reader sees them; they are cleaned only when their file is next edited for another reason.
 
 ## Brand system (single source: these values, do not re-derive)
-Colours: plum #2B1B2E (grounds, ink, buttons), coral #E5735B (accent), sage #7A8F7D, parchment #F6F4EF (page background), stone #D6D8DB, card #FFFFFF, muted #6B6470, line #E5E1E6. All already in styles.css :root. Never invent new hex values.
+Colours: plum #2B1B2E (grounds, ink, buttons), coral #E5735B (accent), coral-text #AE4E3A (--coral-text: coral for body-size text on light grounds only; never for warnings; added 21 September 2026 on Dr Imbuldeniya's ruling), sage #7A8F7D, parchment #F6F4EF (page background), stone #D6D8DB, card #FFFFFF, muted #6B6470, line #E5E1E6. All already in styles.css :root. Never invent new hex values.
 Typography: Playfair Display (headings, wordmark), Inter (body/UI). The wordmark is always TYPESET, lowercase "orwyn", never an image; the o takes coral on dark grounds only.
 Red, amber and green are functional safety colours only, never decoration; coral is never a warning colour.
 
@@ -28,9 +28,11 @@ Coral is spent sparingly, one word at a time: a single headline keyword per head
 Restraint: one idea per screen, generous vertical space, centred sections. Content fades up on scroll (.reveal + IntersectionObserver) and must keep respecting prefers-reduced-motion. Soft geometry: pill buttons, 14px card radii. Mobile below 880px: centred brand, hamburger menu (.menubtn), no visible link row.
 
 ## Structure
-Thirteen indexable pages: index, what-orwyn-does, msk-clinical-decision-support, msk-referral-optimisation, nhs, resources, msk-triage-explained, first-contact-practitioners-explained, safety, standards, about, contact, privacy. The four reference pages sit under /resources, which is the only one of them in the footer; none is in the header nav. Shared styles.css, per-page canonical and Open Graph tags, Organization and WebSite schema on index, Article and BreadcrumbList on the reference pages, sitemap.xml kept in step with any page added or removed.
+Eighteen indexable pages: index, what-orwyn-does, see-the-demo, msk-clinical-decision-support, msk-referral-optimisation, nhs, evidence, resources, knee-orthopaedic-referral-criteria, msk-triage-explained, first-contact-practitioners-explained, safety, standards, about, for-patients, press, contact, privacy. The reference pages sit under /resources, which is the only one of them in the footer; none is in the header nav. Shared styles.css, per-page canonical and Open Graph tags, Organization and WebSite schema on index, Article and BreadcrumbList on the reference pages, sitemap.xml kept in step with any page added or removed.
 
-Not indexable, and must stay that way until Dr Imbuldeniya says otherwise: /demo (noindex, password-gated) and knee-orthopaedic-referral-criteria (noindex, absent from the sitemap, linked from nowhere, carries TODO markers for clinical content and a blank reviewer line). The first page of a knee cluster; the rest follow the pattern in _templates/.
+Not indexable, and must stay that way until Dr Imbuldeniya says otherwise: /demo (noindex, password-gated).
+
+knee-orthopaedic-referral-criteria is published and indexed on purpose (commit 3f6b463, 21 August 2026, author-reviewed), is in the sitemap and is linked from /resources. It is the first page of a knee cluster; the rest follow the pattern in _templates/.
 
 Colour: every hex value on this site, including inside inlined SVG diagrams, comes from the :root palette in styles.css. Diagrams supplied from outside are remapped to it before they ship. Never invent a new hex value.
 

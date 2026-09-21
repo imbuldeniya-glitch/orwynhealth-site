@@ -22,7 +22,7 @@
   unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
-/* Orwyn site styles — brand tokens governed by the orwyn-brand skill's palette.md. Do not edit hex values. */
+/* Orwyn site styles , brand tokens governed by the orwyn-brand skill's palette.md. Do not edit hex values. */
 :root{
   --plum:#2B1B2E; --coral:#E5735B; --sage:#7A8F7D; --parchment:#F6F4EF; --stone:#D6D8DB;
   --ink:#2B1B2E; --muted:#6B6470; --line:#E5E1E6; --card:#FFFFFF;
@@ -30,6 +30,15 @@
   --red:#B23B2E; --redbg:#FBECEA; --redline:#E5B7B0;
   --amber:#8A6D1F; --amberbg:#FBF3DD; --amberline:#E8D79C;
   --green:#3F6B57; --greenbg:#E9F1EC; --greenline:#BCD6C8;
+  /* Design tokens (site-v2, A8): spacing, type scale, radii, card padding */
+  --space-1:4px; --space-2:8px; --space-3:12px; --space-4:16px; --space-5:24px; --space-6:38px; --space-7:64px; --space-8:84px;
+  --fs-small:13px; --fs-body:clamp(15.5px,1.1vw + 11px,17.5px); --fs-lede:clamp(17px,1.2vw + 12px,19px);
+  --fs-h3:clamp(18px,1vw + 13px,20px); --fs-h2:clamp(28px,3.6vw,40px); --fs-h1:clamp(34px,5.4vw,60px); --fs-figure:clamp(32px,3.4vw,40px);
+  --radius-card:14px; --radius-band:18px; --radius-pill:999px; --pad-card:clamp(20px,2.4vw,26px);
+  --logo-size:34px;
+  /* Darker coral for coral TEXT at body size on light grounds: passes 4.5:1 on white (5.3), parchment (4.8) and the sage tint (4.6).
+     Added 21 September 2026 on Dr Imbuldeniya's instruction (follow-up 1, item 5). Large headline words keep --coral. */
+  --coral-text:#AE4E3A;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -46,7 +55,7 @@ header.top .wrap{display:flex;align-items:center;gap:26px;flex-wrap:wrap}
 .mark .o{color:var(--coral)}
 .mark .tm{font-family:'Inter',-apple-system,sans-serif;font-size:.38em;font-weight:500;vertical-align:super;letter-spacing:0;margin-left:2px;color:#E7DCE6}
 .brand{display:inline-flex;align-items:center;gap:10px;text-decoration:none}
-.logomark{width:34px;height:34px;border-radius:8px;display:block;flex:0 0 auto}
+.logomark{width:var(--logo-size);height:var(--logo-size);border-radius:8px;display:block;flex:0 0 auto}
 nav.main{display:flex;align-items:center;gap:4px;margin-left:auto;flex-wrap:wrap}
 nav.main a{color:#E7DCE6;text-decoration:none;font-size:14.5px;font-weight:500;padding:8px 12px;border-radius:999px}
 nav.main a:hover{color:#fff;background:rgba(255,255,255,.07)}
@@ -55,7 +64,7 @@ nav.main a.cta{background:#fff;color:var(--plum);font-weight:600;padding:9px 18p
 nav.main a.cta:hover{background:#F1EDE6}
 @media(max-width:880px){header.top .wrap{gap:12px}nav.main{margin-left:0}}
 
-/* Hero — plum ground, soft light, one idea */
+/* Hero , plum ground, soft light, one idea */
 .hero{background:var(--plum);color:#fff;position:relative;overflow:hidden;
   padding:110px 0 120px}
 .hero::before{content:"";position:absolute;inset:0;pointer-events:none;
@@ -81,20 +90,20 @@ nav.main a.cta:hover{background:#F1EDE6}
 .btn.onlight{background:var(--plum);color:#fff}
 .btn.onlight.ghost{background:transparent;color:var(--plum);border-color:var(--plum)}
 
-/* Sections — generous air, one idea per screen */
+/* Sections , generous air, one idea per screen */
 section.idea{padding:96px 0 8px;text-align:center}
 section.idea.first{padding-top:84px}
 .kicker{font-size:12px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
 h2.section{font-family:'Playfair Display',Georgia,serif;font-weight:600;
-  font-size:clamp(28px,3.6vw,40px);line-height:1.2;margin:12px auto 22px;max-width:24ch}
-.lead{font-size:17.5px;line-height:1.7;max-width:62ch;margin:0 auto 18px}
+  font-size:var(--fs-h2);line-height:1.2;margin:12px auto 22px;max-width:24ch}
+.lead{font-size:var(--fs-body);line-height:1.7;max-width:62ch;margin:0 auto 18px}
 .lead:last-child{margin-bottom:0}
 .center{text-align:center}
 .center h2.section,.center .lead{margin-left:auto;margin-right:auto}
 
 /* Cards */
-.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:26px 26px;text-align:left}
-.card h3{font-family:'Playfair Display',Georgia,serif;font-weight:600;font-size:19px;margin:0 0 10px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius-card);padding:var(--pad-card);text-align:left}
+.card h3{font-family:'Playfair Display',Georgia,serif;font-weight:600;font-size:var(--fs-h3);margin:0 0 10px}
 .card p{margin:0 0 12px;font-size:15.5px;line-height:1.65}
 .card p:last-child{margin-bottom:0}
 .three{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:38px}
@@ -118,7 +127,7 @@ a.pagelink .go{display:inline-block;margin-top:14px;font-size:14px;font-weight:6
 @media(max-width:620px){.bio{flex-direction:column;gap:16px}.portrait{width:108px;height:108px}}
 
 /* Closing band */
-.band{background:var(--plum);color:#fff;border-radius:18px;padding:64px 48px;margin:96px 0 0;text-align:center;
+.band{background:var(--plum);color:#fff;border-radius:var(--radius-band);padding:64px 48px;margin:96px 0 0;text-align:center;
   position:relative;overflow:hidden}
 .band::before{content:"";position:absolute;inset:0;pointer-events:none;
   background:radial-gradient(ellipse 55% 70% at 80% 10%, rgba(229,115,91,.15), transparent 65%)}
@@ -139,18 +148,21 @@ footer.site nav a:hover{color:#fff}
 a{color:var(--plum)}
 .pad{padding-bottom:96px}
 
-/* Scroll pacing — content arrives quietly */
-.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
-.reveal.in{opacity:1;transform:none}
+/* Scroll pacing , content arrives quietly */
+/* The hidden state applies only once the script has marked the page (.js on <html>), so with
+   JavaScript off, with reduced motion, and in print, every section is visible (follow-up 3, 2.4). */
+.js .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.js .reveal.in{opacity:1;transform:none}
 @media (prefers-reduced-motion: reduce){
   html{scroll-behavior:auto}
-  .reveal{opacity:1;transform:none;transition:none}
+  .js .reveal{opacity:1;transform:none;transition:none}
 }
+@media print{.js .reveal{opacity:1!important;transform:none!important}}
 
 .bio{text-align:left}
 .hero .btn.ghost{margin:0 6px}
 
-/* Mobile menu — hamburger below 880px */
+/* Mobile menu , hamburger below 880px */
 .menubtn{display:none;width:44px;height:44px;border:0;background:none;cursor:pointer;padding:10px;
   position:absolute;right:16px;top:14px;border-radius:10px}
 .menubtn span{display:block;height:2px;background:#fff;border-radius:2px;margin:5px 0;transition:transform .25s ease,opacity .25s ease}
@@ -167,7 +179,7 @@ a{color:var(--plum)}
   header.top.menu-open .menubtn span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
 }
 
-/* Coral accent system — large or bold text only (contrast rule) */
+/* Coral accent system , large or bold text only (contrast rule) */
 .accent{color:var(--coral)}
 .lead b.hl,p b.hl{color:var(--coral);font-weight:600}
 a.pagelink .go{color:var(--coral)}
@@ -181,7 +193,7 @@ footer.site nav a:hover{color:var(--coral)}
 /* Coral words in body leads carry weight for contrast compliance */
 .lead .accent,.lede .accent{font-weight:600}
 
-/* Dictionary entry — the name */
+/* Dictionary entry , the name */
 .dict{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:34px 38px;max-width:620px;margin:38px auto 0;text-align:left}
 .dict .word{font-family:'Playfair Display',Georgia,serif;font-size:34px;font-weight:600;color:var(--ink)}
 .dict .word .o{color:var(--coral)}
@@ -190,10 +202,12 @@ footer.site nav a:hover{color:var(--coral)}
 .dict .ety{font-size:15px;color:var(--muted);margin:14px 0 10px;line-height:1.6}
 .dict .def{font-size:17px;line-height:1.6;margin:0}
 
-/* National statistics cards — problem validation */
-.stat .n{font-family:'Playfair Display',Georgia,serif;font-size:40px;font-weight:700;color:var(--plum);line-height:1.1}
-.stat .t{font-size:15px;line-height:1.55;margin-top:8px}
-.stat .src{font-size:12.5px;color:var(--muted);margin-top:10px}
+/* National statistics cards , problem validation */
+.stat{display:flex;flex-direction:column;height:100%}
+.stat .n{font-family:'Playfair Display',Georgia,serif;font-size:var(--fs-figure);font-weight:700;color:var(--plum);line-height:1.1;min-height:1.1em;white-space:nowrap}
+.stat .t{font-size:15px;line-height:1.55;margin-top:var(--space-2)}
+.stat .src{font-size:12.5px;color:var(--muted);margin-top:auto;padding-top:var(--space-3)}
+.three>.stat,.grid>.stat{align-self:stretch}
 .stat .src a{color:var(--muted)}
 
 /* Footer standing group: safety and standards, quiet and secondary */
@@ -206,7 +220,7 @@ footer.site .footgroup a:hover{color:var(--coral)}
    VISUAL RHYTHM (added on branch redesign-visual-rhythm)
    Alternating full-bleed grounds, a left-aligned reading measure,
    numbered step sequences, the two-directions diagram, and the
-   product device frame. Existing brand tokens only — no new hex.
+   product device frame. Existing brand tokens only , no new hex.
    These are opt-in classes; pages not using them are unchanged.
    ============================================================ */
 
@@ -230,7 +244,7 @@ section.idea.ground.slim{padding:60px 0}
 
 /* Reading measure: headings stay centred, longer copy sits left
    in a ~68ch column that is itself centred under the heading. */
-.body{max-width:68ch;margin:0 auto 18px;text-align:left;font-size:17.5px;line-height:1.7}
+.body{max-width:68ch;margin:0 auto 18px;text-align:left;font-size:var(--fs-body);line-height:1.7}
 .body:last-child{margin-bottom:0}
 
 /* Numbered vertical sequence with a connecting rule down the left. */
@@ -244,12 +258,6 @@ section.idea.ground.slim{padding:60px 0}
 .step h3{font-family:'Playfair Display',Georgia,serif;font-weight:600;font-size:19px;margin:0 0 7px}
 .step p{margin:0 0 10px;font-size:15.5px;line-height:1.65}
 .step p:last-child{margin-bottom:0}
-/* the first two steps carry more weight; the last two recede */
-.step.lead .num{font-size:44px;top:-6px}
-.step.lead h3{font-size:22px}
-.step.lead p{font-size:16.5px}
-.step.tail .num{font-size:26px;color:var(--muted)}
-.step.tail h3{font-size:18px}
 /* numerals mask the rule with a chip in the section's own ground colour */
 .ground-parchment .sequence .num{background:var(--parchment)}
 .ground-sage .sequence .num{background:var(--sage-tint)}
@@ -258,7 +266,6 @@ section.idea.ground.slim{padding:60px 0}
   .step{padding-left:60px}
   .sequence::before{left:19px}
   .step .num{width:40px;font-size:26px}
-  .step.lead .num{font-size:36px}
 }
 
 /* Strong single onward link (replaces the home Explore grid) */
@@ -321,7 +328,7 @@ section.idea.ground.slim{padding:60px 0}
 .cta-row{margin-top:22px}
 .cta-row .btn{margin:6px}
 
-/* Diagram wrapper for the inlined graphics pack — added 20 August 2026 */
+/* Diagram wrapper for the inlined graphics pack , added 20 August 2026 */
 .orwyn-visual { width:min(100%,1100px); margin:44px auto 0 }
 .orwyn-visual svg { display:block; width:100%; height:auto }
 .orwyn-visual figcaption { font-size:13.5px; color:var(--muted); text-align:center; margin-top:14px; line-height:1.55 }
@@ -329,3 +336,282 @@ section.idea.ground.slim{padding:60px 0}
   .orwyn-visual { overflow-x:auto; -webkit-overflow-scrolling:touch }
   .orwyn-visual .wide-infographic { min-width:760px }
 }
+
+/* ============================================================
+   SITE-V2 COMPONENTS (branch site-v2, 21 September 2026)
+   Existing palette only. No new hex values.
+   ============================================================ */
+
+/* Skip link and main landmark */
+.skip{position:absolute;left:-9999px;top:0;background:#fff;color:var(--plum);padding:10px 16px;border-radius:0 0 10px 0;z-index:20;font-weight:600}
+.skip:focus{left:0}
+main{display:block}
+
+/* Primary and secondary buttons, same pair on every ground */
+.btn.primary{background:#fff;color:var(--plum);border-color:#fff}
+.btn.primary:hover{background:var(--parchment);border-color:var(--parchment)}
+.onlight .btn.primary,.btn.primary.onlight{background:var(--plum);color:#fff;border-color:var(--plum)}
+.onlight .btn.primary:hover,.btn.primary.onlight:hover{background:#3A2740}
+.onlight .btn.ghost,.btn.ghost.onlight{color:var(--plum);border-color:var(--plum)}
+.onlight .btn.ghost:hover{background:rgba(43,27,46,.05)}
+.btnrow{display:flex;flex-wrap:wrap;gap:var(--space-3);justify-content:center;margin:0}
+.btnrow .btn{margin:0}
+@media(max-width:420px){.btnrow .btn{flex:1 1 100%;text-align:center}}
+
+/* Split hero: words left, the product right. On a phone the picture follows the headline. */
+.hero.split{padding:clamp(56px,7vw,96px) 0 clamp(64px,8vw,104px)}
+.hero.split .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.08fr);gap:clamp(32px,4vw,56px);align-items:center;text-align:left;max-width:1240px}
+.hero.split .words{min-width:0}
+.hero.split h1{margin:var(--space-4) 0 var(--space-5);max-width:14ch;font-size:var(--fs-h1)}
+.hero.split .lede{margin:0 0 var(--space-4);font-size:var(--fs-lede);max-width:52ch}
+.hero.split .thesis{margin:var(--space-5) 0 var(--space-6);max-width:none}
+.hero.split .btnrow{justify-content:flex-start}
+.hero.split .shot{margin:0;min-width:0}
+@media(max-width:960px){
+  .hero.split .wrap{grid-template-columns:1fr;text-align:center;gap:14px}
+  .hero.split h1{margin-left:auto;margin-right:auto}
+  .hero.split .lede{margin-left:auto;margin-right:auto}
+  .hero.split .btnrow{justify-content:center}
+  .hero.split .words{display:contents}
+  .hero.split .words>.kicker,.hero.split .words>h1{order:0}
+  .hero.split .shot{order:1;margin:var(--space-2) 0 var(--space-5)}
+  .hero.split .words>.lede,.hero.split .words>.thesis,.hero.split .words>.btnrow{order:2}
+}
+
+/* A simple browser-style frame: a border and a radius, no fake window chrome */
+.frame{background:#fff;border:1px solid var(--stone);border-radius:var(--radius-card);overflow:hidden;box-shadow:0 2px 14px rgba(43,27,46,.07)}
+.hero .frame{border-color:rgba(255,255,255,.18);box-shadow:0 18px 50px rgba(0,0,0,.28)}
+.frame img{display:block;width:100%;height:auto}
+.shot figcaption{font-size:var(--fs-small);color:var(--muted);margin-top:10px;text-align:center}
+.hero .shot figcaption{color:#CBB9CC}
+
+/* Walk-through: four pictures, next and back, no autoplay */
+.walk{max-width:880px;margin:var(--space-6) auto 0;text-align:left}
+.walk-stage{position:relative}
+.walk-slide{display:none}
+.walk-slide:first-child,.walk-slide.is-on{display:block}
+.walk-slide[hidden]{display:none!important}
+/* Without JavaScript a <noscript> style in the page head shows every slide in order. */
+.walk-slide .frame{max-height:560px;overflow:hidden}
+.walk-slide .frame.tall{max-height:560px}
+.walk-slide .frame.strip{max-height:none}
+.walk-num{font-size:12px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);margin:0 0 6px}
+.walk-slide h3{font-family:'Playfair Display',Georgia,serif;font-weight:600;font-size:var(--fs-h3);margin:0 0 var(--space-2)}
+.walk-slide p.cap{margin:0 0 var(--space-4);font-size:var(--fs-body);line-height:1.6}
+.walk-multi{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-4)}
+.walk-multi > :first-child{grid-row:span 2}
+@media(max-width:640px){.walk-multi{grid-template-columns:1fr}.walk-multi > :first-child{grid-row:auto}}
+.walk-decide{background:#fff;border:1px solid var(--line);border-radius:var(--radius-card);padding:var(--pad-card)}
+.walk-decide .pair{display:flex;gap:var(--space-3);flex-wrap:wrap;margin:var(--space-3) 0}
+.walk-decide .pill{display:inline-block;padding:10px 22px;border-radius:12px;border:1.5px solid var(--plum);font-weight:600;font-size:16px}
+.walk-decide .pill.on{background:var(--plum);color:#fff}
+.walk-decide dl{margin:var(--space-4) 0 0;display:grid;grid-template-columns:max-content 1fr;gap:6px 16px;font-size:15px}
+.walk-decide dt{font-weight:700;color:var(--plum)}
+.walk-decide dd{margin:0;color:var(--ink)}
+.walk-nav{display:flex;align-items:center;justify-content:space-between;gap:var(--space-3);margin-top:var(--space-5)}
+.walk-nav > button{font:inherit;font-size:15px;font-weight:600;padding:10px 20px;border-radius:var(--radius-pill);border:1px solid var(--plum);background:#fff;color:var(--plum);cursor:pointer;min-width:96px}
+.walk-nav > button.next{background:var(--plum);color:#fff}
+.walk-nav > button:disabled{opacity:.35;cursor:default}
+.walk-nav button:focus-visible,.walk-dots button:focus-visible{outline:3px solid var(--coral);outline-offset:2px}
+.walk-dots{display:flex;gap:8px;list-style:none;margin:0;padding:0}
+.walk-dots button{width:34px;height:24px;padding:0;border:0;border-top:9px solid transparent;border-bottom:9px solid transparent;background:var(--stone);background-clip:padding-box;cursor:pointer}
+@media(max-width:480px){.walk-dots{gap:6px}.walk-dots button{width:20px}.walk-nav > button{min-width:0;padding:10px 16px}}
+.walk-dots button[aria-current="step"]{background:var(--coral);background-clip:padding-box}
+.walk-video{margin-top:var(--space-5);border:1px dashed var(--stone);border-radius:var(--radius-card);padding:var(--space-4);font-size:var(--fs-small);color:var(--muted);text-align:center}
+
+/* The Orwyn model diagram: horizontal on wide screens, vertical on phones */
+.model{max-width:1080px;margin:var(--space-6) auto 0}
+.model svg{display:block;width:100%;height:auto}
+.model .dgm-v{display:none;max-width:420px;margin:0 auto}
+@media(max-width:760px){.model .dgm-h{display:none}.model .dgm-v{display:block}}
+.model figcaption{font-size:13.5px;color:var(--muted);text-align:center;margin-top:14px;line-height:1.55}
+.twoways{max-width:760px;margin:var(--space-6) auto 0}
+.twoways svg{display:block;width:100%;height:auto}
+
+/* Status tags: exists in the demo today, or planned */
+.tag{display:inline-block;font-size:11.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:3px 10px;border-radius:var(--radius-pill);vertical-align:middle;white-space:nowrap}
+.tag.now{background:var(--greenbg);color:var(--green);border:1px solid var(--greenline)}
+.tag.planned{background:#fff;color:var(--muted);border:1px dashed var(--stone)}
+.tag.progress{background:#FFFFFF;color:var(--amber);border:1px solid var(--amberline)}
+
+/* Status table (evidence page) */
+.status{width:100%;max-width:880px;margin:var(--space-6) auto 0;border-collapse:separate;border-spacing:0;text-align:left;background:#fff;border:1px solid var(--line);border-radius:var(--radius-card);overflow:hidden;font-size:15px}
+.status th,.status td{padding:14px 18px;border-bottom:1px solid var(--line);vertical-align:top;line-height:1.55}
+.status tr:last-child td,.status tr:last-child th{border-bottom:0}
+.status thead th{background:var(--parchment);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.status tbody th{font-family:'Playfair Display',Georgia,serif;font-weight:600;font-size:17px;color:var(--plum);width:22%}
+.status td.st{width:22%}
+@media(max-width:680px){
+  .status,.status tbody,.status tr,.status th,.status td{display:block;width:100%}
+  .status thead{display:none}
+  .status tr{border-bottom:1px solid var(--line);padding:6px 0}
+  .status th,.status td{border:0;padding:6px 18px}
+  .status tbody th{padding-top:14px}
+}
+
+/* Two-column provides table (NHS page) and route cards (contact) */
+.split2{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-4);margin:var(--space-6) auto 0;max-width:880px;text-align:left}
+@media(max-width:700px){.split2{grid-template-columns:1fr}}
+.split2 ul,.card ul{margin:0;padding-left:1.1rem}
+.split2 li,.card li{margin:0 0 8px;font-size:15.5px;line-height:1.6}
+.route .btn{margin-top:var(--space-3)}
+
+/* Closing band: one sentence, two buttons, nothing else */
+.band.closing{margin:var(--space-8) 0 0;padding:clamp(40px,5vw,56px) clamp(22px,4vw,48px)}
+.band.closing p.one{font-family:'Playfair Display',Georgia,serif;font-weight:600;font-size:clamp(22px,2.6vw,28px);color:#fff;max-width:30ch;margin:0 auto var(--space-5);line-height:1.3}
+
+/* Plain reading page (evidence, patients, press) */
+.prose{max-width:68ch;margin:0 auto;text-align:left}
+.prose h2{font-family:'Playfair Display',Georgia,serif;font-weight:600;font-size:clamp(24px,2.6vw,30px);margin:var(--space-6) 0 var(--space-3);line-height:1.25}
+.prose p,.prose li{font-size:var(--fs-body);line-height:1.7}
+.prose .note{font-size:14px;color:var(--muted)}
+.demo-request{background:#fff;border:1px solid var(--line);border-radius:var(--radius-card);padding:var(--pad-card);max-width:640px;margin:var(--space-6) auto 0;text-align:left}
+.demo-request ol{padding-left:1.2rem;margin:var(--space-3) 0}
+.demo-request li{margin:0 0 6px}
+.demo-request .btn{margin-top:var(--space-3)}
+.demo-request .small{font-size:14px;color:var(--muted);margin:var(--space-3) 0 0}
+.fig-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:var(--space-4);margin-top:var(--space-5)}
+.fig-list figure{margin:0}
+.fig-list figcaption{font-size:var(--fs-small);color:var(--muted);margin-top:8px}
+.twoways .dgm-v{display:none;max-width:400px;margin:0 auto}
+@media(max-width:640px){.twoways .dgm-h{display:none}.twoways .dgm-v{display:block}}
+
+/* Walk-through video (follow-up 1): no autoplay, nothing loads until play except the poster */
+.video{max-width:880px;margin:var(--space-5) auto 0;text-align:left}
+.video video{display:block;width:100%;height:auto;background:var(--plum)}
+.video figcaption{font-size:var(--fs-small);color:var(--muted);text-align:center;margin-top:10px}
+.video-text{margin-top:var(--space-3);font-size:15px}
+.video-text summary{cursor:pointer;font-weight:600;color:var(--plum);text-align:center}
+.video-text ol{margin:var(--space-3) 0 0;padding-left:0;list-style:none;line-height:1.6}
+.video-text li{margin:0 0 4px}
+.video-text .vt{display:inline-block;min-width:3.2em;color:var(--muted);font-variant-numeric:tabular-nums}
+
+/* Body-size coral text on light grounds uses --coral-text (follow-up 1, item 5).
+   Large headline words (.section, h1, band headings) keep --coral; so does anything on plum. */
+.lead .accent,.body .accent,.prose .accent,.card p .accent,.lead b.hl,p b.hl{color:var(--coral-text)}
+.nextlink .nextlink-go,a.pagelink .go{color:var(--coral-text)}
+.ground-plum .body .accent,.ground-plum .lead .accent,.ground-plum p b.hl,.hero .lede .accent,.hero .lead .accent,.band p .accent,.band p b.hl{color:var(--coral)}
+
+/* Keep hyphenated kicker words whole */
+.nw{white-space:nowrap}
+
+/* Phone hero (follow-up 1, item 7): tighter stack so the headline and the product share the first screen */
+@media(max-width:960px){
+  .hero.split{padding-top:36px}
+  .hero.split .wrap{gap:0}
+  .hero.split .kicker2{margin-top:8px}
+  .hero.split h1{margin:18px auto 22px}
+  .hero.split .shot{margin:0 0 22px}
+  .hero.split .thesis{margin:18px auto 26px}
+}
+@media(max-width:440px){
+  .hero.split .kicker{font-size:11px;letter-spacing:.06em}
+}
+
+/* Follow-up 2, item B: no coral heading word on parchment or sage (2.75:1 fails even for large text).
+   The content area is white; section rhythm comes from hairlines and the plum bands; cards take the
+   parchment tint so they still read as cards. Coral on white is 3.03:1, which passes for large text. */
+main{background:var(--card)}
+.ground-parchment,.ground-sage{background:var(--card)}
+section.idea.ground + section.idea.ground{border-top:1px solid var(--line)}
+section.idea.ground#walk-through{border-top:0}
+.card{background:var(--parchment)}
+.ground-plum .card{background:var(--card)}
+.ground-parchment .sequence .num,.ground-sage .sequence .num,.sequence .num{background:var(--card)}
+.nextlink{background:var(--parchment)}
+.walk-decide,.demo-request{background:var(--parchment)}
+
+
+/* ============================================================
+   FOLLOW-UP 3 (21 September 2026)
+   ============================================================ */
+
+/* One H1 per page: the search phrase (kicker) and the brand line (display), styled as before */
+.hero h1 .kicker{display:block;font-family:'Inter',-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:12px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:#CBB9CC;line-height:1.5;margin:0 0 14px}
+.hero h1 .kicker2{margin-top:-7px}
+.hero h1 .display{display:block}
+.hero.split h1 .kicker{margin-bottom:10px}
+@media(max-width:440px){.hero h1 .kicker{font-size:11px;letter-spacing:.06em}}
+
+/* Shorter inner-page first screens (about 40 per cent less on desktop) */
+.hero.small{padding:44px 0 46px}
+.hero.small h1{margin:0 auto}
+@media(max-width:640px){.hero.small{padding:26px 0 28px}.hero.small h1{font-size:clamp(28px,8vw,36px)}}
+
+/* Inner pages with the product in the first screen */
+.hero.small.pichero .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,4vw,48px);align-items:center;text-align:left;max-width:1180px}
+.hero.small.pichero h1{margin:0;max-width:18ch}
+.hero.small.pichero .lede{margin:16px 0 0;font-size:var(--fs-lede);max-width:48ch}
+.hero.small.pichero .pic{max-width:560px;justify-self:end;width:100%}
+@media(max-width:900px){
+  .hero.small.pichero .wrap{grid-template-columns:1fr;text-align:center;gap:18px}
+  .hero.small.pichero h1{margin:0 auto}
+  .hero.small.pichero .lede{margin:0 auto}
+  .hero.small.pichero .pic{justify-self:center}
+}
+
+/* One frame for every product picture, caption "Example patient", click or tap to enlarge */
+.pic{margin:0}
+.pic figcaption{font-size:var(--fs-small);color:var(--muted);text-align:center;margin-top:8px}
+.hero .pic figcaption{color:#CBB9CC}
+button.zoom{display:block;width:100%;padding:0;margin:0;border:0;background:none;cursor:zoom-in;font:inherit}
+button.zoom:focus-visible{outline:3px solid var(--coral);outline-offset:3px;border-radius:var(--radius-card)}
+.vh{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+dialog.lightbox{width:min(96vw,1300px);max-height:94vh;padding:0;border:0;border-radius:var(--radius-card);background:var(--card);overflow:auto}
+dialog.lightbox::backdrop{background:rgba(43,27,46,.82)}
+dialog.lightbox img{display:block;width:100%;height:auto}
+dialog.lightbox .lb-bar{position:sticky;top:0;display:flex;justify-content:space-between;align-items:center;gap:12px;padding:10px 14px;background:var(--card);border-bottom:1px solid var(--line);font-size:14px;color:var(--muted)}
+dialog.lightbox .lb-close{font:inherit;font-weight:600;padding:8px 16px;border-radius:var(--radius-pill);border:1px solid var(--plum);background:var(--plum);color:#fff;cursor:pointer}
+
+/* How Orwyn is held to account: text only, four items, each a link */
+.account{background:var(--sage-tint);border-bottom:1px solid var(--line)}
+.account ul{list-style:none;margin:0 auto;padding:16px 24px;max-width:1180px;display:flex;flex-wrap:wrap;justify-content:center;gap:10px 28px}
+.account li{font-size:14px;line-height:1.45}
+.account a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--stone)}
+.account a:hover{border-bottom-color:var(--coral)}
+.account .account-h{display:block;text-align:center;font-size:11.5px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);padding-top:14px}
+
+/* The named surgeon, on the homepage */
+.surgeon{display:flex;gap:28px;align-items:center;max-width:820px;margin:0 auto;text-align:left}
+.surgeon img{width:112px;height:112px;border-radius:50%;object-fit:cover;flex:0 0 auto;border:3px solid var(--plum)}
+.surgeon h2{font-family:'Playfair Display',Georgia,serif;font-weight:600;font-size:clamp(22px,2.4vw,28px);margin:0 0 10px;line-height:1.25}
+.surgeon p{margin:0 0 10px;font-size:var(--fs-body);line-height:1.65}
+@media(max-width:620px){.surgeon{flex-direction:column;text-align:center;gap:16px}}
+
+/* Programme credentials: each logo on its own white card, small fixed height, never in a row of logos */
+.programmes{display:grid;gap:18px;max-width:760px;margin:26px auto 0;text-align:left}
+.programme{display:flex;gap:18px;align-items:center}
+.logo-card{flex:0 0 auto;display:flex;flex-direction:column;align-items:center;gap:4px;background:#FFFFFF;border:1px solid var(--line);border-radius:10px;padding:8px 10px 6px}
+.logo-card img{display:block;height:44px;width:auto}
+.logo-card span{font-size:11px;font-weight:600;letter-spacing:.04em;color:var(--muted)}
+.programme p{margin:0;font-size:15.5px;line-height:1.6}
+@media(max-width:560px){.logo-card img{height:36px}.programme{align-items:flex-start}}
+
+/* Questions (homepage) */
+.faq{max-width:760px;margin:26px auto 0;text-align:left}
+.faq details{border-top:1px solid var(--line);padding:14px 0}
+.faq details:last-child{border-bottom:1px solid var(--line)}
+.faq summary{cursor:pointer;font-family:'Playfair Display',Georgia,serif;font-weight:600;font-size:var(--fs-h3);color:var(--plum)}
+.faq details p{margin:10px 0 0;font-size:var(--fs-body);line-height:1.65}
+
+/* Clinical reference pages (Stage B) */
+.orwyn-box{background:var(--parchment);border:1px solid var(--line);border-left:4px solid var(--sage);border-radius:var(--radius-card);padding:var(--pad-card);max-width:760px;margin:30px auto 0;text-align:left}
+.orwyn-box h3{font-family:'Playfair Display',Georgia,serif;font-weight:600;font-size:var(--fs-h3);margin:0 0 10px}
+.orwyn-box p{margin:0 0 12px;font-size:15.5px;line-height:1.65}
+.orwyn-box .pic{margin-top:14px}
+.byline{font-size:14px;color:var(--muted);max-width:68ch;margin:0 auto 6px}
+.readnext{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:960px;margin:24px auto 0}
+.readnext .nextlink{margin:0}
+.readnext .nextlink .nextlink-h{font-size:18px}
+@media(max-width:860px){.readnext{grid-template-columns:1fr}}
+.article .idea p:not(.lead):not(.kicker),.article .idea li{max-width:68ch;margin-left:auto;margin-right:auto;text-align:left}
+.article .idea ul.plain{max-width:68ch;margin:0 auto 18px;padding-left:1.2rem;text-align:left}
+.article .idea ul.plain li{margin:0 0 8px;font-size:var(--fs-body);line-height:1.65}
+.sources li{font-size:14.5px}
+.hero .video{margin:0}
+.hero .video figcaption{color:#CBB9CC}
+.hero .video-text summary{color:#FFFFFF}
+.hero .video-text{color:#E7DCE6}
+.hero .video-text .vt{color:#CBB9CC}
+.logo-card{width:200px;box-sizing:border-box}
+@media(max-width:560px){.logo-card{width:160px}}

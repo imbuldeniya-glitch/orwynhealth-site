@@ -3,60 +3,282 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>For NHS commissioners, MSK triage and general practice | Orwyn</title>
-<meta name="description" content="How Orwyn works with the NHS: for commissioners of musculoskeletal care, for MSK triage and first contact services, and for general practice.">
-
+<title>MSK decision support for NHS services and commissioners | Orwyn</title>
+<meta name="description" content="MSK decision support for NHS services and commissioners: where Orwyn sits, what a first evaluation would measure, and the governance it needs.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://orwynhealth.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Working with the NHS",
+      "item": "https://orwynhealth.com/nhs"
+    }
+  ]
+}
+</script>
 <link rel="canonical" href="https://orwynhealth.com/nhs">
 <meta name="robots" content="index, follow">
 <meta name="theme-color" content="#2B1B2E">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Orwyn">
-<meta property="og:title" content="For NHS commissioners, MSK triage and general practice | Orwyn">
-<meta property="og:description" content="How Orwyn works with the NHS: for commissioners of musculoskeletal care, for MSK triage and first contact services, and for general practice.">
+<meta property="og:title" content="MSK decision support for NHS services and commissioners | Orwyn">
+<meta property="og:description" content="MSK decision support for NHS services and commissioners: where Orwyn sits, what a first evaluation would measure, and the governance it needs.">
 <meta property="og:url" content="https://orwynhealth.com/nhs">
-<meta property="og:image" content="https://orwynhealth.com/social.jpg">
+<meta property="og:image" content="https://orwynhealth.com/og-letters.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Orwyn. The ortho opinion, at first contact. Dr Arj Imbuldeniya, Consultant Knee and Hip Surgeon.">
-<meta name="twitter:image" content="https://orwynhealth.com/social.jpg">
+<meta property="og:image:alt" content="A referral letter written by Orwyn to an acute knee clinic for an example patient.">
+<meta name="twitter:image" content="https://orwynhealth.com/og-letters.jpg">
 <meta property="og:locale" content="en_GB">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="For NHS commissioners, MSK triage and general practice | Orwyn">
-<meta name="twitter:description" content="How Orwyn works with the NHS: for commissioners of musculoskeletal care, for MSK triage and first contact services, and for general practice.">
+<meta name="twitter:title" content="MSK decision support for NHS services and commissioners | Orwyn">
+<meta name="twitter:description" content="MSK decision support for NHS services and commissioners: where Orwyn sits, what a first evaluation would measure, and the governance it needs.">
 <link rel="icon" href="/favicon.png" type="image/png">
 <link rel="preload" href="/fonts/playfair-display-latin-var.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/inter-latin-var.woff2" as="font" type="font/woff2" crossorigin>
+<script>document.documentElement.className+=' js'</script>
 <link rel="stylesheet" href="/styles.css">
 <style>
   .source{font-size:12.5px;line-height:1.6;color:var(--muted);max-width:62ch;margin:22px auto 0}
   .source a{color:var(--muted)}
   .idea[id]{scroll-margin-top:88px}
+  .toc{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:26px auto 0;max-width:820px;padding:0;list-style:none}
+  .toc a{display:inline-block;padding:7px 14px;border:1px solid var(--line);border-radius:999px;background:#fff;font-size:14px;text-decoration:none}
+  .toc a:hover{border-color:var(--coral)}
 </style>
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 <header class="top">
   <div class="wrap">
-    <a class="brand" href="/"><img class="logomark" src="/logo.svg" width="32" height="32" alt="Orwyn logo"><span class="mark"><span class="o">o</span>rwyn<span class="tm">&trade;</span></span></a>
+    <a class="brand" href="/"><img class="logomark" src="/logo.svg" width="34" height="34" alt="Orwyn logo"><span class="mark"><span class="o">o</span>rwyn<span class="tm">&trade;</span></span></a>
     <button class="menubtn" aria-label="Open menu" aria-expanded="false" aria-controls="mainnav"><span></span><span></span><span></span></button>
-    <nav class="main" id="mainnav" aria-label="Main"><a href="/">Home</a><a href="/what-orwyn-does">What it does</a><a href="/safety">Safety</a><a href="/about">About</a><a href="/nhs" aria-current="page">Working with the NHS</a><a href="/demo">See the demo</a><a class="cta" href="/contact">Get in touch</a></nav>
+    <nav class="main" id="mainnav" aria-label="Main"><a href="/">Home</a><a href="/what-orwyn-does">What it does</a><a href="/safety">Safety</a><a href="/about">About</a><a href="/nhs" aria-current="page">Working with the NHS</a><a href="/see-the-demo">See the demo</a><a class="cta" href="/contact">Get in touch</a></nav>
   </div>
 </header>
-<section class="hero small">
+<main id="main">
+<section class="hero small pichero">
   <div class="wrap">
-    <div class="kicker">Working with the NHS</div>
-    <h1>Developed with the <span class="accent">people</span> who do the work.</h1>
+    <div>
+      <h1><span class="kicker">MSK decision support for NHS services and commissioners</span><span class="display">Developed with the <span class="accent">people</span> who do the work.</span></h1>
+    </div>
+    <figure class="pic"><div class="frame"><picture><source type="image/webp" srcset="/img/03-surgeon-letter-800.webp 800w, /img/03-surgeon-letter-1200.webp 1200w" sizes="(max-width: 900px) 92vw, 560px"><img src="/img/03-surgeon-letter.png" width="1200" height="624" fetchpriority="high" decoding="async" alt="The one-page letter to the acute knee clinic, opening &quot;Please see this 41-year-old, as we suspect an anterior cruciate ligament rupture or insufficiency.&quot;"></picture></div><figcaption>Example patient</figcaption></figure>
   </div>
 </section>
+<nav class="account" aria-label="How Orwyn is held to account">
+  <span class="account-h">How Orwyn is held to account</span>
+  <ul>
+    <li><a href="/standards">Clinical risk management to DCB0129, with a named Clinical Safety Officer</a></li>
+    <li><a href="/standards">Built to the standards expected of regulated clinical software; certification not yet held</a></li>
+    <li><a href="/safety">Every rule written, versioned and sourced</a></li>
+    <li><a href="/about">NHS Clinical Entrepreneur Programme, Cohort 10</a></li>
+  </ul>
+</nav>
 
 <div class="wrap pad">
+  <section class="idea first reveal" id="where">
+    <p class="lead">This page is for NHS MSK service leads and commissioners who are deciding whether Orwyn is worth evaluating in their pathway. It answers the questions we are asked most, and says plainly what is not yet decided.</p>
+    <ul class="toc" aria-label="On this page">
+      <li><a href="#where-it-sits">Where it sits</a></li><li><a href="#consultation">The consultation</a></li><li><a href="#unchanged">What does not change</a></li><li><a href="#evaluation">A first evaluation</a></li><li><a href="#measures">What it measures</a></li><li><a href="#who-provides">Who provides what</a></li><li><a href="#governance">Governance and safety</a></li>
+    </ul>
+  </section>
 
-  <section class="idea first reveal" id="scale">
+  <section class="idea reveal" id="where-it-sits">
+    <h2 class="section">Where Orwyn sits in the MSK pathway, and who <span class="accent">uses</span> it</h2>
+    <p class="lead">Orwyn sits inside the first contact MSK consultation, in general practice, community MSK services and interface or triage services. It is used by the clinician seeing the patient: first contact practitioners, advanced practice physiotherapists and MSK physiotherapists.</p>
+    <p class="lead">Orwyn is for the clinician, in the room, while the patient is in front of them. It is <a href="/msk-clinical-decision-support">clinician-facing decision support</a>, not a patient questionnaire and not something the patient fills in at home. It fits inside a normal appointment and it does not slow the appointment down.</p>
+    <p class="lead">Every suggestion comes with the reason for it, in plain words. The clinician can disagree and record why, and that disagreement is kept. Orwyn does not check, approve or oversee anyone's work. It carries a surgeon's judgement into a room the surgeon is not in, and the clinician assesses the patient and decides.</p>
+    <h3 class="center" style="font-family:'Playfair Display',Georgia,serif;font-weight:600;font-size:var(--fs-h3);margin:34px 0 10px">General practice</h3>
+    <p class="lead">General practice still sees most musculoskeletal presentations, in ten minute appointments, alongside everything else. The hardest cases are often the ones already waiting, who keep coming back, where the honest question is whether anything has been missed and whether the plan should change.</p>
+    <p class="lead">Orwyn is designed and tested for first contact musculoskeletal appointments rather than for a ten minute general practice appointment. We are talking to GPs now about whether it is useful in general practice and what would have to change. If you see these patients, <a href="/contact">we would like to hear from you</a>.</p>
+  </section>
+
+  <section class="idea reveal" id="consultation">
+    <h2 class="section">What happens in the <span class="accent">consultation</span></h2>
+    <p class="lead">The same seven steps every time, with the safety questions first. You can <a href="/see-the-demo">watch the four-step walk-through of an example patient</a> without a password.</p>
+    <figure class="model reveal">
+<svg class="dgm-h" viewBox="0 0 1200 300" role="img" aria-labelledby="mdlT mdlD" xmlns="http://www.w3.org/2000/svg">
+<title id="mdlT">What Orwyn does in a consultation, in seven steps</title>
+<desc id="mdlD">Seven steps in order. One: assess, with the safety questions first. Two: the most likely diagnosis, with its reasons. Three: a test, where one is needed. Four: what to do today. Five: when to review and when to escalate. Six: the letters are written. Seven: the outcome is returned to the clinician. Steps one to six work in the demo today. Step seven is planned, as are stored records and connection to the record system.</desc>
+<style>.mdl-t{font-family:Inter,Arial,sans-serif;font-size:14px;font-weight:700;fill:#2B1B2E}.mdl-s{font-family:Inter,Arial,sans-serif;font-size:13px;fill:#6B6470}.mdl-n{font-family:'Playfair Display',Georgia,serif;font-size:22px;font-weight:700}.mdl-l{font-family:Inter,Arial,sans-serif;font-size:12.5px;fill:#6B6470}</style>
+<rect x="1" y="1" width="1198" height="298" rx="28" fill="#FFFFFF" stroke="#E5E1E6" stroke-width="1.5"/>
+<line x1="128" y1="110" x2="232" y2="110" stroke="#2B1B2E" stroke-width="2"/>
+<line x1="296" y1="110" x2="400" y2="110" stroke="#2B1B2E" stroke-width="2"/>
+<line x1="464" y1="110" x2="568" y2="110" stroke="#2B1B2E" stroke-width="2"/>
+<line x1="632" y1="110" x2="736" y2="110" stroke="#2B1B2E" stroke-width="2"/>
+<line x1="800" y1="110" x2="904" y2="110" stroke="#2B1B2E" stroke-width="2"/>
+<line x1="968" y1="110" x2="1072" y2="110" stroke="#D6D8DB" stroke-width="2" stroke-dasharray="4 6"/>
+<circle cx="96" cy="110" r="30" fill="#2B1B2E" stroke="#E5735B" stroke-width="3"/>
+<text x="96" y="118" text-anchor="middle" class="mdl-n" fill="#FFFFFF">1</text>
+<text x="96" y="172" text-anchor="middle" class="mdl-t">Assess</text>
+<text x="96" y="192" text-anchor="middle" class="mdl-s">safety first</text>
+<circle cx="264" cy="110" r="30" fill="#2B1B2E" stroke="#2B1B2E" stroke-width="3"/>
+<text x="264" y="118" text-anchor="middle" class="mdl-n" fill="#FFFFFF">2</text>
+<text x="264" y="172" text-anchor="middle" class="mdl-t">Most likely</text>
+<text x="264" y="192" text-anchor="middle" class="mdl-s">diagnosis, with reasons</text>
+<circle cx="432" cy="110" r="30" fill="#2B1B2E" stroke="#2B1B2E" stroke-width="3"/>
+<text x="432" y="118" text-anchor="middle" class="mdl-n" fill="#FFFFFF">3</text>
+<text x="432" y="172" text-anchor="middle" class="mdl-t">Test, where</text>
+<text x="432" y="192" text-anchor="middle" class="mdl-s">one is needed</text>
+<circle cx="600" cy="110" r="30" fill="#2B1B2E" stroke="#2B1B2E" stroke-width="3"/>
+<text x="600" y="118" text-anchor="middle" class="mdl-n" fill="#FFFFFF">4</text>
+<text x="600" y="172" text-anchor="middle" class="mdl-t">What to do</text>
+<text x="600" y="192" text-anchor="middle" class="mdl-s">today</text>
+<circle cx="768" cy="110" r="30" fill="#2B1B2E" stroke="#2B1B2E" stroke-width="3"/>
+<text x="768" y="118" text-anchor="middle" class="mdl-n" fill="#FFFFFF">5</text>
+<text x="768" y="172" text-anchor="middle" class="mdl-t">When to review,</text>
+<text x="768" y="192" text-anchor="middle" class="mdl-s">when to escalate</text>
+<circle cx="936" cy="110" r="30" fill="#2B1B2E" stroke="#2B1B2E" stroke-width="3"/>
+<text x="936" y="118" text-anchor="middle" class="mdl-n" fill="#FFFFFF">6</text>
+<text x="936" y="172" text-anchor="middle" class="mdl-t">Letters</text>
+<text x="936" y="192" text-anchor="middle" class="mdl-s">written</text>
+<circle cx="1104" cy="110" r="30" fill="#FFFFFF" stroke="#6B6470" stroke-width="2" stroke-dasharray="4 5"/>
+<text x="1104" y="118" text-anchor="middle" class="mdl-n" fill="#6B6470">7</text>
+<text x="1104" y="172" text-anchor="middle" class="mdl-t">Outcome returned</text>
+<text x="1104" y="192" text-anchor="middle" class="mdl-s">to the clinician</text>
+<circle cx="330" cy="252" r="8" fill="#2B1B2E"/><text x="346" y="257" class="mdl-l">In the demo today</text>
+<circle cx="520" cy="252" r="8" fill="#FFFFFF" stroke="#6B6470" stroke-width="1.5" stroke-dasharray="3 3"/><text x="536" y="257" class="mdl-l">Planned, with stored records and connection to the record system</text>
+</svg>
+<svg class="dgm-v" viewBox="0 0 420 780" role="img" aria-labelledby="mdlTv mdlDv" xmlns="http://www.w3.org/2000/svg">
+<title id="mdlTv">What Orwyn does in a consultation, in seven steps</title>
+<desc id="mdlDv">Seven steps in order. One: assess, with the safety questions first. Two: the most likely diagnosis, with its reasons. Three: a test, where one is needed. Four: what to do today. Five: when to review and when to escalate. Six: the letters are written. Seven: the outcome is returned to the clinician. Steps one to six work in the demo today. Step seven is planned, as are stored records and connection to the record system.</desc>
+<style>.mdl-t{font-family:Inter,Arial,sans-serif;font-size:14px;font-weight:700;fill:#2B1B2E}.mdl-s{font-family:Inter,Arial,sans-serif;font-size:13px;fill:#6B6470}.mdl-n{font-family:'Playfair Display',Georgia,serif;font-size:22px;font-weight:700}.mdl-l{font-family:Inter,Arial,sans-serif;font-size:12.5px;fill:#6B6470}</style>
+<rect x="1" y="1" width="418" height="778" rx="24" fill="#FFFFFF" stroke="#E5E1E6" stroke-width="1.5"/>
+<line x1="62" y1="90" x2="62" y2="128" stroke="#2B1B2E" stroke-width="2"/>
+<line x1="62" y1="184" x2="62" y2="222" stroke="#2B1B2E" stroke-width="2"/>
+<line x1="62" y1="278" x2="62" y2="316" stroke="#2B1B2E" stroke-width="2"/>
+<line x1="62" y1="372" x2="62" y2="410" stroke="#2B1B2E" stroke-width="2"/>
+<line x1="62" y1="466" x2="62" y2="504" stroke="#2B1B2E" stroke-width="2"/>
+<line x1="62" y1="560" x2="62" y2="598" stroke="#D6D8DB" stroke-width="2" stroke-dasharray="4 6"/>
+<circle cx="62" cy="62" r="27" fill="#2B1B2E" stroke="#E5735B" stroke-width="3"/>
+<text x="62" y="70" text-anchor="middle" class="mdl-n" fill="#FFFFFF">1</text>
+<text x="108" y="59" class="mdl-t">Assess</text>
+<text x="108" y="78" class="mdl-s">safety first</text>
+<circle cx="62" cy="156" r="27" fill="#2B1B2E" stroke="#2B1B2E" stroke-width="3"/>
+<text x="62" y="164" text-anchor="middle" class="mdl-n" fill="#FFFFFF">2</text>
+<text x="108" y="153" class="mdl-t">Most likely</text>
+<text x="108" y="172" class="mdl-s">diagnosis, with reasons</text>
+<circle cx="62" cy="250" r="27" fill="#2B1B2E" stroke="#2B1B2E" stroke-width="3"/>
+<text x="62" y="258" text-anchor="middle" class="mdl-n" fill="#FFFFFF">3</text>
+<text x="108" y="247" class="mdl-t">Test, where</text>
+<text x="108" y="266" class="mdl-s">one is needed</text>
+<circle cx="62" cy="344" r="27" fill="#2B1B2E" stroke="#2B1B2E" stroke-width="3"/>
+<text x="62" y="352" text-anchor="middle" class="mdl-n" fill="#FFFFFF">4</text>
+<text x="108" y="341" class="mdl-t">What to do</text>
+<text x="108" y="360" class="mdl-s">today</text>
+<circle cx="62" cy="438" r="27" fill="#2B1B2E" stroke="#2B1B2E" stroke-width="3"/>
+<text x="62" y="446" text-anchor="middle" class="mdl-n" fill="#FFFFFF">5</text>
+<text x="108" y="435" class="mdl-t">When to review,</text>
+<text x="108" y="454" class="mdl-s">when to escalate</text>
+<circle cx="62" cy="532" r="27" fill="#2B1B2E" stroke="#2B1B2E" stroke-width="3"/>
+<text x="62" y="540" text-anchor="middle" class="mdl-n" fill="#FFFFFF">6</text>
+<text x="108" y="529" class="mdl-t">Letters</text>
+<text x="108" y="548" class="mdl-s">written</text>
+<circle cx="62" cy="626" r="27" fill="#FFFFFF" stroke="#6B6470" stroke-width="2" stroke-dasharray="4 5"/>
+<text x="62" y="634" text-anchor="middle" class="mdl-n" fill="#6B6470">7</text>
+<text x="108" y="623" class="mdl-t">Outcome returned</text>
+<text x="108" y="642" class="mdl-s">to the clinician</text>
+<circle cx="70" cy="726" r="7" fill="#2B1B2E"/><text x="84" y="731" class="mdl-l">In the demo today</text>
+<circle cx="70" cy="752" r="7" fill="#FFFFFF" stroke="#6B6470" stroke-width="1.5" stroke-dasharray="3 3"/><text x="84" y="757" class="mdl-l">Planned</text>
+</svg>
+<figcaption>One model, used on every page. Steps one to six work in the demo today. Returning the outcome to the clinician, stored records and connection to the record system are planned.</figcaption>
+</figure>
+  </section>
+
+  <section class="idea reveal" id="unchanged">
+    <h2 class="section">What does not <span class="accent">change</span></h2>
+    <div class="three">
+      <div class="card"><h3>The clinician decides</h3><p>The clinician assesses the patient, makes every decision and remains accountable for it, exactly as now. Orwyn offers a suggestion with its reasons; the clinician can disagree and the disagreement is recorded.</p></div>
+      <div class="card"><h3>Nothing refers by itself</h3><p>Orwyn does not send a referral, book an appointment or contact a patient on its own. Every letter is written for the clinician to check, change and send.</p></div>
+      <div class="card"><h3>Existing pathways stay</h3><p>Your triage, referral routes and local criteria stay as they are, unless the service decides to change them on purpose as part of an evaluation.</p></div>
+    </div>
+  </section>
+
+  <section class="idea reveal" id="evaluation">
+    <h2 class="section">What a first <span class="accent">evaluation</span> looks like</h2>
+    <p class="lead">No pilot has been agreed yet. A first evaluation would run in one first contact MSK service, with clinicians who choose to take part, alongside the existing pathway rather than in place of it. The service and Orwyn would agree in advance which clinics take part, for how long, what counts as a good decision in both directions, and who reviews safety during the evaluation.</p>
+    <p class="lead">It would start with a baseline of how referral decisions are made today, then compare the same measures while Orwyn is in use, so that any change can be shown rather than asserted. The results would belong to the service as much as to Orwyn.</p>
+  </section>
+
+  <section class="idea reveal" id="measures">
+    <h2 class="section">What it would <span class="accent">measure</span></h2>
+    <p class="lead">These are the measures a first evaluation would collect. They are not results: Orwyn has not yet been deployed.</p>
+    <div class="grid">
+      <div class="card"><h3>Process</h3><p>Whether Orwyn fits inside a normal appointment, how often it is used, and where it is not.</p></div>
+      <div class="card"><h3>Decisions, in both directions</h3><p>Patients referred who did not need a surgical opinion, and patients held in non-surgical care who needed one sooner. Neither on its own; always both.</p></div>
+      <div class="card"><h3>The pathway</h3><p>Time to the right next step, re-attendance, imaging requested, and escalation.</p></div>
+      <div class="card"><h3>User experience</h3><p>What clinicians and patients say about the plan, the letters and the time it takes.</p></div>
+      <div class="card"><h3>Safety</h3><p>Every safety rule that applied, what was done, and any incident, reviewed against the clinical safety case.</p></div>
+    </div>
+    <figure class="diagram orwyn-visual reveal">
+<svg class="wide-infographic" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 430" role="img" aria-labelledby="nhs3T nhs3D" fill="#2B1B2E">
+      <title id="nhs3T">Pilot measurement map</title>
+      <desc id="nhs3D">A four-part pilot evaluation pathway covering the referral decision, specialist outcome, patient pathway and service effect.</desc>
+
+<style>
+  .nhs3-display { font-family: 'Playfair Display', Georgia, serif; }
+  .nhs3-sans { font-family: Inter, Arial, sans-serif; }
+  .nhs3-muted { fill:#6B6470; }
+  .nhs3-caps { letter-spacing:1.4px; font-weight:700; }
+  .nhs3-fine { stroke:#E5E1E6; stroke-width:1.5; }
+</style>
+
+
+<rect width="1200" height="430" rx="30" fill="#FFFFFF" stroke="#E5E1E6" stroke-width="1.5"/>
+<text x="55" y="67" class="nhs3-display" font-size="36">A pilot should measure <tspan fill="#E5735B">what changed.</tspan></text>
+<text x="55" y="98" class="nhs3-sans nhs3-muted" font-size="15">Not clicks. Not logins. The clinical decision, the outcome, and the pathway around it.</text>
+<path d="M180 148 H1020" stroke="#E5E1E6" stroke-width="2"/>
+<circle cx="180" cy="148" r="7" fill="#2B1B2E"/><circle cx="460" cy="148" r="7" fill="#E5735B"/><circle cx="740" cy="148" r="7" fill="#7A8F7D"/><circle cx="1020" cy="148" r="7" fill="#6B6470"/>
+<rect x="70" y="205" width="230" height="135" rx="22" fill="#FFFFFF" stroke="#2B1B2E" stroke-width="1.5"/><circle cx="104" cy="239" r="17" fill="#2B1B2E" opacity=".14"/><text x="104" y="245" text-anchor="middle" class="nhs3-sans" font-size="13" font-weight="800" fill="#2B1B2E">1</text><text x="94" y="280" class="nhs3-display" font-size="19">Referral decision</text><text x="94" y="310" class="nhs3-sans nhs3-muted" font-size="13">What was decided, and why</text><path d="M302 272 H332" stroke="#E5E1E6" stroke-width="2"/><path d="M324 265l10 7-10 7" fill="none" stroke="#E5E1E6" stroke-width="2"/><rect x="340" y="205" width="230" height="135" rx="22" fill="#FFFFFF" stroke="#E5735B" stroke-width="1.5"/><circle cx="374" cy="239" r="17" fill="#E5735B" opacity=".14"/><text x="374" y="245" text-anchor="middle" class="nhs3-sans" font-size="13" font-weight="800" fill="#2B1B2E">2</text><text x="364" y="280" class="nhs3-display" font-size="19">Specialist outcome</text><text x="364" y="310" class="nhs3-sans nhs3-muted" font-size="13">What happened downstream</text><path d="M572 272 H602" stroke="#E5E1E6" stroke-width="2"/><path d="M594 265l10 7-10 7" fill="none" stroke="#E5E1E6" stroke-width="2"/><rect x="610" y="205" width="230" height="135" rx="22" fill="#FFFFFF" stroke="#7A8F7D" stroke-width="1.5"/><circle cx="644" cy="239" r="17" fill="#7A8F7D" opacity=".14"/><text x="644" y="245" text-anchor="middle" class="nhs3-sans" font-size="13" font-weight="800" fill="#2B1B2E">3</text><text x="634" y="280" class="nhs3-display" font-size="19">Patient pathway</text><text x="634" y="310" class="nhs3-sans nhs3-muted" font-size="13">Time, reattendance, escalation</text><path d="M842 272 H872" stroke="#E5E1E6" stroke-width="2"/><path d="M864 265l10 7-10 7" fill="none" stroke="#E5E1E6" stroke-width="2"/><rect x="880" y="205" width="230" height="135" rx="22" fill="#FFFFFF" stroke="#6B6470" stroke-width="1.5"/><circle cx="914" cy="239" r="17" fill="#6B6470" opacity=".14"/><text x="914" y="245" text-anchor="middle" class="nhs3-sans" font-size="13" font-weight="800" fill="#6B6470">4</text><text x="904" y="280" class="nhs3-display" font-size="19">Service effect</text><text x="904" y="310" class="nhs3-sans nhs3-muted" font-size="13">Activity, waits, variation, cost</text>
+<text x="70" y="386" class="nhs3-sans nhs3-muted" font-size="13">Designed for NHS pilot evaluation: baseline, then decision, then downstream outcome, then service-level effect.</text>
+
+    </svg>
+      <figcaption>What a pilot should measure: the decision, the downstream outcome, the patient pathway and the effect on the service.</figcaption>
+    </figure>
+  </section>
+
+  <section class="idea reveal" id="who-provides">
+    <h2 class="section">Who provides <span class="accent">what</span></h2>
+    <div class="split2">
+      <div class="card"><h3>Orwyn provides</h3><ul>
+        <li>The software, and the clinical rules behind it, written and signed off by a named consultant knee surgeon</li>
+        <li>The manufacturer's clinical safety work under DCB0129: the hazard log and the clinical safety case report</li>
+        <li>Training for the clinicians taking part, and support during the evaluation</li>
+        <li>The evaluation reports, shared with the service</li>
+      </ul></div>
+      <div class="card"><h3>The NHS partner provides</h3><ul>
+        <li>A clinical lead and the clinicians who choose to take part</li>
+        <li>The deploying organisation's clinical safety assessment under DCB0160</li>
+        <li>Information governance approval, including the data protection impact assessment</li>
+        <li>Agreement on what is measured, and access to the outcome information needed to measure it</li>
+      </ul></div>
+    </div>
+  </section>
+
+  <section class="idea reveal" id="governance">
+    <h2 class="section">Information governance and clinical <span class="accent">safety</span></h2>
+    <p class="lead">Clinical risk management follows DCB0129, the NHS standard for manufacturers of health software, which Orwyn carries out as the manufacturer. The deploying organisation carries out its own assessment under the companion standard, DCB0160, which we support. Orwyn is being mapped against the NHS Digital Technology Assessment Criteria (DTAC) as it is built.</p>
+    <p class="lead">Some questions are not yet decided, including how Orwyn connects to the record system, where the service's data is held and how clinicians sign in. We will agree each of them with the service before any evaluation starts. Where each standard stands today is set out on <a href="/standards">our standards page</a>, what has been tested is on <a href="/evidence">what we have tested, and what the first trial will measure</a>, and how the tool is built to be safe is on <a href="/safety">safety and how it is built</a>.</p>
+    <p class="btnrow onlight" style="margin-top:26px"><a class="btn primary" href="/contact#nhs-pilot">Discuss an NHS pilot</a></p>
+  </section>
+
+  <section class="idea reveal" id="scale">
+    <p class="kicker">Background</p>
     <h2 class="section">The size of the problem</h2>
     <p class="lead">Musculoskeletal problems are one of the biggest things the NHS deals with. 20 million people in the UK live with a musculoskeletal condition. Up to 30% of general practice consultations in England relate to one. The NHS spends around &pound;5 billion a year on them, and around 30.6 million working days are lost to them every year.</p>
     <p class="lead">ARMA, the alliance of patient charities and professional bodies that speaks for musculoskeletal health in the UK, describes <a href="https://arma.uk.net/policy-priorities/better-msk-care/" target="_blank" rel="noopener noreferrer">what good care needs</a>: early assessment, rapid advice and appropriate triage, so people get the right support before problems escalate, and strong links between community services and specialist care. Delays, they note, lead to avoidable deterioration, loss of function and increased pressure on the rest of the system.</p>
     <p class="source">The GP consultation figure is published by <a href="https://www.england.nhs.uk/long-read/msk-orthopaedic-approach-to-referral-optimisation/" target="_blank" rel="noopener noreferrer">NHS England</a>. The remaining figures and the policy positions are published by <a href="https://arma.uk.net" target="_blank" rel="noopener noreferrer">ARMA</a>, the Arthritis and Musculoskeletal Alliance. Orwyn has no affiliation with either and is endorsed by neither.</p>
   </section>
-    <figure class="diagram orwyn-visual reveal">
+  <figure class="diagram orwyn-visual reveal">
 <svg class="wide-infographic" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 325" role="img" aria-labelledby="nhs1T nhs1D" fill="#2B1B2E">
       <title id="nhs1T">The scale of musculoskeletal care</title>
       <desc id="nhs1D">Four current musculoskeletal burden statistics: more than 20 million people affected, up to 30 percent of GP consultations, around 5 billion pounds annual NHS spending, and around 30.6 million working days lost.</desc>
@@ -75,18 +297,17 @@
       <circle cx="15" cy="9" r="6"/><circle cx="41" cy="9" r="6"/>
       <path d="M3 34c2-9 7-14 12-14s10 5 12 14M29 34c2-9 7-14 12-14s10 5 12 14"/>
       <path d="M25 22h7"/>
-    </g><text x="55" y="158" class="nhs1-display" font-size="38" fill="#7A8F7D">20m+</text><text x="55" y="187" class="nhs1-sans" font-size="15" font-weight="800">people</text><text x="55" y="214" class="nhs1-sans nhs1-muted" font-size="13.5">in the UK live with an MSK</text><text x="55" y="233" class="nhs1-sans nhs1-muted" font-size="13.5">condition.</text><text x="55" y="286" class="nhs1-sans nhs1-muted" font-size="11.5">Source: NHS England</text><line x1="599" y1="55" x2="599" y2="265" stroke="#E5E1E6" stroke-width="1.2"/><circle cx="375" cy="90" r="34" fill="none" stroke="#E5735B" stroke-width="2" opacity=".9"/><path d="M355 99a20 20 0 1 1 40 0" fill="none" stroke="#E5735B" stroke-width="3"/><path d="M375 79v20l14 10" fill="none" stroke="#E5735B" stroke-width="3" stroke-linecap="round"/><text x="345" y="158" class="nhs1-display" font-size="38" fill="#E5735B">Up to 30%</text><text x="345" y="187" class="nhs1-sans" font-size="15" font-weight="800">GP consultations</text><text x="345" y="214" class="nhs1-sans nhs1-muted" font-size="13.5">in England relate to MSK</text><text x="345" y="233" class="nhs1-sans nhs1-muted" font-size="13.5">conditions.</text><text x="345" y="286" class="nhs1-sans nhs1-muted" font-size="11.5">Source: NHS England</text><line x1="889" y1="55" x2="889" y2="265" stroke="#E5E1E6" stroke-width="1.2"/><circle cx="665" cy="90" r="34" fill="none" stroke="#7A8F7D" stroke-width="2" opacity=".9"/><text x="665" y="102" text-anchor="middle" class="nhs1-display" font-size="38" fill="#7A8F7D">£</text><text x="635" y="158" class="nhs1-display" font-size="38" fill="#7A8F7D">£5bn</text><text x="635" y="187" class="nhs1-sans" font-size="15" font-weight="800">NHS spend</text><text x="635" y="214" class="nhs1-sans nhs1-muted" font-size="13.5">estimated annually on MSK</text><text x="635" y="233" class="nhs1-sans nhs1-muted" font-size="13.5">conditions.</text><text x="635" y="286" class="nhs1-sans nhs1-muted" font-size="11.5">Source: ARMA 2026</text><circle cx="955" cy="90" r="34" fill="none" stroke="#E5735B" stroke-width="2" opacity=".9"/><rect x="935" y="72" width="40" height="34" rx="5" fill="none" stroke="#E5735B" stroke-width="3"/><path d="M945 72v-8h20v8" fill="none" stroke="#E5735B" stroke-width="3"/><text x="925" y="158" class="nhs1-display" font-size="38" fill="#E5735B">30.6m</text><text x="925" y="187" class="nhs1-sans" font-size="15" font-weight="800">working days</text><text x="925" y="214" class="nhs1-sans nhs1-muted" font-size="13.5">lost annually to MSK conditions.</text><text x="925" y="286" class="nhs1-sans nhs1-muted" font-size="11.5">Source: ARMA 2026</text>
+    </g><text x="55" y="158" class="nhs1-display" font-size="38" fill="#7A8F7D">20m+</text><text x="55" y="187" class="nhs1-sans" font-size="15" font-weight="800">people</text><text x="55" y="214" class="nhs1-sans nhs1-muted" font-size="13.5">in the UK live with an MSK</text><text x="55" y="233" class="nhs1-sans nhs1-muted" font-size="13.5">condition.</text><text x="55" y="286" class="nhs1-sans nhs1-muted" font-size="11.5">Source: ARMA 2026</text><line x1="599" y1="55" x2="599" y2="265" stroke="#E5E1E6" stroke-width="1.2"/><circle cx="375" cy="90" r="34" fill="none" stroke="#E5735B" stroke-width="2" opacity=".9"/><path d="M355 99a20 20 0 1 1 40 0" fill="none" stroke="#E5735B" stroke-width="3"/><path d="M375 79v20l14 10" fill="none" stroke="#E5735B" stroke-width="3" stroke-linecap="round"/><text x="345" y="158" class="nhs1-display" font-size="38" fill="#E5735B">Up to 30%</text><text x="345" y="187" class="nhs1-sans" font-size="15" font-weight="800">GP consultations</text><text x="345" y="214" class="nhs1-sans nhs1-muted" font-size="13.5">in England relate to MSK</text><text x="345" y="233" class="nhs1-sans nhs1-muted" font-size="13.5">conditions.</text><text x="345" y="286" class="nhs1-sans nhs1-muted" font-size="11.5">Source: NHS England</text><line x1="889" y1="55" x2="889" y2="265" stroke="#E5E1E6" stroke-width="1.2"/><circle cx="665" cy="90" r="34" fill="none" stroke="#7A8F7D" stroke-width="2" opacity=".9"/><text x="665" y="102" text-anchor="middle" class="nhs1-display" font-size="38" fill="#7A8F7D">£</text><text x="635" y="158" class="nhs1-display" font-size="38" fill="#7A8F7D">£5bn</text><text x="635" y="187" class="nhs1-sans" font-size="15" font-weight="800">NHS spend</text><text x="635" y="214" class="nhs1-sans nhs1-muted" font-size="13.5">estimated annually on MSK</text><text x="635" y="233" class="nhs1-sans nhs1-muted" font-size="13.5">conditions.</text><text x="635" y="286" class="nhs1-sans nhs1-muted" font-size="11.5">Source: ARMA 2026</text><circle cx="955" cy="90" r="34" fill="none" stroke="#E5735B" stroke-width="2" opacity=".9"/><rect x="935" y="72" width="40" height="34" rx="5" fill="none" stroke="#E5735B" stroke-width="3"/><path d="M945 72v-8h20v8" fill="none" stroke="#E5735B" stroke-width="3"/><text x="925" y="158" class="nhs1-display" font-size="38" fill="#E5735B">30.6m</text><text x="925" y="187" class="nhs1-sans" font-size="15" font-weight="800">working days</text><text x="925" y="214" class="nhs1-sans nhs1-muted" font-size="13.5">lost annually to MSK conditions.</text><text x="925" y="286" class="nhs1-sans nhs1-muted" font-size="11.5">Source: ARMA 2026</text>
 
     </svg>
       <figcaption>The scale of musculoskeletal care in the NHS. Figures published by NHS England and by ARMA, the Arthritis and Musculoskeletal Alliance.</figcaption>
     </figure>
-
   <section class="idea reveal" id="commissioners">
     <h2 class="section">For services that commission musculoskeletal care</h2>
     <p class="lead">ARMA's analysis of every integrated care board's joint forward plan found that 1 in 3 do not meaningfully reference musculoskeletal health, and 2 in 3 do not reference chronic pain services. Their recommendation is a joined up approach across the whole system, with clear outcomes for the services being bought, and services measured on function and participation rather than on activity.</p>
     <p class="lead">Orwyn is designed to improve the value of existing MSK pathways, reducing avoidable downstream activity while identifying patients who need specialist review sooner. It is built for one moment inside the spending that already happens: the point where the clinician seeing the patient first decides whether that patient needs a surgical opinion. Get that moment right and the patients who need an operation are found sooner, and the patients who do not are given a clear answer instead of a year of waiting to be told so. Because every decision is recorded with the reason for it, what happens next can be counted. This is the work NHS England calls <a href="/msk-referral-optimisation">MSK referral optimisation</a>, and it is judged in both directions rather than on referral volume alone.</p>
   </section>
-    <figure class="diagram orwyn-visual reveal">
+  <figure class="diagram orwyn-visual reveal">
 <svg class="wide-infographic" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 380" role="img" aria-labelledby="nhs2T nhs2D" fill="#2B1B2E">
       <title id="nhs2T">Better decisions, better care</title>
       <desc id="nhs2D">Four intended benefits of Orwyn: earlier specialist review when indicated, fewer unnecessary waits, less uncertainty, and structured outcome data. These are design intentions, not results. Orwyn has not yet been deployed.</desc>
@@ -120,48 +341,17 @@
     <text x="60" y="352" class="nhs2-sans" font-size="15" fill="#F6F4EF" opacity=".85">Design intentions, not results. Orwyn has not yet been deployed.</text></svg>
       <figcaption>What Orwyn is designed to change. These are design intentions, not results: Orwyn has not yet been deployed.</figcaption>
     </figure>
-
-  <section class="idea reveal" id="triage">
-    <h2 class="section">For musculoskeletal triage and first contact services</h2>
-    <p class="lead">Orwyn is for the clinician, in the room, while the patient is in front of them. It is <a href="/msk-clinical-decision-support">clinician-facing decision support</a>, not a patient questionnaire and not something the patient fills in at home. It fits inside a normal appointment and it does not slow the appointment down.</p>
-    <p class="lead">Every suggestion comes with the reason for it, in plain words. The clinician can disagree and record why, and that disagreement is kept. Orwyn does not check, approve or oversee anyone's work. It carries a surgeon's judgement into a room the surgeon is not in, and the clinician assesses the patient and decides.</p>
-  </section>
-
-  <section class="idea reveal" id="general-practice">
-    <h2 class="section">For general practice</h2>
-    <p class="lead">General practice still sees most musculoskeletal presentations, in ten minute appointments, alongside everything else. The hardest cases are often the ones already waiting, who keep coming back, where the honest question is whether anything has been missed and whether the plan should change.</p>
-    <p class="lead">Orwyn is designed and tested for first contact musculoskeletal appointments rather than for a ten minute general practice appointment. We are talking to GPs now about whether it is useful in general practice and what would have to change. If you see these patients, <a href="/contact">we would like to hear from you</a>.</p>
-  </section>
-    <figure class="diagram orwyn-visual reveal">
-<svg class="wide-infographic" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 430" role="img" aria-labelledby="nhs3T nhs3D" fill="#2B1B2E">
-      <title id="nhs3T">Pilot measurement map</title>
-      <desc id="nhs3D">A four-part pilot evaluation pathway covering the referral decision, specialist outcome, patient pathway and service effect.</desc>
-
-<style>
-  .nhs3-display { font-family: 'Playfair Display', Georgia, serif; }
-  .nhs3-sans { font-family: Inter, Arial, sans-serif; }
-  .nhs3-muted { fill:#6B6470; }
-  .nhs3-caps { letter-spacing:1.4px; font-weight:700; }
-  .nhs3-fine { stroke:#E5E1E6; stroke-width:1.5; }
-</style>
-
-
-<rect width="1200" height="430" rx="30" fill="#FFFFFF" stroke="#E5E1E6" stroke-width="1.5"/>
-<text x="55" y="67" class="nhs3-display" font-size="36">A pilot should measure <tspan fill="#E5735B">what changed.</tspan></text>
-<text x="55" y="98" class="nhs3-sans nhs3-muted" font-size="15">Not clicks. Not logins. The clinical decision, the outcome, and the pathway around it.</text>
-<path d="M180 148 H1020" stroke="#E5E1E6" stroke-width="2"/>
-<circle cx="180" cy="148" r="7" fill="#2B1B2E"/><circle cx="460" cy="148" r="7" fill="#E5735B"/><circle cx="740" cy="148" r="7" fill="#7A8F7D"/><circle cx="1020" cy="148" r="7" fill="#6B6470"/>
-<rect x="70" y="205" width="230" height="135" rx="22" fill="#FFFFFF" stroke="#2B1B2E" stroke-width="1.5"/><circle cx="104" cy="239" r="17" fill="#2B1B2E" opacity=".14"/><text x="104" y="245" text-anchor="middle" class="nhs3-sans" font-size="13" font-weight="800" fill="#2B1B2E">1</text><text x="94" y="280" class="nhs3-display" font-size="19">Referral decision</text><text x="94" y="310" class="nhs3-sans nhs3-muted" font-size="13">What was decided, and why</text><path d="M302 272 H332" stroke="#E5E1E6" stroke-width="2"/><path d="M324 265l10 7-10 7" fill="none" stroke="#E5E1E6" stroke-width="2"/><rect x="340" y="205" width="230" height="135" rx="22" fill="#FFFFFF" stroke="#E5735B" stroke-width="1.5"/><circle cx="374" cy="239" r="17" fill="#E5735B" opacity=".14"/><text x="374" y="245" text-anchor="middle" class="nhs3-sans" font-size="13" font-weight="800" fill="#2B1B2E">2</text><text x="364" y="280" class="nhs3-display" font-size="19">Specialist outcome</text><text x="364" y="310" class="nhs3-sans nhs3-muted" font-size="13">What happened downstream</text><path d="M572 272 H602" stroke="#E5E1E6" stroke-width="2"/><path d="M594 265l10 7-10 7" fill="none" stroke="#E5E1E6" stroke-width="2"/><rect x="610" y="205" width="230" height="135" rx="22" fill="#FFFFFF" stroke="#7A8F7D" stroke-width="1.5"/><circle cx="644" cy="239" r="17" fill="#7A8F7D" opacity=".14"/><text x="644" y="245" text-anchor="middle" class="nhs3-sans" font-size="13" font-weight="800" fill="#2B1B2E">3</text><text x="634" y="280" class="nhs3-display" font-size="19">Patient pathway</text><text x="634" y="310" class="nhs3-sans nhs3-muted" font-size="13">Time, reattendance, escalation</text><path d="M842 272 H872" stroke="#E5E1E6" stroke-width="2"/><path d="M864 265l10 7-10 7" fill="none" stroke="#E5E1E6" stroke-width="2"/><rect x="880" y="205" width="230" height="135" rx="22" fill="#FFFFFF" stroke="#6B6470" stroke-width="1.5"/><circle cx="914" cy="239" r="17" fill="#6B6470" opacity=".14"/><text x="914" y="245" text-anchor="middle" class="nhs3-sans" font-size="13" font-weight="800" fill="#6B6470">4</text><text x="904" y="280" class="nhs3-display" font-size="19">Service effect</text><text x="904" y="310" class="nhs3-sans nhs3-muted" font-size="13">Activity, waits, variation, cost</text>
-<text x="70" y="386" class="nhs3-sans nhs3-muted" font-size="13">Designed for NHS pilot evaluation: baseline, then decision, then downstream outcome, then service-level effect.</text>
-
-    </svg>
-      <figcaption>What a pilot should measure: the decision, the downstream outcome, the patient pathway and the effect on the service.</figcaption>
-    </figure>
-
+</div>
+<div class="wrap">
+  <div class="band closing reveal">
+    <p class="one">Surgeon-governed decision support for first-contact MSK clinicians.</p>
+    <p class="btnrow"><a class="btn primary" href="/see-the-demo">See the demo</a><a class="btn ghost" href="/contact#nhs-pilot">Discuss an NHS pilot</a></p>
+  </div>
   <div class="foot">
     <div class="disclaim">Decision support for clinicians only. The clinician assesses the patient and makes every decision. Orwyn is not a service for patients and gives no advice directly to patients or the public.</div>
   </div>
 </div>
+</main>
 <footer class="site">
   <div class="wrap">
     <span class="mark"><span class="o">o</span>rwyn<span class="tm">&trade;</span></span>
@@ -170,15 +360,18 @@
       <a href="/about">About</a>
       <a href="/nhs">Working with the NHS</a>
       <a href="/resources">Resources</a>
+      <a href="/for-patients">For patients</a>
+      <a href="/press">Press</a>
       <a href="/contact">Contact</a>
       <a href="https://www.linkedin.com/company/orwynhealth/" target="_blank" rel="noopener">LinkedIn</a>
       <a href="/privacy">Privacy</a>
-      <a href="/demo">Demo</a>
+      <a href="/see-the-demo">See the demo</a>
     </nav>
     <div class="footgroup">
-      <span class="footgroup-h">Safety and standards</span>
+      <span class="footgroup-h">Safety, standards and evidence</span>
       <a href="/safety">Safety</a>
       <a href="/standards">Standards</a>
+      <a href="/evidence">Evidence</a>
     </div>
     <p>Orwynhealth Ltd, registered in England and Wales, company number 17374862.<br>
     Registered office: 1 Landor Road, London SW9 9RX.<br>
@@ -189,13 +382,15 @@
 </footer>
 <script>
 (function(){
-  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   var els = document.querySelectorAll('.reveal');
-  if (!('IntersectionObserver' in window)) { els.forEach(function(e){e.classList.add('in');}); return; }
+  function all(){ els.forEach(function(e){ e.classList.add('in'); }); }
+  if ((window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) || !('IntersectionObserver' in window)) { all(); return; }
   var io = new IntersectionObserver(function(entries){
     entries.forEach(function(en){ if (en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
   }, {threshold:.12});
   els.forEach(function(e){ io.observe(e); });
+  window.addEventListener('beforeprint', all);
+  setTimeout(all, 2500);
 })();
 </script>
 <script>
@@ -213,5 +408,6 @@
   });
 })();
 </script>
+<script src="/zoom.js" defer></script>
 </body>
 </html>

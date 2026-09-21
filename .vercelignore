@@ -1,10 +1,19 @@
-# Build tooling for the /demo gate — never serve this publicly.
+# Build tooling for the /demo gate: never serve this publicly.
 demo/_build/
 
-# Page templates and cluster rules — not a website page, never served.
+# Page templates and cluster rules: not a website page, never served.
 _templates/
 
 # Logo master vectors. In git so they survive and stay versioned, but not served:
 # nothing on the site links to them, the README names a pending trade mark filing,
 # and clean brand artwork should not be downloadable from the marketing site.
 brand/
+
+# Review documents for the site-v2 branch: for Dr Imbuldeniya, never served.
+AUDIT.md
+COPY-FOR-APPROVAL.md
+NEXT_DECISIONS.md
+CHANGELOG.md
+SEARCH-MAP.md
+_tools/
+COPY-FOR-APPROVAL-SHORTLIST.md
