@@ -300,3 +300,10 @@ Internal links added:
 Schema on /: Organization knowsAbout now also lists MSK triage, MSK triage tool, MSK decision support, NHS MSK tool, MSK diagnosis, orthopaedic referral, and first contact practitioner decision support. The existing FAQPage gains "Is Orwyn an MSK triage tool?" and "Who is Orwyn for?"; the AI question was already there ("Is Orwyn artificial intelligence?") and is not duplicated.
 
 Link fix: the DTAC link on /msk-triage-tool and /msk-clinical-decision-support now points to digital.nhs.uk/services/digital-technology-assessment-criteria-dtac, because transform.england.nhs.uk no longer resolves.
+
+### Credibility changes, 1 October 2026 (same branch)
+
+- /standards is now the trust centre, same URL. Title: Trust centre: standards, DCB0129, DTAC and UK MDR | Orwyn (57). Main phrase: DCB0129 and DTAC for decision support; variants: Orwyn trust centre, accessibility statement. New meta description (144): Orwyn trust centre: DCB0129 clinical safety, DTAC, medical device regulation, data protection and accessibility, with an honest status for each. Footer link text now "Trust centre".
+- /news, new page. Audience: press, partners, buyers. Main phrase: Orwyn news. Title: Orwyn news: programme and evidence updates | Orwyn (50). Meta description (147). Linked from the footer on every page and from /press. Article schema for each dated post.
+- /contact gains the demo request form (id demo-request). Title and description unchanged.
+- Header on every page: "Who it's for" dropdown linking /nhs, /msk-decision-support-insurers and /what-orwyn-does.

@@ -88,7 +88,7 @@
   <div class="wrap">
     <a class="brand" href="/"><img class="logomark" src="/logo.svg" width="34" height="34" alt="Orwyn logo"><span class="mark"><span class="o">o</span>rwyn<span class="tm">&trade;</span></span></a>
     <button class="menubtn" aria-label="Open menu" aria-expanded="false" aria-controls="mainnav"><span></span><span></span><span></span></button>
-    <nav class="main" id="mainnav" aria-label="Main"><a href="/">Home</a><a href="/what-orwyn-does">What it does</a><a href="/safety">Safety</a><a href="/about">About</a><a href="/nhs">Working with the NHS</a><a href="/see-the-demo">See the demo</a><a class="cta" href="/contact">Get in touch</a></nav>
+    <nav class="main" id="mainnav" aria-label="Main"><a href="/">Home</a><details class="navgroup"><summary>Who it&rsquo;s for</summary><div class="navdrop"><a href="/nhs">NHS services</a><a href="/msk-decision-support-insurers">Insurers and employee health</a><a href="/what-orwyn-does">Clinicians</a></div></details><a href="/what-orwyn-does">What it does</a><a href="/safety">Safety</a><a href="/about">About</a><a href="/nhs">Working with the NHS</a><a href="/see-the-demo">See the demo</a><a class="cta" href="/contact">Get in touch</a></nav>
   </div>
 </header>
 <main id="main">
@@ -192,6 +192,7 @@
       <a href="/resources">Resources</a>
       <a href="/for-patients">For patients</a>
       <a href="/press">Press</a>
+      <a href="/news">News</a>
       <a href="/contact">Contact</a>
       <a href="https://www.linkedin.com/company/orwynhealth/" target="_blank" rel="noopener">LinkedIn</a>
       <a href="/privacy">Privacy</a>
@@ -200,7 +201,7 @@
     <div class="footgroup">
       <span class="footgroup-h">Safety, standards and evidence</span>
       <a href="/safety">Safety</a>
-      <a href="/standards">Standards</a>
+      <a href="/standards">Trust centre</a>
       <a href="/evidence">Evidence</a>
     </div>
     <p>Orwynhealth Ltd, registered in England and Wales, company number 17374862.<br>
@@ -235,6 +236,13 @@
   });
   document.querySelectorAll('nav.main a').forEach(function(a){
     a.addEventListener('click', function(){ hdr.classList.remove('menu-open'); btn.setAttribute('aria-expanded','false'); });
+  });
+  document.addEventListener('click', function(e){
+    document.querySelectorAll('details.navgroup[open]').forEach(function(d){ if (!d.contains(e.target)) d.removeAttribute('open'); });
+  });
+  document.addEventListener('keydown', function(e){
+    if (e.key !== 'Escape') return;
+    document.querySelectorAll('details.navgroup[open]').forEach(function(d){ d.removeAttribute('open'); d.querySelector('summary').focus(); });
   });
 })();
 </script>

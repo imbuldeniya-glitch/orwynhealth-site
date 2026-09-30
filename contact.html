@@ -55,7 +55,7 @@
   <div class="wrap">
     <a class="brand" href="/"><img class="logomark" src="/logo.svg" width="34" height="34" alt="Orwyn logo"><span class="mark"><span class="o">o</span>rwyn<span class="tm">&trade;</span></span></a>
     <button class="menubtn" aria-label="Open menu" aria-expanded="false" aria-controls="mainnav"><span></span><span></span><span></span></button>
-    <nav class="main" id="mainnav" aria-label="Main"><a href="/">Home</a><a href="/what-orwyn-does">What it does</a><a href="/safety">Safety</a><a href="/about">About</a><a href="/nhs">Working with the NHS</a><a href="/see-the-demo">See the demo</a><a class="cta" href="/contact" aria-current="page">Get in touch</a></nav>
+    <nav class="main" id="mainnav" aria-label="Main"><a href="/">Home</a><details class="navgroup"><summary>Who it&rsquo;s for</summary><div class="navdrop"><a href="/nhs">NHS services</a><a href="/msk-decision-support-insurers">Insurers and employee health</a><a href="/what-orwyn-does">Clinicians</a></div></details><a href="/what-orwyn-does">What it does</a><a href="/safety">Safety</a><a href="/about">About</a><a href="/nhs">Working with the NHS</a><a href="/see-the-demo">See the demo</a><a class="cta" href="/contact" aria-current="page">Get in touch</a></nav>
   </div>
 </header><main id="main">
 <section class="hero small">
@@ -80,6 +80,23 @@
         <p>What a first evaluation would involve is set out on <a href="/nhs">the page for NHS services</a>. Tell us about your service and we will reply.</p>
         <a class="btn ghost" href="mailto:hello@orwynhealth.com?subject=NHS%20pilot&body=Name%3A%0ARole%3A%0AService%20or%20organisation%3A%0A">Discuss an NHS pilot</a>
       </div>
+    </div>
+    <div class="card demoform" id="demo-request" style="max-width:880px;margin:16px auto 0">
+      <h2 class="kicker" style="margin:0 0 8px">Ask for a demo</h2>
+      <h3>Tell us who you are and we will reply</h3>
+      <form id="demo-form" action="mailto:hello@orwynhealth.com" method="post" enctype="text/plain">
+        <div class="formgrid">
+          <p><label for="df-name">Name</label><input id="df-name" name="Name" type="text" autocomplete="name" required></p>
+          <p><label for="df-role">Role</label><input id="df-role" name="Role" type="text" autocomplete="organization-title" required></p>
+          <p><label for="df-org">Organisation</label><input id="df-org" name="Organisation" type="text" autocomplete="organization" required></p>
+          <p><label for="df-type">Organisation type</label><select id="df-type" name="Organisation type" required><option value="" selected disabled>Choose one</option><option>NHS service</option><option>Insurer or employee health provider</option><option>Private provider</option><option>Other</option></select></p>
+          <p class="full"><label for="df-email">Email</label><input id="df-email" name="Email" type="email" autocomplete="email" required></p>
+          <p class="full"><label for="df-msg">Message</label><textarea id="df-msg" name="Message" rows="5"></textarea></p>
+        </div>
+        <p><button class="btn primary" type="submit">Open an email with these details</button></p>
+        <p class="formnote">This opens your own email app with a message to <a href="mailto:hello@orwynhealth.com">hello@orwynhealth.com</a>; nothing is sent until you press send there. Please do not include patient-identifiable or confidential clinical information.</p>
+        <p class="formnote">We use your details only to reply to you. See our <a href="/privacy">privacy notice</a>.</p>
+      </form>
     </div>
     <div class="card" style="max-width:880px;margin:16px auto 0">
       <p>Email <a href="mailto:hello@orwynhealth.com">hello@orwynhealth.com</a>.</p>
@@ -107,6 +124,7 @@
       <a href="/resources">Resources</a>
       <a href="/for-patients">For patients</a>
       <a href="/press">Press</a>
+      <a href="/news">News</a>
       <a href="/contact">Contact</a>
       <a href="https://www.linkedin.com/company/orwynhealth/" target="_blank" rel="noopener">LinkedIn</a>
       <a href="/privacy">Privacy</a>
@@ -115,7 +133,7 @@
     <div class="footgroup">
       <span class="footgroup-h">Safety, standards and evidence</span>
       <a href="/safety">Safety</a>
-      <a href="/standards">Standards</a>
+      <a href="/standards">Trust centre</a>
       <a href="/evidence">Evidence</a>
     </div>
     <p>Orwynhealth Ltd, registered in England and Wales, company number 17374862.<br>
@@ -125,6 +143,22 @@
     <p>&copy; 2026 Orwynhealth Ltd. All rights reserved.</p>
   </div>
 </footer>
+<script>
+(function(){
+  var form = document.getElementById('demo-form');
+  if (!form) return;
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    if (!form.reportValidity()) return;
+    var v = function(id){ return document.getElementById(id).value.trim(); };
+    var type = v('df-type');
+    var body = 'Name: ' + v('df-name') + '\nRole: ' + v('df-role') + '\nOrganisation: ' + v('df-org') +
+      '\nOrganisation type: ' + type + '\nEmail: ' + v('df-email') + '\n\nMessage:\n' + v('df-msg') + '\n';
+    window.location.href = 'mailto:hello@orwynhealth.com?subject=' + encodeURIComponent('Demo request: ' + type) +
+      '&body=' + encodeURIComponent(body);
+  });
+})();
+</script>
 <script>
 (function(){
   var els = document.querySelectorAll('.reveal');
@@ -150,6 +184,13 @@
   });
   document.querySelectorAll('nav.main a').forEach(function(a){
     a.addEventListener('click', function(){ hdr.classList.remove('menu-open'); btn.setAttribute('aria-expanded','false'); });
+  });
+  document.addEventListener('click', function(e){
+    document.querySelectorAll('details.navgroup[open]').forEach(function(d){ if (!d.contains(e.target)) d.removeAttribute('open'); });
+  });
+  document.addEventListener('keydown', function(e){
+    if (e.key !== 'Escape') return;
+    document.querySelectorAll('details.navgroup[open]').forEach(function(d){ d.removeAttribute('open'); d.querySelector('summary').focus(); });
   });
 })();
 </script>

@@ -615,3 +615,36 @@ dialog.lightbox .lb-close{font:inherit;font-weight:600;padding:8px 16px;border-r
 .hero .video-text .vt{color:#CBB9CC}
 .logo-card{width:200px;box-sizing:border-box}
 @media(max-width:560px){.logo-card{width:160px}}
+
+/* Who it's for , header dropdown (1 October 2026) */
+nav.main details.navgroup{position:relative}
+nav.main details.navgroup summary{list-style:none;cursor:pointer;color:#E7DCE6;font-size:14.5px;font-weight:500;padding:8px 12px;border-radius:999px}
+nav.main details.navgroup summary::-webkit-details-marker{display:none}
+nav.main details.navgroup summary::after{content:"";display:inline-block;width:6px;height:6px;margin-left:8px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:translateY(-3px) rotate(45deg);transition:transform .2s ease}
+nav.main details.navgroup[open] summary::after{transform:translateY(0) rotate(-135deg)}
+nav.main details.navgroup summary:hover{color:var(--coral);background:rgba(229,115,91,.08)}
+nav.main details.navgroup summary:focus-visible{outline:2px solid #fff;outline-offset:2px}
+nav.main .navdrop{position:absolute;top:calc(100% + 8px);left:0;min-width:260px;background:var(--plum);border:1px solid rgba(255,255,255,.14);border-radius:var(--radius-card);padding:8px;box-shadow:0 14px 34px rgba(43,27,46,.28);display:flex;flex-direction:column;gap:2px;z-index:20}
+nav.main .navdrop a{border-radius:10px;padding:10px 12px}
+@media(max-width:880px){
+  nav.main details.navgroup summary{padding:12px 14px;font-size:16px;border-radius:10px}
+  nav.main .navdrop{position:static;min-width:0;border:0;box-shadow:none;background:none;padding:0 0 0 14px}
+}
+
+/* Demo request form (contact page, 1 October 2026). No third-party service: opens the visitor's email app */
+.demoform form{text-align:left;margin-top:14px}
+.demoform .formgrid{display:grid;grid-template-columns:1fr 1fr;gap:4px 18px}
+.demoform .formgrid p{margin:0 0 10px}
+.demoform .formgrid .full{grid-column:1 / -1}
+.demoform label{display:block;font-size:14px;font-weight:600;color:var(--plum);margin:0 0 6px}
+.demoform input,.demoform select,.demoform textarea{width:100%;box-sizing:border-box;font:inherit;font-size:16px;color:var(--ink);background:#fff;border:1px solid var(--stone);border-radius:10px;padding:11px 12px}
+.demoform textarea{resize:vertical}
+.demoform input:focus,.demoform select:focus,.demoform textarea:focus{outline:2px solid var(--plum);outline-offset:1px;border-color:var(--plum)}
+.demoform .formnote{font-size:var(--fs-small);color:var(--muted);margin:8px 0 0}
+@media(max-width:640px){.demoform .formgrid{grid-template-columns:1fr}}
+/* Keep the header on one row between the hamburger breakpoint and wide screens */
+@media(min-width:881px) and (max-width:1180px){
+  nav.main{gap:0}
+  nav.main a,nav.main details.navgroup summary{font-size:14px;padding:8px 8px}
+  nav.main a.cta{padding:9px 14px;margin-left:6px}
+}
