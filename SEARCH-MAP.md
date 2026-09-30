@@ -267,3 +267,36 @@ Patients: Orwyn is not a service for patients, so no symptom searches such as "k
 - Meta description, old (131): What this website does with your information. It sets no cookies, runs no analytics, and collects nothing about you as you read it.
 - Meta description, new (147): Privacy notice for orwynhealth.com: the website sets no cookies and runs no analytics or tracking, and says how information you send us is handled.
 - Linked from (in page): /for-patients
+
+
+## Added 1 October 2026 (branch seo-buyers-oct2026): buyer search terms, ruled by Dr Imbuldeniya
+
+Dr Imbuldeniya ruled on 1 October 2026 that the site targets every search a buyer makes, including the MSK triage terms. Positioning stays: Orwyn is surgical decision support used inside MSK triage, never described as a patient triage app or as AI.
+
+- /msk-triage-tool: main phrase MSK triage tool; variants MSK tool, NHS MSK tool, MSK triage software.
+- /ai-msk-triage: main phrase AI MSK triage; variants AI MSK tool, AI musculoskeletal triage. States plainly that Orwyn is not AI.
+- /msk-decision-support-insurers: main phrase MSK tool for insurers; variants MSK triage for insurers, occupational health MSK, employee health MSK.
+- /msk-diagnosis-first-contact: main phrase MSK diagnosis; variants musculoskeletal diagnosis, knee diagnosis at first contact.
+- / title now: Orwyn Health: surgical decision support for MSK triage (54 characters).
+- /nhs title now: NHS MSK tool: surgical decision support for MSK services (56).
+- /see-the-demo title now: MSK triage tool demo.
+- /what-orwyn-does title now: MSK diagnosis and surgical decision support.
+- /msk-clinical-decision-support keeps MSK decision support.
+
+### Follow-up, 1 October 2026 (same branch)
+
+Titles cut to 60 characters or fewer, main phrase kept at the front:
+- /msk-triage-tool: MSK triage tool: what it should do, and where Orwyn fits (56).
+- /ai-msk-triage: AI in MSK triage, and why Orwyn uses written rules | Orwyn (58).
+- /msk-decision-support-insurers: MSK tool for insurers and employee health providers | Orwyn (59).
+- /msk-diagnosis-first-contact: MSK diagnosis at first contact: the most likely answer (54).
+- Left over 60 and unchanged, because their titles are approved copy not touched on this branch: /evidence (61), /msk-triage-explained (64).
+
+Internal links added:
+- /msk-clinical-decision-support links to /msk-triage-tool and /ai-msk-triage (Sources section).
+- /what-orwyn-does links to /msk-diagnosis-first-contact (end of the first section).
+- /nhs links to /msk-decision-support-insurers (end of the commissioners section).
+
+Schema on /: Organization knowsAbout now also lists MSK triage, MSK triage tool, MSK decision support, NHS MSK tool, MSK diagnosis, orthopaedic referral, and first contact practitioner decision support. The existing FAQPage gains "Is Orwyn an MSK triage tool?" and "Who is Orwyn for?"; the AI question was already there ("Is Orwyn artificial intelligence?") and is not duplicated.
+
+Link fix: the DTAC link on /msk-triage-tool and /msk-clinical-decision-support now points to digital.nhs.uk/services/digital-technology-assessment-criteria-dtac, because transform.england.nhs.uk no longer resolves.
