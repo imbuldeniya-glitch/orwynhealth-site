@@ -9,7 +9,7 @@ Orwyn: surgeon-governed decision support for first-contact musculoskeletal (MSK)
 - NO audit figures or clinical outcome numbers anywhere on the site. National PUBLISHED statistics (NHS England and similar) ARE allowed in problem-framing sections, always with a cited, linked source (ruled by Dr Imbuldeniya, 9 August 2026). His own audit figures stay banned until Stage 2 review is complete.
 - NO prices.
 - NO mention of Dr Imbuldeniya's private practice or OrthoLongevity: Orwyn is a strictly separate brand.
-- NO claims that Orwyn is endorsed by the NHS or any trust. The independence disclaimer on the About page stays.
+- NO claims that Orwyn is endorsed by the NHS or any trust. The About page states that Orwyn is built by Orwynhealth Ltd, an independent company (the longer independence disclaimer was removed on Dr Imbuldeniya's instruction, 1 October 2026).
 - The disclaimer strip appears on every page and is never removed or softened. Current wording (approved by Dr Imbuldeniya 9 August 2026 as a DRAFT pending the clinical safety officer's review): "Decision support for clinicians only. The clinician assesses the patient and makes every decision. Orwyn is not a service for patients and gives no advice directly to patients or the public."
 - Never change the wording of existing copy without Dr Imbuldeniya's explicit approval; copy is approved verbatim. Layout and styling changes are fine on a branch.
 - British English. Acronyms glossed at first use (MSK, FCP and so on). No marketing or startup vocabulary of any kind.
