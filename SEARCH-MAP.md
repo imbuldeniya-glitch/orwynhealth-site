@@ -108,10 +108,10 @@ Patients: Orwyn is not a service for patients, so no symptom searches such as "k
 - Audience: Patients
 - Main phrase: what is Orwyn
 - Variants: Orwyn knee plan; Orwyn NHS
-- Title: What is Orwyn? For patients whose clinician used Orwyn
-- H1: My clinician used Orwyn. What does that mean?
+- Title: What is Orwyn? A guide for patients
+- H1: What is Orwyn? A guide for patients
 - Meta description, old (none): (new page)
-- Meta description, new (145): What is Orwyn? If your clinician used Orwyn, this explains what it is, that your clinician made the decision, and who to contact about your care.
+- Meta description, new (148): What is Orwyn? A guide for patients: what Orwyn is, why your clinician will make every decision about your care, and who to contact with a question.
 - Linked from (in page): header and footer only
 
 ## /resources
@@ -313,3 +313,4 @@ Link fix: the DTAC link on /msk-triage-tool and /msk-clinical-decision-support n
 - /nhs-msk-triage, new page. Audience: NHS service leads and commissioners. Main phrase: NHS MSK triage; variants: NHS MSK triage tool, NHS musculoskeletal triage. Title: NHS MSK triage: how it works, and where Orwyn fits | Orwyn (58). Meta description (141). Article, FAQPage and BreadcrumbList schema. Does not repeat /msk-triage-explained (what triage is) or /msk-triage-tool (buyer's guide): it covers where triage sits in NHS England policy and what services are measured on.
 - Linked from (in page): /, /nhs, /msk-triage-explained, /msk-triage-tool, /ai-msk-triage, /resources.
 - /for-patients had no in-page link from any other page; /nhs-msk-triage now links to it.
+- /for-patients rewritten in the future tense, 4 October 2026: Orwyn is not yet in clinical use, so no page may suggest a patient has been seen with it. Pages describing Orwyn now say it is "designed for" the clinician rather than "used by" the clinician.
