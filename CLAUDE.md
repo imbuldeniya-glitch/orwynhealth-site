@@ -28,7 +28,7 @@ Coral is spent sparingly, one word at a time: a single headline keyword per head
 Restraint: one idea per screen, generous vertical space, centred sections. Content fades up on scroll (.reveal + IntersectionObserver) and must keep respecting prefers-reduced-motion. Soft geometry: pill buttons, 14px card radii. Mobile below 880px: centred brand, hamburger menu (.menubtn), no visible link row.
 
 ## Structure
-Twenty-three indexable pages (plus the knee reference pages): index, what-orwyn-does, see-the-demo, msk-clinical-decision-support, msk-triage-tool, ai-msk-triage, msk-diagnosis-first-contact, msk-decision-support-insurers, msk-referral-optimisation, nhs, evidence, resources, knee-orthopaedic-referral-criteria, msk-triage-explained, first-contact-practitioners-explained, safety, standards, about, for-patients, press, news, contact, privacy. /standards is also the trust centre (status table, accessibility statement, security contact); the footer link reads "Trust centre". The header has a "Who it's for" dropdown (NHS services, insurers and employee health, clinicians), built from a native details element. /news holds short dated posts, linked from the footer and /press. The /contact demo request form opens the visitor's own email app; it uses no third-party form service and stores nothing. The reference pages sit under /resources, which is the only one of them in the footer; none is in the header nav. Shared styles.css, per-page canonical and Open Graph tags, Organization and WebSite schema on index, Article and BreadcrumbList on the reference pages, sitemap.xml kept in step with any page added or removed.
+Twenty-four indexable pages (plus the knee reference pages): index, what-orwyn-does, see-the-demo, msk-clinical-decision-support, msk-triage-tool, nhs-msk-triage, ai-msk-triage, msk-diagnosis-first-contact, msk-decision-support-insurers, msk-referral-optimisation, nhs, evidence, resources, knee-orthopaedic-referral-criteria, msk-triage-explained, first-contact-practitioners-explained, safety, standards, about, for-patients, press, news, contact, privacy. /standards is also the trust centre (status table, accessibility statement, security contact); the footer link reads "Trust centre". The header has a "Who it's for" dropdown (NHS services, insurers and employee health, clinicians), built from a native details element. /news holds short dated posts, linked from the footer and /press. The /contact demo request form opens the visitor's own email app; it uses no third-party form service and stores nothing. The reference pages sit under /resources, which is the only one of them in the footer; none is in the header nav. Shared styles.css, per-page canonical and Open Graph tags, Organization and WebSite schema on index, Article and BreadcrumbList on the reference pages, sitemap.xml kept in step with any page added or removed.
 
 Not indexable, and must stay that way until Dr Imbuldeniya says otherwise: /demo (noindex, password-gated).
 
@@ -43,13 +43,16 @@ The header logo is `logo.svg` and the home page hero mark is inlined SVG, both f
 `logo.png` and `hero-mark.png` are kept as protected raster fallbacks and `logo.png` remains the
 Organization schema logo, because schema consumers want a raster.
 
-Protected files, do not modify or delete: logo.png, favicon.png, portrait.jpg, social.jpg, hero-mark.png, robots.txt, google091cc17a7cfd7918.html.
+Protected files, do not modify or delete: logo.png, favicon.png, portrait.jpg, social.jpg, hero-mark.png, robots.txt, google091cc17a7cfd7918.html (Google Search Console verification), 6bacbbf76fe51868263e9efe5f55f2e3.txt (the IndexNow key).
 
 ## Process
 1. Branch, never main.
 2. Make the change; keep every rule above.
 3. Show the diff and, for visual changes, open the page locally for review.
 4. Wait for Dr Imbuldeniya's explicit go before any merge or push to main.
+
+## After every push
+Once the Vercel deploy is live, run `scripts/indexnow.sh` from the repo root. It sends every URL in sitemap.xml to IndexNow, which tells Bing (and through it ChatGPT and Copilot search) about the change straight away, and prints the HTTP status (200 or 202 means accepted). Never delete the key file `6bacbbf76fe51868263e9efe5f55f2e3.txt` at the site root, and never delete `google091cc17a7cfd7918.html` (Google Search Console verification). The `scripts/` folder is excluded from the deploy by .vercelignore.
 
 ## Commits and working practice
 - No Co-Authored-By trailer, and no AI, assistant or tooling attribution of any kind, in any commit message, ever. Commits are authored solely by Dr Imbuldeniya. In force from 21 August 2026 onward; existing history is left exactly as it is and is never rewritten to add or strip attribution.

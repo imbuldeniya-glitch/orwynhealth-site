@@ -307,3 +307,9 @@ Link fix: the DTAC link on /msk-triage-tool and /msk-clinical-decision-support n
 - /news, new page. Audience: press, partners, buyers. Main phrase: Orwyn news. Title: Orwyn news: programme and evidence updates | Orwyn (50). Meta description (147). Linked from the footer on every page and from /press. Article schema for each dated post.
 - /contact gains the demo request form (id demo-request). Title and description unchanged.
 - Header on every page: "Who it's for" dropdown linking /nhs, /msk-decision-support-insurers and /what-orwyn-does.
+
+## Added 4 October 2026 (branch seo-nhs-msk-triage-oct2026)
+
+- /nhs-msk-triage, new page. Audience: NHS service leads and commissioners. Main phrase: NHS MSK triage; variants: NHS MSK triage tool, NHS musculoskeletal triage. Title: NHS MSK triage: how it works, and where Orwyn fits | Orwyn (58). Meta description (141). Article, FAQPage and BreadcrumbList schema. Does not repeat /msk-triage-explained (what triage is) or /msk-triage-tool (buyer's guide): it covers where triage sits in NHS England policy and what services are measured on.
+- Linked from (in page): /, /nhs, /msk-triage-explained, /msk-triage-tool, /ai-msk-triage, /resources.
+- /for-patients had no in-page link from any other page; /nhs-msk-triage now links to it.
