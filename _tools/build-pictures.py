@@ -3,7 +3,7 @@
 Run from the repository root with a Python that has Pillow:
     python3 _tools/build-pictures.py
 
-Source: Orwyn Ltd/04-brand/website-screenshots-v0.13/<slot>.png (2x screenshots).
+Source: Orwyn Ltd/04-brand/website-screenshots-v0.15/<slot>.png (2x screenshots).
 Output: img/<slot>-1200.webp, img/<slot>-800.webp and img/<slot>.png (the PNG fallback).
 Each slot keeps its name, so the pages need no change when a new picture arrives.
 Slots with no source file are skipped and reported. This folder is not deployed (.vercelignore).
@@ -13,7 +13,7 @@ from PIL import Image
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
-SRC = os.path.join(ROOT, '..', '..', '04-brand', 'website-screenshots-v0.13')
+SRC = os.path.join(ROOT, '..', '..', '04-brand', 'website-screenshots-v0.15')
 
 # slot name: (source file names to try, in order; optional crop height in source pixels)
 SLOTS = {
